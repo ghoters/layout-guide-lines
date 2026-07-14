@@ -161,22 +161,26 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--hero-tint)] to-transparent" />
-        <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-6 pb-16 pt-6 lg:grid-cols-2">
-          <div className="pt-8">
+      <section className="relative min-h-[620px] overflow-hidden lg:min-h-[720px]">
+        <img
+          src={heroVase.url}
+          alt="Model 3D — wazon gotycki"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="relative mx-auto max-w-[1200px] px-6 pb-20 pt-20">
+          <div className="max-w-2xl pt-8">
             <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
               PROJEKTOWANIE 3D
             </div>
-            <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl">
+            <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight drop-shadow-sm md:text-6xl">
               Tworzę modele <span className="text-[var(--brand)]">3D</span>
               <br />
               dopasowane do
               <br />
               Twoich potrzeb.
             </h1>
-            <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted-foreground">
+            <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/90 drop-shadow-sm">
               Modele do druku 3D, gier, wizualizacji i nie tylko.
               <br />
               Od pomysłu do gotowego projektu.
@@ -185,7 +189,7 @@ function Index() {
               <button className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">
                 Wyślij zapytanie <ArrowRight className="h-4 w-4" />
               </button>
-              <a href="#realizacje" className="inline-flex items-center gap-2 text-sm font-medium">
+              <a href="#realizacje" className="inline-flex items-center gap-2 text-sm font-medium drop-shadow-sm">
                 Zobacz realizacje <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -196,38 +200,15 @@ function Index() {
                 { icon: Star, value: "100%", label: "zaangażowania" },
               ].map((s) => (
                 <div key={s.label} className="flex items-start gap-3">
-                  <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-border text-[var(--brand)]">
+                  <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/70 text-[var(--brand)] backdrop-blur-sm">
                     <s.icon className="h-4 w-4" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-[var(--brand)]">{s.value}</div>
-                    <div className="text-xs text-muted-foreground">{s.label}</div>
+                    <div className="text-2xl font-bold text-[var(--brand)] drop-shadow-sm">{s.value}</div>
+                    <div className="text-xs text-foreground/80 drop-shadow-sm">{s.label}</div>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="relative min-h-[520px] overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--hero-tint)] to-transparent lg:min-h-[560px]">
-            <img
-              src={heroVase.url}
-              alt="Model 3D — wazon gotycki"
-              className="h-full w-full object-cover object-right"
-            />
-            <div className="absolute left-4 top-24 w-[220px] rounded-xl border border-border bg-card/90 p-4 shadow-sm backdrop-blur-sm">
-              <div className="text-[11px] font-semibold text-muted-foreground">Ostatni projekt</div>
-              <div className="mt-1 text-sm font-semibold">wazon gotycki</div>
-              <div className="text-xs text-muted-foreground">Druk 3D, żywica</div>
-              <div className="mt-3 text-xs text-muted-foreground">
-                Blender, ZBrush,
-                <br />
-                Marmoset Toolbag
-              </div>
-              <div className="mt-2 flex justify-end">
-                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)] text-primary-foreground">
-                  <ArrowRight className="h-3 w-3" />
-                </div>
-              </div>
             </div>
           </div>
         </div>
