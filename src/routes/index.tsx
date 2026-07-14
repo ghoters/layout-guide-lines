@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import heroVase from "@/assets/hero-vase.png.asset.json";
 import {
   ArrowRight,
   Box,
@@ -208,7 +209,13 @@ function Index() {
           </div>
 
           <div className="relative">
-            <Placeholder className="h-[520px] w-full" label="Obrazek hero (model 3D)" />
+            <div className="relative h-[520px] w-full">
+              <img
+                src={heroVase.url}
+                alt="Model 3D — wazon gotycki"
+                className="h-full w-full object-contain object-right"
+              />
+            </div>
             <div className="absolute left-4 top-24 w-[220px] rounded-xl border border-border bg-card p-4 shadow-sm">
               <div className="text-[11px] font-semibold text-muted-foreground">Ostatni projekt</div>
               <div className="mt-1 text-sm font-semibold">wazon gotycki</div>
