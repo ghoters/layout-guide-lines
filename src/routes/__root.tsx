@@ -77,11 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Projektowanie 3D — modele, wydruki i wizualizacje" },
+      {
+        name: "description",
+        content:
+          "Tworzę modele 3D dopasowane do Twoich potrzeb — do druku 3D, gier i wizualizacji.",
+      },
+      { name: "author", content: "Projektowanie 3D" },
+      { property: "og:title", content: "Projektowanie 3D" },
+      {
+        property: "og:description",
+        content: "Modele 3D do druku, gier i wizualizacji. Od pomysłu do gotowego projektu.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
