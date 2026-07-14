@@ -161,15 +161,10 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section className="relative min-h-[620px] overflow-hidden lg:min-h-[720px]">
-        <img
-          src={heroVase.url}
-          alt="Model 3D — wazon gotycki"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--page)] via-[var(--page)]/80 to-transparent" />
-        <div className="relative mx-auto max-w-[1200px] px-6 pb-20 pt-20">
-          <div className="max-w-2xl pt-8">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--hero-tint)] to-transparent" />
+        <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-6 pb-16 pt-6 lg:grid-cols-2">
+          <div className="pt-8">
             <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
               PROJEKTOWANIE 3D
@@ -213,18 +208,25 @@ function Index() {
             </div>
           </div>
 
-          <div className="absolute bottom-24 right-6 hidden w-[220px] rounded-xl border border-border bg-card/90 p-4 shadow-sm backdrop-blur-sm lg:block">
-            <div className="text-[11px] font-semibold text-muted-foreground">Ostatni projekt</div>
-            <div className="mt-1 text-sm font-semibold">wazon gotycki</div>
-            <div className="text-xs text-muted-foreground">Druk 3D, żywica</div>
-            <div className="mt-3 text-xs text-muted-foreground">
-              Blender, ZBrush,
-              <br />
-              Marmoset Toolbag
-            </div>
-            <div className="mt-2 flex justify-end">
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)] text-primary-foreground">
-                <ArrowRight className="h-3 w-3" />
+          <div className="relative min-h-[520px] overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--hero-tint)] to-transparent lg:min-h-[560px]">
+            <img
+              src={heroVase.url}
+              alt="Model 3D — wazon gotycki"
+              className="h-full w-full object-cover object-right"
+            />
+            <div className="absolute left-4 top-24 w-[220px] rounded-xl border border-border bg-card/90 p-4 shadow-sm backdrop-blur-sm">
+              <div className="text-[11px] font-semibold text-muted-foreground">Ostatni projekt</div>
+              <div className="mt-1 text-sm font-semibold">wazon gotycki</div>
+              <div className="text-xs text-muted-foreground">Druk 3D, żywica</div>
+              <div className="mt-3 text-xs text-muted-foreground">
+                Blender, ZBrush,
+                <br />
+                Marmoset Toolbag
+              </div>
+              <div className="mt-2 flex justify-end">
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)] text-primary-foreground">
+                  <ArrowRight className="h-3 w-3" />
+                </div>
               </div>
             </div>
           </div>
