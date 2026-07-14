@@ -208,11 +208,11 @@ function Index() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[520px] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--hero-tint)] to-transparent lg:min-h-[560px]">
+          <div className="relative min-h-[520px] overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--hero-tint)] to-transparent lg:min-h-[560px]">
             <img
               src={heroVase.url}
               alt="Model 3D — wazon gotycki"
-              className="h-full w-full object-contain object-center"
+              className="h-full w-full object-cover object-right"
             />
             <div className="absolute left-4 top-24 w-[220px] rounded-xl border border-border bg-card/90 p-4 shadow-sm backdrop-blur-sm">
               <div className="text-[11px] font-semibold text-muted-foreground">Ostatni projekt</div>
