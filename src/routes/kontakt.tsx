@@ -59,7 +59,7 @@ function Kontakt() {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">projektowanie3d.pl</span>
+          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">3dmodele.pl</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
@@ -90,14 +90,14 @@ function Kontakt() {
       {/* HERO */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-[1200px] px-6 py-16 lg:py-20">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
+          <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
             KONTAKT
           </div>
           <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
             Porozmawiajmy o <span className="text-[var(--brand)]">projekcie</span>
           </h1>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
             Napisz lub zadzwoń — chętnie omówię szczegóły, zakres i wycenę. Odpowiadam
             zazwyczaj tego samego dnia.
           </p>
@@ -112,13 +112,13 @@ function Kontakt() {
             <div className="rounded-2xl border border-border bg-card p-6">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <Mail className="h-5 w-5" />
+                  <Mail className="h-6 w-6" />
                 </div>
                 <div>
-                  <div className="text-xs text-muted-foreground">E-mail</div>
+                  <div className="text-sm text-muted-foreground">E-mail</div>
                   <a
                     href="mailto:sebjara.ghoters@gmail.com"
-                    className="text-sm font-semibold hover:text-[var(--brand)]"
+                    className="text-base font-semibold hover:text-[var(--brand)]"
                   >
                     sebjara.ghoters@gmail.com
                   </a>
@@ -128,13 +128,13 @@ function Kontakt() {
             <div className="rounded-2xl border border-border bg-card p-6">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <Phone className="h-5 w-5" />
+                  <Phone className="h-6 w-6" />
                 </div>
                 <div>
-                  <div className="text-xs text-muted-foreground">Telefon</div>
+                  <div className="text-sm text-muted-foreground">Telefon</div>
                   <a
                     href="tel:+48576309671"
-                    className="text-sm font-semibold hover:text-[var(--brand)]"
+                    className="text-base font-semibold hover:text-[var(--brand)]"
                   >
                     +48 576 309 671
                   </a>
