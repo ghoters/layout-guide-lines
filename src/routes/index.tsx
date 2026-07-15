@@ -378,9 +378,12 @@ function Index() {
               planować formę, detale i proporcje. Dzięki temu tworzę dopasowane modele do druku,
               gier i wizualizacji.
             </p>
-            <button className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90">
+            <Link
+              to="/kontakt"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
+            >
               Dowiedz się więcej
-            </button>
+            </Link>
           </div>
           <div>
             <div className="mb-4 text-xs font-semibold tracking-wider">NARZĘDZIA, NA KTÓRYCH PRACUJĘ</div>
