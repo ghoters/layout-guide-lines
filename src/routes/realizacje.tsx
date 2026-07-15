@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone } from "lucide-react";
-import { projects } from "@/lib/projects";
+import { useState, useEffect } from "react";
+import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone, X } from "lucide-react";
+import { projects, type Project } from "@/lib/projects";
 
 export const Route = createFileRoute("/realizacje")({
   head: () => ({
@@ -30,7 +31,63 @@ const navLinks = [
   { label: "Kontakt", to: "#kontakt" },
 ];
 
+function Lightbox({ project, onClose }: { project: Project; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm animate-in fade-in duration-200"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={project.title}
+    >
+      <div
+        className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-background shadow-2xl animate-in zoom-in-95 duration-200"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          onClick={onClose}
+          className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-foreground shadow-sm transition-colors hover:bg-muted"
+          aria-label="Zamknij"
+        >
+          <X className="h-5 w-5" />
+        </button>
+        <div className="flex max-h-[80vh] items-center justify-center overflow-hidden bg-black/5">
+          <img
+            src={project.image.url}
+            alt={project.title}
+            className="max-h-[80vh] w-full object-contain"
+          />
+        </div>
+        <div className="flex items-start justify-between border-t border-border p-6">
+          <div>
+            <h2 className="text-lg font-semibold">{project.title}</h2>
+            <p className="mt-1 text-sm text-muted-foreground">{project.tag}</p>
+          </div>
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
+            <ArrowRight className="h-5 w-5" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Realizacje() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
       {/* NAV */}
@@ -95,9 +152,11 @@ function Realizacje() {
       <section className="mx-auto max-w-[1200px] px-6 py-12">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
-            <div
+            <button
               key={p.title}
-              className="group overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg"
+              type="button"
+              onClick={() => setSelectedProject(p)}
+              className="group cursor-pointer overflow-hidden rounded-2xl border border-border bg-card text-left transition-shadow hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2"
             >
               <div className="h-[240px] w-full overflow-hidden">
                 <img
@@ -115,9 +174,14 @@ function Realizacje() {
                   <ArrowRight className="h-4 w-4" />
                 </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
+
+        {/* LIGHTBOX */}
+        {selectedProject && (
+          <Lightbox project={selectedProject} onClose={() => setSelectedProject(null)} />
+        )}
       </section>
 
       {/* CTA */}
