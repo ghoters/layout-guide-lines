@@ -32,9 +32,9 @@ export const Route = createFileRoute("/")({
 });
 
 const navLinks = [
-  { label: "Strona główna", active: true },
-  { label: "Realizacje" },
-  { label: "Kontakt" },
+  { label: "Strona główna", to: "/" },
+  { label: "Realizacje", to: "/realizacje" },
+  { label: "Kontakt", to: "#kontakt" },
 ];
 
 const services = [
