@@ -134,15 +134,27 @@ function Index() {
           <span className="text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
         </div>
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((l) => (
-            <a
-              key={l.label}
-              href="#"
-              className={`text-sm ${l.active ? "font-medium text-[var(--brand)] underline underline-offset-8" : "text-foreground/80 hover:text-foreground"}`}
-            >
-              {l.label}
-            </a>
-          ))}
+          {navLinks.map((l) =>
+            l.to.startsWith("#") ? (
+              <a
+                key={l.label}
+                href={l.to}
+                className="text-sm text-foreground/80 hover:text-foreground"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <Link
+                key={l.label}
+                to={l.to as "/" | "/realizacje"}
+                activeProps={{ className: "text-sm font-medium text-[var(--brand)] underline underline-offset-8" }}
+                inactiveProps={{ className: "text-sm text-foreground/80 hover:text-foreground" }}
+                activeOptions={{ exact: true }}
+              >
+                {l.label}
+              </Link>
+            )
+          )}
         </nav>
         <button className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90">
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
