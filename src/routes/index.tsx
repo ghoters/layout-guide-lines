@@ -256,27 +256,23 @@ function Index() {
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
             WYBRANE REALIZACJE
           </div>
-          <a href="#" className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand)]">
+          <Link
+            to="/realizacje"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand)]"
+          >
             Zobacz wszystkie realizacje <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
-          {projects.map((p, i) => {
-            const imgs = [szkielet3, jozef2, revolwer, martin, elephant, wieza, forest, konstr];
-            const img = imgs[i];
-            return (
+          {projects.map((p) => (
             <div key={p.title} className="space-y-3">
-              {img ? (
-                <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
-                  <img
-                    src={img.url}
-                    alt={p.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              ) : (
-                <Placeholder className="h-[170px] w-full" label="Obrazek realizacji" />
-              )}
+              <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
+                <img
+                  src={p.image.url}
+                  alt={p.title}
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <div className="flex items-start justify-between">
                 <div>
                   <div className="text-sm font-semibold">{p.title}</div>
@@ -285,8 +281,7 @@ function Index() {
                 <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)]" />
               </div>
             </div>
-            );
-          })}
+          ))}
         </div>
       </section>
 
