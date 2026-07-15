@@ -78,7 +78,7 @@ const services = [
 ];
 
 const projects = [
-  { title: "wazon gotycki", tag: "Druk 3D, żywica" },
+  { title: "Szkielet", tag: "Druk 3D, żywica" },
   { title: "Urządzenie sci-fi", tag: "Model 3D, wizualizacja" },
   { title: "Środowisko – koncept", tag: "Game asset" },
   { title: "Broń fantasy", tag: "Game asset" },
