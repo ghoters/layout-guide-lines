@@ -153,7 +153,7 @@ function Index() {
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="text-sm font-semibold tracking-wide">PROJEKTOWANIE 3D</span>
+          <span className="text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
         </div>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
