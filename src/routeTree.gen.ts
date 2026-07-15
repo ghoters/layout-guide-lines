@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RealizacjeRouteImport } from './routes/realizacje'
+import { Route as OMnieRouteImport } from './routes/o-mnie'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as IndexRouteImport } from './routes/index'
 
 const RealizacjeRoute = RealizacjeRouteImport.update({
   id: '/realizacje',
   path: '/realizacje',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OMnieRoute = OMnieRouteImport.update({
+  id: '/o-mnie',
+  path: '/o-mnie',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KontaktRoute = KontaktRouteImport.update({
@@ -32,30 +38,34 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/kontakt': typeof KontaktRoute
+  '/o-mnie': typeof OMnieRoute
   '/realizacje': typeof RealizacjeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/kontakt': typeof KontaktRoute
+  '/o-mnie': typeof OMnieRoute
   '/realizacje': typeof RealizacjeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/kontakt': typeof KontaktRoute
+  '/o-mnie': typeof OMnieRoute
   '/realizacje': typeof RealizacjeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kontakt' | '/realizacje'
+  fullPaths: '/' | '/kontakt' | '/o-mnie' | '/realizacje'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kontakt' | '/realizacje'
-  id: '__root__' | '/' | '/kontakt' | '/realizacje'
+  to: '/' | '/kontakt' | '/o-mnie' | '/realizacje'
+  id: '__root__' | '/' | '/kontakt' | '/o-mnie' | '/realizacje'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   KontaktRoute: typeof KontaktRoute
+  OMnieRoute: typeof OMnieRoute
   RealizacjeRoute: typeof RealizacjeRoute
 }
 
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/realizacje'
       fullPath: '/realizacje'
       preLoaderRoute: typeof RealizacjeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/o-mnie': {
+      id: '/o-mnie'
+      path: '/o-mnie'
+      fullPath: '/o-mnie'
+      preLoaderRoute: typeof OMnieRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kontakt': {
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   KontaktRoute: KontaktRoute,
+  OMnieRoute: OMnieRoute,
   RealizacjeRoute: RealizacjeRoute,
 }
 export const routeTree = rootRouteImport
