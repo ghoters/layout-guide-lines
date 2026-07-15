@@ -65,16 +65,6 @@ const services = [
   },
 ];
 
-const projects = [
-  { title: "Szkielet", tag: "Druk 3D, żywica" },
-  { title: "Figurka św. Józefa", tag: "Druk 3D, FDM" },
-  { title: "Rewolwer", tag: "Game asset" },
-  { title: "Gitarzysta", tag: "Druk 3D, żywica" },
-  { title: "Mecha Elephant", tag: "Game asset" },
-  { title: "Wieża ciśnień", tag: "Druk 3D, FDM" },
-  { title: "Concept lasu", tag: "Ilustracja" },
-  { title: "Element użytkowy", tag: "Druk 3D, FDM" },
-];
 
 const steps = [
   { n: 1, icon: MessageSquare, title: "Rozmowa", desc: "Poznam Twoich potrzeb i oczekiwań." },
