@@ -141,20 +141,6 @@ function Kontakt() {
                 </div>
               </div>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <Instagram className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="text-xs text-muted-foreground">Social media</div>
-                  <div className="mt-1 flex items-center gap-4 text-sm font-semibold">
-                    <span className="hover:text-[var(--brand)]">Instagram</span>
-                    <span className="hover:text-[var(--brand)]">LinkedIn</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* FORM */}
