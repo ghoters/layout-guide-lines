@@ -83,7 +83,7 @@ const projects = [
   { title: "Rewolwer", tag: "Game asset" },
   { title: "Gitarzysta", tag: "Druk 3D, żywica" },
   { title: "Mecha Elephant", tag: "Game asset" },
-  { title: "Figurka kolekcjonerska", tag: "Druk 3D, żywica" },
+  { title: "Wieża ciśnień", tag: "Druk 3D, FDM" },
   { title: "Pojazd koncept", tag: "Game asset" },
   { title: "Wizualizacja produktu", tag: "Wizualizacja 3D" },
 ];
