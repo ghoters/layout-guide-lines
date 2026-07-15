@@ -144,5 +144,10 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-weight: 500;
+  }
+
+  svg.lucide {
+    stroke-width: 2.5px;
   }
 }
