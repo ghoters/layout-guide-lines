@@ -71,13 +71,13 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
             className="max-h-[80vh] w-full object-contain"
           />
         </div>
-        <div className="flex items-start justify-between border-t border-border p-6">
+          <div className="flex items-start justify-between border-t border-border p-6">
           <div>
-            <h2 className="text-lg font-semibold">{project.title}</h2>
-            <p className="mt-1 text-sm text-muted-foreground">{project.tag}</p>
+            <h2 className="text-xl font-semibold">{project.title}</h2>
+            <p className="mt-1 text-base text-muted-foreground">{project.tag}</p>
           </div>
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
-            <ArrowRight className="h-5 w-5" />
+            <ArrowRight className="h-6 w-6" />
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ function Realizacje() {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">projektowanie3d.pl</span>
+          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">3dmodele.pl</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) =>
@@ -137,14 +137,14 @@ function Realizacje() {
       {/* HERO */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-[1200px] px-6 py-16 lg:py-20">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
+          <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
             PORTFOLIO
           </div>
           <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
             Wybrane <span className="text-[var(--brand)]">realizacje</span>
           </h1>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
             Zobacz projekty, nad którymi pracowałem – od modeli do druku 3D, przez assety do gier,
             po wizualizacje i ilustracje.
           </p>
@@ -170,11 +170,11 @@ function Realizacje() {
               </div>
               <div className="flex items-start justify-between p-5">
                 <div>
-                  <div className="text-sm font-semibold">{p.title}</div>
-                  <div className="mt-1 text-xs text-muted-foreground">{p.tag}</div>
+                  <div className="text-base font-semibold">{p.title}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{p.tag}</div>
                 </div>
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-5 w-5" />
                 </div>
               </div>
             </button>
