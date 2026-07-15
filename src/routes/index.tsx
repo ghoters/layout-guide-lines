@@ -84,7 +84,7 @@ const projects = [
   { title: "Gitarzysta", tag: "Druk 3D, żywica" },
   { title: "Mecha Elephant", tag: "Game asset" },
   { title: "Wieża ciśnień", tag: "Druk 3D, FDM" },
-  { title: "Pojazd koncept", tag: "Game asset" },
+  { title: "Concept lasu", tag: "Ilustracja" },
   { title: "Wizualizacja produktu", tag: "Wizualizacja 3D" },
 ];
 
