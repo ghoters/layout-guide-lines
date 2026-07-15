@@ -85,7 +85,7 @@ const projects = [
   { title: "Mecha Elephant", tag: "Game asset" },
   { title: "Wieża ciśnień", tag: "Druk 3D, FDM" },
   { title: "Concept lasu", tag: "Ilustracja" },
-  { title: "Wizualizacja produktu", tag: "Wizualizacja 3D" },
+  { title: "Element użytkowy", tag: "Druk 3D, FDM" },
 ];
 
 const steps = [
