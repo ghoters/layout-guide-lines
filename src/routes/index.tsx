@@ -201,19 +201,19 @@ function Index() {
                 Zobacz realizacje <ArrowRight className="h-4 w-4" />
               </a>
             </div>
-            <div className="mt-12 grid max-w-lg grid-cols-3 gap-6">
+            <div className="mt-12 grid max-w-lg grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
               {[
                 { icon: Clock, value: "6+", label: "lat doświadczenia" },
                 { icon: Mail, value: "1000+", label: "zrealizowanych projektów" },
                 { icon: Star, value: "100%", label: "zaangażowania" },
               ].map((s) => (
-                <div key={s.label} className="flex items-start gap-3">
-                  <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/70 text-[var(--brand)] backdrop-blur-sm">
+                <div key={s.label} className="flex items-center gap-3 sm:items-start">
+                  <div className="mt-0 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-background/70 text-[var(--brand)] backdrop-blur-sm sm:mt-1">
                     <s.icon className="h-4 w-4" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-[var(--brand)] drop-shadow-sm">{s.value}</div>
-                    <div className="text-xs text-foreground/80 drop-shadow-sm">{s.label}</div>
+                    <div className="text-xl font-bold text-[var(--brand)] drop-shadow-sm sm:text-2xl">{s.value}</div>
+                    <div className="text-[11px] text-foreground/80 drop-shadow-sm sm:text-xs">{s.label}</div>
                   </div>
                 </div>
               ))}
