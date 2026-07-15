@@ -2,6 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroVase from "@/assets/wazon2-2.jpg.asset.json";
 import skeleton from "@/assets/szkielet2.jpg.asset.json";
 import jozef from "@/assets/jozef.jpg.asset.json";
+import szkielet3 from "@/assets/szkielet3.jpg.asset.json";
+import jozef2 from "@/assets/jozef2.jpg.asset.json";
+import revolwer from "@/assets/revolwer.jpg.asset.json";
+import martin from "@/assets/martin.jpg.asset.json";
+import elephant from "@/assets/elephant.jpg.asset.json";
+import wieza from "@/assets/wieza.jpg.asset.json";
+import forest from "@/assets/forest.jpg.asset.json";
+import konstr from "@/assets/konstr.jpg.asset.json";
 import {
   ArrowRight,
   Box,
@@ -274,12 +282,15 @@ function Index() {
           </a>
         </div>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
-          {projects.map((p, i) => (
+          {projects.map((p, i) => {
+            const imgs = [szkielet3, jozef2, revolwer, martin, elephant, wieza, forest, konstr];
+            const img = imgs[i];
+            return (
             <div key={p.title} className="space-y-3">
-              {i === 0 || i === 1 ? (
+              {img ? (
                 <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
                   <img
-                    src={i === 0 ? skeleton.url : jozef.url}
+                    src={img.url}
                     alt={p.title}
                     className="h-full w-full object-cover"
                   />
@@ -295,7 +306,8 @@ function Index() {
                 <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)]" />
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
