@@ -370,7 +370,7 @@ function Index() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[220px_1fr_1fr]">
           <div className="h-[240px] w-full overflow-hidden rounded-xl border border-border">
             <img
-              src={awatar3.url}
+              src={awatar4.url}
               alt="Zdjęcie profilowe"
               className="h-full w-full object-cover"
             />
