@@ -208,7 +208,7 @@ function Index() {
             <div className="mt-12 grid max-w-lg grid-cols-3 gap-6">
               {[
                 { icon: Clock, value: "6+", label: "lat doświadczenia" },
-                { icon: Mail, value: "100+", label: "zrealizowanych projektów" },
+                { icon: Mail, value: "1000+", label: "zrealizowanych projektów" },
                 { icon: Star, value: "100%", label: "zaangażowania" },
               ].map((s) => (
                 <div key={s.label} className="flex items-start gap-3">
