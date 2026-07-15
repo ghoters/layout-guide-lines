@@ -1,16 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroVase from "@/assets/wazon2-2.jpg.asset.json";
-import skeleton from "@/assets/szkielet2.jpg.asset.json";
 import awatar3 from "@/assets/awatar3.jpg.asset.json";
-import jozef from "@/assets/jozef.jpg.asset.json";
-import szkielet3 from "@/assets/szkielet3.jpg.asset.json";
-import jozef2 from "@/assets/jozef2.jpg.asset.json";
-import revolwer from "@/assets/revolwer.jpg.asset.json";
-import martin from "@/assets/martin.jpg.asset.json";
-import elephant from "@/assets/elephant.jpg.asset.json";
-import wieza from "@/assets/wieza.jpg.asset.json";
-import forest from "@/assets/forest.jpg.asset.json";
-import konstr from "@/assets/konstr.jpg.asset.json";
+import { projects } from "@/lib/projects";
 import {
   ArrowRight,
   Box,
@@ -41,9 +32,9 @@ export const Route = createFileRoute("/")({
 });
 
 const navLinks = [
-  { label: "Strona główna", active: true },
-  { label: "Realizacje" },
-  { label: "Kontakt" },
+  { label: "Strona główna", to: "/" },
+  { label: "Realizacje", to: "/realizacje" },
+  { label: "Kontakt", to: "#kontakt" },
 ];
 
 const services = [
@@ -74,16 +65,6 @@ const services = [
   },
 ];
 
-const projects = [
-  { title: "Szkielet", tag: "Druk 3D, żywica" },
-  { title: "Figurka św. Józefa", tag: "Druk 3D, FDM" },
-  { title: "Rewolwer", tag: "Game asset" },
-  { title: "Gitarzysta", tag: "Druk 3D, żywica" },
-  { title: "Mecha Elephant", tag: "Game asset" },
-  { title: "Wieża ciśnień", tag: "Druk 3D, FDM" },
-  { title: "Concept lasu", tag: "Ilustracja" },
-  { title: "Element użytkowy", tag: "Druk 3D, FDM" },
-];
 
 const steps = [
   { n: 1, icon: MessageSquare, title: "Rozmowa", desc: "Poznam Twoich potrzeb i oczekiwań." },
@@ -153,15 +134,27 @@ function Index() {
           <span className="text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
         </div>
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((l) => (
-            <a
-              key={l.label}
-              href="#"
-              className={`text-sm ${l.active ? "font-medium text-[var(--brand)] underline underline-offset-8" : "text-foreground/80 hover:text-foreground"}`}
-            >
-              {l.label}
-            </a>
-          ))}
+          {navLinks.map((l) =>
+            l.to.startsWith("#") ? (
+              <a
+                key={l.label}
+                href={l.to}
+                className="text-sm text-foreground/80 hover:text-foreground"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <Link
+                key={l.label}
+                to={l.to as "/" | "/realizacje"}
+                activeProps={{ className: "text-sm font-medium text-[var(--brand)] underline underline-offset-8" }}
+                inactiveProps={{ className: "text-sm text-foreground/80 hover:text-foreground" }}
+                activeOptions={{ exact: true }}
+              >
+                {l.label}
+              </Link>
+            )
+          )}
         </nav>
         <button className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90">
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
@@ -275,27 +268,23 @@ function Index() {
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
             WYBRANE REALIZACJE
           </div>
-          <a href="#" className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand)]">
+          <Link
+            to="/realizacje"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand)]"
+          >
             Zobacz wszystkie realizacje <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
-          {projects.map((p, i) => {
-            const imgs = [szkielet3, jozef2, revolwer, martin, elephant, wieza, forest, konstr];
-            const img = imgs[i];
-            return (
+          {projects.map((p) => (
             <div key={p.title} className="space-y-3">
-              {img ? (
-                <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
-                  <img
-                    src={img.url}
-                    alt={p.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              ) : (
-                <Placeholder className="h-[170px] w-full" label="Obrazek realizacji" />
-              )}
+              <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
+                <img
+                  src={p.image.url}
+                  alt={p.title}
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <div className="flex items-start justify-between">
                 <div>
                   <div className="text-sm font-semibold">{p.title}</div>
@@ -304,8 +293,7 @@ function Index() {
                 <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)]" />
               </div>
             </div>
-            );
-          })}
+          ))}
         </div>
       </section>
 
