@@ -191,9 +191,12 @@ function Index() {
               Od pomysłu do gotowego projektu.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
-              <button className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">
+              <Link
+                to="/kontakt"
+                className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+              >
                 Wyślij zapytanie <ArrowRight className="h-4 w-4" />
-              </button>
+              </Link>
               <a href="#realizacje" className="inline-flex items-center gap-2 text-sm font-medium drop-shadow-sm">
                 Zobacz realizacje <ArrowRight className="h-4 w-4" />
               </a>
