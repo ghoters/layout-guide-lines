@@ -411,17 +411,17 @@ function Index() {
             <h3 className="text-xl font-bold">Masz pomysł na projekt?</h3>
             <p className="mt-1 text-sm text-muted-foreground">Napisz lub zadzwoń – chętnie pomogę.</p>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
               <Mail className="h-4 w-4" />
             </div>
-            <span className="text-sm">sebjara.ghoters@gmail.com</span>
+            <span className="min-w-0 truncate text-sm">sebjara.ghoters@gmail.com</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
               <Phone className="h-4 w-4" />
             </div>
-            <span className="text-sm">+48 576309671</span>
+            <span className="text-sm">+48 576 309 671</span>
           </div>
           <Link
             to="/kontakt"
