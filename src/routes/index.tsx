@@ -421,7 +421,7 @@ function Index() {
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
               <Mail className="h-4 w-4" />
             </div>
-            <span className="text-sm">hello@twojadomena.pl</span>
+            <span className="text-sm">sebjara.ghoters@gmail.com</span>
           </div>
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
