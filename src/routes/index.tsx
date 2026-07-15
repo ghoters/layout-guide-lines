@@ -213,19 +213,21 @@ function Index() {
             </div>
           </div>
           <div className="pointer-events-none absolute left-[54%] top-[15rem] lg:left-[54%] xl:left-[50%] hidden lg:block">
-            <div className="pointer-events-auto w-[220px] rounded-2xl bg-background/95 p-6 shadow-xl backdrop-blur-sm">
+            <div className="pointer-events-auto w-[200px] rounded-2xl bg-background/95 pl-6 pt-6 pb-6 pr-4 shadow-xl backdrop-blur-sm">
               <div className="text-xs font-semibold text-[var(--brand)]">Ostatni projekt</div>
               <div className="mt-3 text-lg font-bold">wazon gotycki</div>
               <div className="mt-2 text-sm text-muted-foreground">Druk 3D, żywica</div>
-              <div className="mt-4 flex items-start justify-between gap-3">
+              <div className="mt-4 grid grid-cols-[auto_1fr_auto_1fr] items-start gap-2">
                 <div className="text-sm text-muted-foreground">
                   Blender, ZBrush,
                   <br />
                   Marmoset Toolbag
                 </div>
+                <div />
                 <div className="flex h-5 w-5 shrink-0 items-center justify-center self-end rounded-full bg-[var(--brand)]">
                   <div className="h-2.5 w-2.5 rounded-full bg-primary-foreground" />
                 </div>
+                <div />
               </div>
             </div>
           </div>
