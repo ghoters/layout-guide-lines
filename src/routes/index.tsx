@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroVase from "@/assets/wazon2-2.jpg.asset.json";
+import skeleton from "@/assets/szkielet.jpg.asset.json";
 import {
   ArrowRight,
   Box,
@@ -272,9 +273,19 @@ function Index() {
           </a>
         </div>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
-          {projects.map((p) => (
+          {projects.map((p, i) => (
             <div key={p.title} className="space-y-3">
-              <Placeholder className="h-[170px] w-full" label="Obrazek realizacji" />
+              {i === 0 ? (
+                <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
+                  <img
+                    src={skeleton.url}
+                    alt={p.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ) : (
+                <Placeholder className="h-[170px] w-full" label="Obrazek realizacji" />
+              )}
               <div className="flex items-start justify-between">
                 <div>
                   <div className="text-sm font-semibold">{p.title}</div>
