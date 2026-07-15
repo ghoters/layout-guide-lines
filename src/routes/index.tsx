@@ -162,7 +162,7 @@ function Index() {
 
       {/* HERO */}
       <section className="relative">
-        <div className="relative mx-auto max-w-[1200px] px-6 pb-20 pt-20">
+        <div className="relative mx-auto max-w-[1200px] overflow-hidden px-6 pb-20 pt-20">
           <img
             src={heroVase.url}
             alt="Model 3D — wazon gotycki"
