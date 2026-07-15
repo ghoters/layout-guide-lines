@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroVase from "@/assets/wazon2-2.jpg.asset.json";
-import skeleton from "@/assets/szkielet.jpg.asset.json";
+import skeleton from "@/assets/szkielet2.jpg.asset.json";
 import {
   ArrowRight,
   Box,
