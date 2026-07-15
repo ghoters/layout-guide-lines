@@ -174,7 +174,7 @@ function Index() {
           />
           <div className="relative mx-auto min-h-[620px] max-w-[1200px] px-6 pb-20 pt-20 lg:min-h-[620px]">
           <div className="max-w-2xl pt-8">
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
               PROJEKTOWANIE 3D
             </div>
@@ -185,7 +185,7 @@ function Index() {
               <br />
               Twoich potrzeb.
             </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-foreground/90 drop-shadow-sm">
+            <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/90 drop-shadow-sm">
               Modele do druku 3D, gier, wizualizacji i nie tylko.
               <br />
               Od pomysłu do gotowego projektu.
@@ -197,8 +197,8 @@ function Index() {
               >
                 Wyślij zapytanie <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="#realizacje" className="inline-flex items-center gap-2 text-base font-medium drop-shadow-sm">
-                Zobacz realizacje <ArrowRight className="h-5 w-5" />
+              <a href="#realizacje" className="inline-flex items-center gap-2 text-sm font-medium drop-shadow-sm">
+                Zobacz realizacje <ArrowRight className="h-4 w-4" />
               </a>
             </div>
             <div className="mt-12 grid max-w-lg grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
@@ -209,11 +209,11 @@ function Index() {
               ].map((s) => (
                 <div key={s.label} className="flex items-center gap-3 sm:items-start">
                   <div className="mt-0 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-background/70 text-[var(--brand)] backdrop-blur-sm sm:mt-1">
-                    <s.icon className="h-5 w-5" />
+                    <s.icon className="h-4 w-4" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-[var(--brand)] drop-shadow-sm sm:text-3xl">{s.value}</div>
-                    <div className="text-xs text-foreground/80 drop-shadow-sm sm:text-sm">{s.label}</div>
+                    <div className="text-xl font-bold text-[var(--brand)] drop-shadow-sm sm:text-2xl">{s.value}</div>
+                    <div className="text-[11px] text-foreground/80 drop-shadow-sm sm:text-xs">{s.label}</div>
                   </div>
                 </div>
               ))}
@@ -221,7 +221,7 @@ function Index() {
           </div>
           <div className="pointer-events-none absolute left-[60%] top-[15rem] lg:left-[60%] xl:left-[56%] hidden lg:block">
             <div className="pointer-events-auto w-fit rounded-2xl bg-background/95 p-6 shadow-xl backdrop-blur-sm">
-              <div className="text-xs font-black text-[var(--brand)]">Ostatni projekt</div>
+              <div className="text-xs font-semibold text-[var(--brand)]">Ostatni projekt</div>
               <div className="mt-3 text-lg font-bold">wazon gotycki</div>
               <div className="mt-2 text-sm text-muted-foreground">Druk 3D, żywica</div>
               <div className="mt-4 flex items-start justify-between gap-3">
@@ -242,7 +242,7 @@ function Index() {
 
       {/* SERVICES */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
-        <div className="mb-6 flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
+        <div className="mb-6 flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
           CO MOGĘ DLA CIEBIE ZROBIĆ
         </div>
@@ -253,14 +253,14 @@ function Index() {
               className="flex h-[210px] flex-col justify-between rounded-2xl border border-border bg-card p-5"
             >
               <div>
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <s.icon className="h-6 w-6" />
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
+                  <s.icon className="h-5 w-5" />
                 </div>
-                <div className="text-base font-semibold">{s.title}</div>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                <div className="text-sm font-semibold">{s.title}</div>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
               </div>
               <div className="flex justify-end text-[var(--brand)]">
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4" />
               </div>
             </div>
           ))}
@@ -270,15 +270,15 @@ function Index() {
       {/* PROJECTS */}
       <section id="realizacje" className="mx-auto max-w-[1200px] px-6 py-10">
         <div className="mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
             WYBRANE REALIZACJE
           </div>
           <Link
             to="/realizacje"
-            className="inline-flex items-center gap-2 text-base font-medium text-[var(--brand)]"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand)]"
           >
-            Zobacz wszystkie realizacje <ArrowRight className="h-5 w-5" />
+            Zobacz wszystkie realizacje <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
@@ -293,10 +293,10 @@ function Index() {
               </div>
               <div className="flex items-start justify-between">
                 <div>
-                  <div className="text-base font-semibold">{p.title}</div>
-                  <div className="text-sm text-muted-foreground">{p.tag}</div>
+                  <div className="text-sm font-semibold">{p.title}</div>
+                  <div className="text-xs text-muted-foreground">{p.tag}</div>
                 </div>
-                <ArrowRight className="mt-1 h-5 w-5 text-[var(--brand)]" />
+                <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)]" />
               </div>
             </div>
           ))}
@@ -307,7 +307,7 @@ function Index() {
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-2">
           <div>
-            <div className="mb-8 text-sm font-semibold tracking-wider text-foreground">
+            <div className="mb-8 text-xs font-semibold tracking-wider text-foreground">
               JAK WYGLĄDA WSPÓŁPRACA
             </div>
             <div className="relative">
@@ -316,13 +316,13 @@ function Index() {
                 {steps.map((s) => (
                   <div key={s.n} className="flex flex-col items-center text-center">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-soft)] text-[var(--brand)]">
-                      <s.icon className="h-6 w-6" />
+                      <s.icon className="h-5 w-5" />
                     </div>
-                    <div className="mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-muted text-sm font-semibold text-muted-foreground">
+                    <div className="mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-muted text-xs font-semibold text-muted-foreground">
                       {s.n}
                     </div>
-                    <div className="mt-3 text-sm font-semibold">{s.title}</div>
-                    <div className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    <div className="mt-3 text-xs font-semibold">{s.title}</div>
+                    <div className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
                       {s.desc}
                     </div>
                   </div>
@@ -332,18 +332,18 @@ function Index() {
           </div>
 
           <div>
-            <div className="mb-8 text-sm font-semibold tracking-wider text-foreground">
+            <div className="mb-8 text-xs font-semibold tracking-wider text-foreground">
               DLACZEGO WARTO ZE MNĄ WSPÓŁPRACOWAĆ?
             </div>
             <div className="grid grid-cols-2 gap-x-8 gap-y-6">
               {advantages.map((a) => (
                 <div key={a.title} className="flex gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--brand)]">
-                    <a.icon className="h-6 w-6" />
+                    <a.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-base font-semibold">{a.title}</div>
-                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{a.desc}</p>
+                    <div className="text-sm font-semibold">{a.title}</div>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{a.desc}</p>
                   </div>
                 </div>
               ))}
@@ -354,7 +354,7 @@ function Index() {
 
       {/* ABOUT + TOOLS */}
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
-        <div className="mb-8 flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
+        <div className="mb-8 flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
           O MNIE
         </div>
@@ -367,37 +367,37 @@ function Index() {
             />
           </div>
           <div>
-            <h3 className="text-2xl font-bold">Od szkicu do gotowego modelu.</h3>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+            <h3 className="text-xl font-bold">Od szkicu do gotowego modelu.</h3>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Moja przygoda z grafiką zaczęła się od rysunku i szkiców. Z czasem przeniosłem się do
               grafiki cyfrowej – tworzyłem ilustracje, grafiki wektorowe, projekty do druku, UI i
               concept art.
             </p>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Obecnie specjalizuję się w projektowaniu 3D. Doświadczenie w 2D pomaga mi lepiej
               planować formę, detale i proporcje. Dzięki temu tworzę dopasowane modele do druku,
               gier i wizualizacji.
             </p>
             <Link
               to="/kontakt"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-base font-medium text-primary-foreground hover:opacity-90"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
             >
               Dowiedz się więcej
             </Link>
           </div>
           <div>
-            <div className="mb-4 text-sm font-semibold tracking-wider">NARZĘDZIA, NA KTÓRYCH PRACUJĘ</div>
+            <div className="mb-4 text-xs font-semibold tracking-wider">NARZĘDZIA, NA KTÓRYCH PRACUJĘ</div>
             <div className="flex flex-wrap gap-2">
               {tools.map((t) => (
                 <span
                   key={t}
-                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm font-medium"
+                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium"
                 >
                   {t}
                 </span>
               ))}
-              <span className="inline-flex items-center gap-1 rounded-lg border border-border bg-card px-3 py-1.5 text-sm font-medium">
-                i inne <Plus className="h-4 w-4" />
+              <span className="inline-flex items-center gap-1 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium">
+                i inne <Plus className="h-3 w-3" />
               </span>
             </div>
           </div>
@@ -408,26 +408,26 @@ function Index() {
       <section className="mx-auto max-w-[1200px] px-6 pb-10">
         <div className="grid grid-cols-1 items-center gap-6 rounded-2xl bg-[var(--brand-soft)] px-8 py-8 lg:grid-cols-[1.2fr_1fr_1fr_auto]">
           <div>
-            <h3 className="text-2xl font-bold">Masz pomysł na projekt?</h3>
-            <p className="mt-1 text-base text-muted-foreground">Napisz lub zadzwoń – chętnie pomogę.</p>
+            <h3 className="text-xl font-bold">Masz pomysł na projekt?</h3>
+            <p className="mt-1 text-sm text-muted-foreground">Napisz lub zadzwoń – chętnie pomogę.</p>
           </div>
           <div className="flex min-w-0 items-center gap-3">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
-              <Mail className="h-5 w-5" />
+              <Mail className="h-4 w-4" />
             </div>
-            <span className="min-w-0 truncate text-base">sebjara.ghoters@gmail.com</span>
+            <span className="min-w-0 truncate text-sm">sebjara.ghoters@gmail.com</span>
           </div>
           <div className="flex min-w-0 items-center gap-3">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
-              <Phone className="h-5 w-5" />
+              <Phone className="h-4 w-4" />
             </div>
-            <span className="text-base">+48 576 309 671</span>
+            <span className="text-sm">+48 576 309 671</span>
           </div>
           <Link
             to="/kontakt"
-            className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-base font-medium text-primary-foreground hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
           >
-            Wyślij zapytanie <ArrowRight className="h-5 w-5" />
+            Wyślij zapytanie <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
@@ -437,15 +437,15 @@ function Index() {
         <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
-              <Settings className="h-5 w-5" />
+              <Settings className="h-4 w-4" />
             </div>
-            <span className="text-sm font-semibold tracking-wide">3dmodele.pl</span>
+            <span className="text-xs font-semibold tracking-wide">projektowanie3d.pl</span>
           </div>
-          <div className="text-sm text-muted-foreground">© 2024 Wszelkie prawa zastrzeżone.</div>
+          <div className="text-xs text-muted-foreground">© 2024 Wszelkie prawa zastrzeżone.</div>
           <div className="flex items-center gap-4 text-[var(--brand)]">
-            <Instagram className="h-5 w-5" />
-            <span className="text-sm font-bold">A</span>
-            <Linkedin className="h-5 w-5" />
+            <Instagram className="h-4 w-4" />
+            <span className="text-xs font-bold">A</span>
+            <Linkedin className="h-4 w-4" />
           </div>
         </div>
       </footer>

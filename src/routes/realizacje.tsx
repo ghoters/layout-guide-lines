@@ -71,13 +71,13 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
             className="max-h-[80vh] w-full object-contain"
           />
         </div>
-          <div className="flex items-start justify-between border-t border-border p-6">
+        <div className="flex items-start justify-between border-t border-border p-6">
           <div>
-            <h2 className="text-xl font-semibold">{project.title}</h2>
-            <p className="mt-1 text-base text-muted-foreground">{project.tag}</p>
+            <h2 className="text-lg font-semibold">{project.title}</h2>
+            <p className="mt-1 text-sm text-muted-foreground">{project.tag}</p>
           </div>
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
-            <ArrowRight className="h-6 w-6" />
+            <ArrowRight className="h-5 w-5" />
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ function Realizacje() {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">3dmodele.pl</span>
+          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">projektowanie3d.pl</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) =>
@@ -137,14 +137,14 @@ function Realizacje() {
       {/* HERO */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-[1200px] px-6 py-16 lg:py-20">
-          <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
             PORTFOLIO
           </div>
           <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
             Wybrane <span className="text-[var(--brand)]">realizacje</span>
           </h1>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
             Zobacz projekty, nad którymi pracowałem – od modeli do druku 3D, przez assety do gier,
             po wizualizacje i ilustracje.
           </p>
@@ -170,11 +170,11 @@ function Realizacje() {
               </div>
               <div className="flex items-start justify-between p-5">
                 <div>
-                  <div className="text-base font-semibold">{p.title}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{p.tag}</div>
+                  <div className="text-sm font-semibold">{p.title}</div>
+                  <div className="mt-1 text-xs text-muted-foreground">{p.tag}</div>
                 </div>
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-4 w-4" />
                 </div>
               </div>
             </button>
@@ -191,26 +191,26 @@ function Realizacje() {
       <section id="kontakt" className="mx-auto max-w-[1200px] px-6 pb-10">
         <div className="grid grid-cols-1 items-center gap-6 rounded-2xl bg-[var(--brand-soft)] px-8 py-8 lg:grid-cols-[1.2fr_1fr_1fr_auto]">
           <div>
-            <h3 className="text-2xl font-bold">Masz pomysł na projekt?</h3>
-            <p className="mt-1 text-base text-muted-foreground">Napisz lub zadzwoń – chętnie pomogę.</p>
+            <h3 className="text-xl font-bold">Masz pomysł na projekt?</h3>
+            <p className="mt-1 text-sm text-muted-foreground">Napisz lub zadzwoń – chętnie pomogę.</p>
           </div>
           <div className="flex min-w-0 items-center gap-3">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
-              <Mail className="h-5 w-5" />
+              <Mail className="h-4 w-4" />
             </div>
-            <span className="min-w-0 truncate text-base">sebjara.ghoters@gmail.com</span>
+            <span className="min-w-0 truncate text-sm">sebjara.ghoters@gmail.com</span>
           </div>
           <div className="flex min-w-0 items-center gap-3">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
-              <Phone className="h-5 w-5" />
+              <Phone className="h-4 w-4" />
             </div>
-            <span className="text-base">+48 576 309 671</span>
+            <span className="text-sm">+48 576 309 671</span>
           </div>
           <Link
             to="/kontakt"
-            className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-base font-medium text-primary-foreground hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
           >
-            Wyślij zapytanie <ArrowRight className="h-5 w-5" />
+            Wyślij zapytanie <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
@@ -220,15 +220,15 @@ function Realizacje() {
         <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
-              <Settings className="h-5 w-5" />
+              <Settings className="h-4 w-4" />
             </div>
-            <span className="text-sm font-semibold tracking-wide">3dmodele.pl</span>
+            <span className="text-xs font-semibold tracking-wide">projektowanie3d.pl</span>
           </Link>
-          <div className="text-sm text-muted-foreground">© 2024 Wszelkie prawa zastrzeżone.</div>
+          <div className="text-xs text-muted-foreground">© 2024 Wszelkie prawa zastrzeżone.</div>
           <div className="flex items-center gap-4 text-[var(--brand)]">
-            <Instagram className="h-5 w-5" />
-            <span className="text-sm font-bold">A</span>
-            <Linkedin className="h-5 w-5" />
+            <Instagram className="h-4 w-4" />
+            <span className="text-xs font-bold">A</span>
+            <Linkedin className="h-4 w-4" />
           </div>
         </div>
       </footer>
