@@ -1,16 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroVase from "@/assets/wazon2-2.jpg.asset.json";
-import skeleton from "@/assets/szkielet2.jpg.asset.json";
 import awatar3 from "@/assets/awatar3.jpg.asset.json";
-import jozef from "@/assets/jozef.jpg.asset.json";
-import szkielet3 from "@/assets/szkielet3.jpg.asset.json";
-import jozef2 from "@/assets/jozef2.jpg.asset.json";
-import revolwer from "@/assets/revolwer.jpg.asset.json";
-import martin from "@/assets/martin.jpg.asset.json";
-import elephant from "@/assets/elephant.jpg.asset.json";
-import wieza from "@/assets/wieza.jpg.asset.json";
-import forest from "@/assets/forest.jpg.asset.json";
-import konstr from "@/assets/konstr.jpg.asset.json";
+import { projects } from "@/lib/projects";
 import {
   ArrowRight,
   Box,
