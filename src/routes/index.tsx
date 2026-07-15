@@ -42,10 +42,7 @@ export const Route = createFileRoute("/")({
 
 const navLinks = [
   { label: "Strona główna", active: true },
-  { label: "O mnie" },
   { label: "Realizacje" },
-  { label: "Wydruki 3D" },
-  { label: "FAQ" },
   { label: "Kontakt" },
 ];
 
