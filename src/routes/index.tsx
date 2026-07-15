@@ -131,7 +131,7 @@ function Index() {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="truncate text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
+          <span className="truncate text-xs font-semibold tracking-wide sm:text-sm">projektowanie3d.pl</span>
         </div>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) =>
@@ -158,7 +158,7 @@ function Index() {
         </nav>
         <Link
           to="/kontakt"
-          className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
+          className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[var(--brand)] px-3 py-2 text-xs font-medium text-primary-foreground hover:opacity-90 sm:px-5 sm:py-2.5 sm:text-sm"
         >
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
         </Link>
