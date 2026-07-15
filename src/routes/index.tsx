@@ -80,7 +80,7 @@ const services = [
 const projects = [
   { title: "Szkielet", tag: "Druk 3D, żywica" },
   { title: "Figurka św. Józefa", tag: "Druk 3D, FDM" },
-  { title: "Środowisko – koncept", tag: "Game asset" },
+  { title: "Rewolwer", tag: "Game asset" },
   { title: "Broń fantasy", tag: "Game asset" },
   { title: "Helm sci-fi", tag: "Druk 3D, FDM" },
   { title: "Figurka kolekcjonerska", tag: "Druk 3D, żywica" },
