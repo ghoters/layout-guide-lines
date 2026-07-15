@@ -148,15 +148,15 @@ function Kontakt() {
             {sent ? (
               <div className="flex h-full flex-col items-center justify-center py-10 text-center">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <CheckCircle2 className="h-7 w-7" />
+                  <CheckCircle2 className="h-8 w-8" />
                 </div>
-                <h3 className="mt-5 text-lg font-semibold">Wiadomość wysłana</h3>
-                <p className="mt-2 max-w-xs text-sm text-muted-foreground">
+                <h3 className="mt-5 text-xl font-semibold">Wiadomość wysłana</h3>
+                <p className="mt-2 max-w-xs text-base text-muted-foreground">
                   Dziękuję za kontakt. Odpowiem najszybciej jak to możliwe.
                 </p>
                 <button
                   onClick={() => setSent(false)}
-                  className="mt-6 text-sm font-medium text-[var(--brand)] hover:underline"
+                  className="mt-6 text-base font-medium text-[var(--brand)] hover:underline"
                 >
                   Wyślij kolejną wiadomość
                 </button>
