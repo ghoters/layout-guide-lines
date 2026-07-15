@@ -226,28 +226,28 @@ function Kontakt() {
       <section className="mx-auto max-w-[1200px] px-6 pb-10">
         <div className="grid grid-cols-1 items-center gap-6 rounded-2xl bg-[var(--brand-soft)] px-8 py-8 lg:grid-cols-[1.2fr_1fr_1fr_auto]">
           <div>
-            <h3 className="text-xl font-bold">Wolisz napisać bezpośrednio?</h3>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <h3 className="text-2xl font-bold">Wolisz napisać bezpośrednio?</h3>
+            <p className="mt-1 text-base text-muted-foreground">
               Jestem też dostępny mailowo i telefonicznie.
             </p>
           </div>
           <div className="flex min-w-0 items-center gap-3">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
-              <Mail className="h-4 w-4" />
+              <Mail className="h-5 w-5" />
             </div>
-            <span className="min-w-0 truncate text-sm">sebjara.ghoters@gmail.com</span>
+            <span className="min-w-0 truncate text-base">sebjara.ghoters@gmail.com</span>
           </div>
           <div className="flex min-w-0 items-center gap-3">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
-              <Phone className="h-4 w-4" />
+              <Phone className="h-5 w-5" />
             </div>
-            <span className="text-sm">+48 576 309 671</span>
+            <span className="text-base">+48 576 309 671</span>
           </div>
           <a
             href="mailto:sebjara.ghoters@gmail.com"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-base font-medium text-primary-foreground hover:opacity-90"
           >
-            Napisz maila <ArrowRight className="h-4 w-4" />
+            Napisz maila <ArrowRight className="h-5 w-5" />
           </a>
         </div>
       </section>
