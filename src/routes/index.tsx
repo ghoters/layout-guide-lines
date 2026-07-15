@@ -242,7 +242,7 @@ function Index() {
 
       {/* SERVICES */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
-        <div className="mb-6 flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
+        <div className="mb-6 flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
           CO MOGĘ DLA CIEBIE ZROBIĆ
         </div>
@@ -253,14 +253,14 @@ function Index() {
               className="flex h-[210px] flex-col justify-between rounded-2xl border border-border bg-card p-5"
             >
               <div>
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <s.icon className="h-5 w-5" />
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
+                  <s.icon className="h-6 w-6" />
                 </div>
-                <div className="text-sm font-semibold">{s.title}</div>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
+                <div className="text-base font-semibold">{s.title}</div>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               </div>
               <div className="flex justify-end text-[var(--brand)]">
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-5 w-5" />
               </div>
             </div>
           ))}
@@ -270,15 +270,15 @@ function Index() {
       {/* PROJECTS */}
       <section id="realizacje" className="mx-auto max-w-[1200px] px-6 py-10">
         <div className="mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
+          <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
             WYBRANE REALIZACJE
           </div>
           <Link
             to="/realizacje"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand)]"
+            className="inline-flex items-center gap-2 text-base font-medium text-[var(--brand)]"
           >
-            Zobacz wszystkie realizacje <ArrowRight className="h-4 w-4" />
+            Zobacz wszystkie realizacje <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
@@ -293,10 +293,10 @@ function Index() {
               </div>
               <div className="flex items-start justify-between">
                 <div>
-                  <div className="text-sm font-semibold">{p.title}</div>
-                  <div className="text-xs text-muted-foreground">{p.tag}</div>
+                  <div className="text-base font-semibold">{p.title}</div>
+                  <div className="text-sm text-muted-foreground">{p.tag}</div>
                 </div>
-                <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)]" />
+                <ArrowRight className="mt-1 h-5 w-5 text-[var(--brand)]" />
               </div>
             </div>
           ))}
