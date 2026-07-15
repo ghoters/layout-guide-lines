@@ -307,7 +307,7 @@ function Index() {
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-2">
           <div>
-            <div className="mb-8 text-xs font-semibold tracking-wider text-foreground">
+            <div className="mb-8 text-sm font-semibold tracking-wider text-foreground">
               JAK WYGLĄDA WSPÓŁPRACA
             </div>
             <div className="relative">
@@ -316,13 +316,13 @@ function Index() {
                 {steps.map((s) => (
                   <div key={s.n} className="flex flex-col items-center text-center">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-soft)] text-[var(--brand)]">
-                      <s.icon className="h-5 w-5" />
+                      <s.icon className="h-6 w-6" />
                     </div>
-                    <div className="mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-muted text-xs font-semibold text-muted-foreground">
+                    <div className="mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-muted text-sm font-semibold text-muted-foreground">
                       {s.n}
                     </div>
-                    <div className="mt-3 text-xs font-semibold">{s.title}</div>
-                    <div className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                    <div className="mt-3 text-sm font-semibold">{s.title}</div>
+                    <div className="mt-1 text-xs leading-relaxed text-muted-foreground">
                       {s.desc}
                     </div>
                   </div>
@@ -332,18 +332,18 @@ function Index() {
           </div>
 
           <div>
-            <div className="mb-8 text-xs font-semibold tracking-wider text-foreground">
+            <div className="mb-8 text-sm font-semibold tracking-wider text-foreground">
               DLACZEGO WARTO ZE MNĄ WSPÓŁPRACOWAĆ?
             </div>
             <div className="grid grid-cols-2 gap-x-8 gap-y-6">
               {advantages.map((a) => (
                 <div key={a.title} className="flex gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--brand)]">
-                    <a.icon className="h-5 w-5" />
+                    <a.icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold">{a.title}</div>
-                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{a.desc}</p>
+                    <div className="text-base font-semibold">{a.title}</div>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{a.desc}</p>
                   </div>
                 </div>
               ))}
@@ -354,7 +354,7 @@ function Index() {
 
       {/* ABOUT + TOOLS */}
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
-        <div className="mb-8 flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
+        <div className="mb-8 flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
           O MNIE
         </div>
