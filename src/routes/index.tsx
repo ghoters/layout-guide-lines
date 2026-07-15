@@ -218,7 +218,11 @@ function Index() {
               <div className="mt-3 text-lg font-bold">wazon gotycki</div>
               <div className="mt-2 text-sm text-muted-foreground">Druk 3D, żywica</div>
               <div className="mt-4 flex items-start justify-between gap-3">
-                <div className="shrink-0 whitespace-nowrap text-sm text-muted-foreground">Blender, ZBrush, Marmoset Toolbag</div>
+                <div className="shrink-0 text-sm text-muted-foreground">
+                  Blender, ZBrush,
+                  <br />
+                  Marmoset Toolbag
+                </div>
                 <div className="flex h-5 w-5 shrink-0 items-center justify-center self-end rounded-full bg-[var(--brand)]">
                   <div className="h-2.5 w-2.5 rounded-full bg-primary-foreground" />
                 </div>
