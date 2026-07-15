@@ -178,7 +178,7 @@ function Index() {
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
               PROJEKTOWANIE 3D
             </div>
-            <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight drop-shadow-sm md:text-6xl">
+            <h1 className="mt-5 text-4xl font-bold leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl md:text-6xl">
               Tworzę modele <span className="text-[var(--brand)]">3D</span>
               <br />
               dopasowane do
