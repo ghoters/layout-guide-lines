@@ -156,9 +156,12 @@ function Index() {
             )
           )}
         </nav>
-        <button className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90">
+        <Link
+          to="/kontakt"
+          className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
+        >
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
-        </button>
+        </Link>
       </header>
 
       {/* HERO */}
