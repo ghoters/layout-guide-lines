@@ -91,12 +91,12 @@ function Realizacje() {
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
       {/* NAV */}
-      <header className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-background">
+      <header className="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-6 sm:flex sm:items-center sm:justify-between">
+        <Link to="/" className="flex min-w-0 items-center gap-2">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
+          <span className="truncate text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) =>
@@ -128,7 +128,7 @@ function Realizacje() {
         </nav>
         <Link
           to="/kontakt"
-          className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
+          className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
         >
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
         </Link>
