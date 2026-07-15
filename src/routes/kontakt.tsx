@@ -165,8 +165,8 @@ function Kontakt() {
               <form onSubmit={onSubmit} className="space-y-5">
                 <div className="space-y-5">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="flex items-center gap-2 text-sm font-medium">
-                      <User className="h-4 w-4 text-[var(--brand)]" />
+                    <label htmlFor="name" className="flex items-center gap-2 text-base font-medium">
+                      <User className="h-5 w-5 text-[var(--brand)]" />
                       Imię i nazwisko
                     </label>
                     <input
@@ -175,13 +175,13 @@ function Kontakt() {
                       required
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-[var(--brand)] focus:ring-1 focus:ring-[var(--brand)]"
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base outline-none focus:border-[var(--brand)] focus:ring-1 focus:ring-[var(--brand)]"
                       placeholder="Jan Kowalski"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="flex items-center gap-2 text-sm font-medium">
-                      <Mail className="h-4 w-4 text-[var(--brand)]" />
+                    <label htmlFor="email" className="flex items-center gap-2 text-base font-medium">
+                      <Mail className="h-5 w-5 text-[var(--brand)]" />
                       E-mail
                     </label>
                     <input
@@ -190,13 +190,13 @@ function Kontakt() {
                       required
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-[var(--brand)] focus:ring-1 focus:ring-[var(--brand)]"
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base outline-none focus:border-[var(--brand)] focus:ring-1 focus:ring-[var(--brand)]"
                       placeholder="jan@example.com"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="flex items-center gap-2 text-sm font-medium">
-                      <MessageSquare className="h-4 w-4 text-[var(--brand)]" />
+                    <label htmlFor="message" className="flex items-center gap-2 text-base font-medium">
+                      <MessageSquare className="h-5 w-5 text-[var(--brand)]" />
                       Wiadomość
                     </label>
                     <textarea
@@ -205,16 +205,16 @@ function Kontakt() {
                       rows={5}
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-[var(--brand)] focus:ring-1 focus:ring-[var(--brand)]"
+                      className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-base outline-none focus:border-[var(--brand)] focus:ring-1 focus:ring-[var(--brand)]"
                       placeholder="Opisz krótko swój projekt..."
                     />
                   </div>
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-base font-medium text-primary-foreground hover:opacity-90"
                 >
-                  Wyślij wiadomość <Send className="h-4 w-4" />
+                  Wyślij wiadomość <Send className="h-5 w-5" />
                 </button>
               </form>
             )}
