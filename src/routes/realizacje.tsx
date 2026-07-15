@@ -28,7 +28,7 @@ export const Route = createFileRoute("/realizacje")({
 const navLinks = [
   { label: "Strona główna", to: "/" },
   { label: "Realizacje", to: "/realizacje" },
-  { label: "Kontakt", to: "#kontakt" },
+  { label: "Kontakt", to: "/kontakt" },
 ];
 
 function Lightbox({ project, onClose }: { project: Project; onClose: () => void }) {
