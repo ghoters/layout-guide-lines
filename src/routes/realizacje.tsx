@@ -91,12 +91,12 @@ function Realizacje() {
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
       {/* NAV */}
-      <header className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-background">
+      <header className="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-6 sm:flex sm:items-center sm:justify-between">
+        <Link to="/" className="flex min-w-0 items-center gap-2">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
+          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">projektowanie3d.pl</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) =>
@@ -128,7 +128,7 @@ function Realizacje() {
         </nav>
         <Link
           to="/kontakt"
-          className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
+          className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[var(--brand)] px-3 py-2 text-xs font-medium text-primary-foreground hover:opacity-90 sm:px-5 sm:py-2.5 sm:text-sm"
         >
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
         </Link>
@@ -194,29 +194,32 @@ function Realizacje() {
             <h3 className="text-xl font-bold">Masz pomysł na projekt?</h3>
             <p className="mt-1 text-sm text-muted-foreground">Napisz lub zadzwoń – chętnie pomogę.</p>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
               <Mail className="h-4 w-4" />
             </div>
-            <span className="text-sm">sebjara.ghoters@gmail.com</span>
+            <span className="min-w-0 truncate text-sm">sebjara.ghoters@gmail.com</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
               <Phone className="h-4 w-4" />
             </div>
-            <span className="text-sm">+48 576309671</span>
+            <span className="text-sm">+48 576 309 671</span>
           </div>
-          <button className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">
+          <Link
+            to="/kontakt"
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+          >
             Wyślij zapytanie <ArrowRight className="h-4 w-4" />
-          </button>
+          </Link>
         </div>
       </section>
 
       {/* FOOTER */}
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6">
+        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
               <Settings className="h-4 w-4" />
             </div>
             <span className="text-xs font-semibold tracking-wide">projektowanie3d.pl</span>

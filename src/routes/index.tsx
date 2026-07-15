@@ -126,12 +126,12 @@ function Index() {
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
       {/* NAV */}
-      <header className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6">
-        <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-foreground text-background">
+      <header className="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-6 sm:flex sm:items-center sm:justify-between">
+        <div className="flex min-w-0 items-center gap-2">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
+          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">projektowanie3d.pl</span>
         </div>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) =>
@@ -158,7 +158,7 @@ function Index() {
         </nav>
         <Link
           to="/kontakt"
-          className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
+          className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[var(--brand)] px-3 py-2 text-xs font-medium text-primary-foreground hover:opacity-90 sm:px-5 sm:py-2.5 sm:text-sm"
         >
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
         </Link>
@@ -178,7 +178,7 @@ function Index() {
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
               PROJEKTOWANIE 3D
             </div>
-            <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight drop-shadow-sm md:text-6xl">
+            <h1 className="mt-5 text-4xl font-bold leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl md:text-6xl">
               Tworzę modele <span className="text-[var(--brand)]">3D</span>
               <br />
               dopasowane do
@@ -201,19 +201,19 @@ function Index() {
                 Zobacz realizacje <ArrowRight className="h-4 w-4" />
               </a>
             </div>
-            <div className="mt-12 grid max-w-lg grid-cols-3 gap-6">
+            <div className="mt-12 grid max-w-lg grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
               {[
                 { icon: Clock, value: "6+", label: "lat doświadczenia" },
                 { icon: Mail, value: "1000+", label: "zrealizowanych projektów" },
                 { icon: Star, value: "100%", label: "zaangażowania" },
               ].map((s) => (
-                <div key={s.label} className="flex items-start gap-3">
-                  <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/70 text-[var(--brand)] backdrop-blur-sm">
+                <div key={s.label} className="flex items-center gap-3 sm:items-start">
+                  <div className="mt-0 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-background/70 text-[var(--brand)] backdrop-blur-sm sm:mt-1">
                     <s.icon className="h-4 w-4" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-[var(--brand)] drop-shadow-sm">{s.value}</div>
-                    <div className="text-xs text-foreground/80 drop-shadow-sm">{s.label}</div>
+                    <div className="text-xl font-bold text-[var(--brand)] drop-shadow-sm sm:text-2xl">{s.value}</div>
+                    <div className="text-[11px] text-foreground/80 drop-shadow-sm sm:text-xs">{s.label}</div>
                   </div>
                 </div>
               ))}
@@ -312,7 +312,7 @@ function Index() {
             </div>
             <div className="relative">
               <div className="absolute left-0 right-0 top-6 h-px border-t border-dashed border-border" />
-              <div className="relative grid grid-cols-5 gap-2">
+              <div className="relative grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-2">
                 {steps.map((s) => (
                   <div key={s.n} className="flex flex-col items-center text-center">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-soft)] text-[var(--brand)]">
@@ -411,17 +411,17 @@ function Index() {
             <h3 className="text-xl font-bold">Masz pomysł na projekt?</h3>
             <p className="mt-1 text-sm text-muted-foreground">Napisz lub zadzwoń – chętnie pomogę.</p>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
               <Mail className="h-4 w-4" />
             </div>
-            <span className="text-sm">sebjara.ghoters@gmail.com</span>
+            <span className="min-w-0 truncate text-sm">sebjara.ghoters@gmail.com</span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
               <Phone className="h-4 w-4" />
             </div>
-            <span className="text-sm">+48 576309671</span>
+            <span className="text-sm">+48 576 309 671</span>
           </div>
           <Link
             to="/kontakt"
@@ -434,9 +434,9 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6">
+        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
               <Settings className="h-4 w-4" />
             </div>
             <span className="text-xs font-semibold tracking-wide">projektowanie3d.pl</span>
