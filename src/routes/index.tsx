@@ -81,7 +81,7 @@ const projects = [
   { title: "Szkielet", tag: "Druk 3D, żywica" },
   { title: "Figurka św. Józefa", tag: "Druk 3D, FDM" },
   { title: "Rewolwer", tag: "Game asset" },
-  { title: "Broń fantasy", tag: "Game asset" },
+  { title: "Gitarzysta", tag: "Druk 3D, żywica" },
   { title: "Helm sci-fi", tag: "Druk 3D, FDM" },
   { title: "Figurka kolekcjonerska", tag: "Druk 3D, żywica" },
   { title: "Pojazd koncept", tag: "Game asset" },
