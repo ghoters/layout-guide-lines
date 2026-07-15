@@ -197,9 +197,12 @@ function Index() {
               >
                 Wyślij zapytanie <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="#realizacje" className="inline-flex items-center gap-2 text-sm font-medium drop-shadow-sm">
+              <Link
+                to="/realizacje"
+                className="inline-flex items-center gap-2 text-sm font-medium drop-shadow-sm"
+              >
                 Zobacz realizacje <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
             <div className="mt-12 grid max-w-lg grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
               {[
