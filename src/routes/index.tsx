@@ -437,15 +437,15 @@ function Index() {
         <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
-              <Settings className="h-4 w-4" />
+              <Settings className="h-5 w-5" />
             </div>
-            <span className="text-xs font-semibold tracking-wide">3dmodele.pl</span>
+            <span className="text-sm font-semibold tracking-wide">3dmodele.pl</span>
           </div>
-          <div className="text-xs text-muted-foreground">© 2024 Wszelkie prawa zastrzeżone.</div>
+          <div className="text-sm text-muted-foreground">© 2024 Wszelkie prawa zastrzeżone.</div>
           <div className="flex items-center gap-4 text-[var(--brand)]">
-            <Instagram className="h-4 w-4" />
-            <span className="text-xs font-bold">A</span>
-            <Linkedin className="h-4 w-4" />
+            <Instagram className="h-5 w-5" />
+            <span className="text-sm font-bold">A</span>
+            <Linkedin className="h-5 w-5" />
           </div>
         </div>
       </footer>
