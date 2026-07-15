@@ -82,7 +82,7 @@ const projects = [
   { title: "Figurka św. Józefa", tag: "Druk 3D, FDM" },
   { title: "Rewolwer", tag: "Game asset" },
   { title: "Gitarzysta", tag: "Druk 3D, żywica" },
-  { title: "Helm sci-fi", tag: "Druk 3D, FDM" },
+  { title: "Mecha Elephant", tag: "Game asset" },
   { title: "Figurka kolekcjonerska", tag: "Druk 3D, żywica" },
   { title: "Pojazd koncept", tag: "Game asset" },
   { title: "Wizualizacja produktu", tag: "Wizualizacja 3D" },
