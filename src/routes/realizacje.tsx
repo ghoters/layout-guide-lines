@@ -66,7 +66,7 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
         </button>
         <div className="flex max-h-[80vh] items-center justify-center overflow-hidden bg-black/5">
           <img
-            src={project.image.url}
+            src={project.fullImage.url}
             alt={project.title}
             className="max-h-[80vh] w-full object-contain"
           />
