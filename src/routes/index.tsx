@@ -161,11 +161,13 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section
-        className="relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroVase.url})` }}
-      >
-        <div className="relative mx-auto max-w-[1200px] px-6 pb-20 pt-20">
+      <section className="relative">
+        <div className="relative mx-auto max-w-[1200px] overflow-hidden px-6 pb-20 pt-20">
+          <img
+            src={heroVase.url}
+            alt="Model 3D — wazon gotycki"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
           <div className="relative min-h-[620px] lg:min-h-[620px]">
           <div className="max-w-2xl pt-8">
             <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
