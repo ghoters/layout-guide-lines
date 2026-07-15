@@ -312,7 +312,7 @@ function Index() {
             </div>
             <div className="relative">
               <div className="absolute left-0 right-0 top-6 h-px border-t border-dashed border-border" />
-              <div className="relative grid grid-cols-5 gap-2">
+              <div className="relative grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-2">
                 {steps.map((s) => (
                   <div key={s.n} className="flex flex-col items-center text-center">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-soft)] text-[var(--brand)]">
