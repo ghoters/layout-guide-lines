@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroVase from "@/assets/wazon2-2.jpg.asset.json";
 import skeleton from "@/assets/szkielet2.jpg.asset.json";
+import awatar3 from "@/assets/awatar3.jpg.asset.json";
 import jozef from "@/assets/jozef.jpg.asset.json";
 import szkielet3 from "@/assets/szkielet3.jpg.asset.json";
 import jozef2 from "@/assets/jozef2.jpg.asset.json";
@@ -367,7 +368,13 @@ function Index() {
           O MNIE
         </div>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[220px_1fr_1fr]">
-          <Placeholder className="h-[240px] w-full" label="Zdjęcie" />
+          <div className="h-[240px] w-full overflow-hidden rounded-xl border border-border">
+            <img
+              src={awatar3.url}
+              alt="Zdjęcie profilowe"
+              className="h-full w-full object-cover"
+            />
+          </div>
           <div>
             <h3 className="text-xl font-bold">Od szkicu do gotowego modelu.</h3>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
