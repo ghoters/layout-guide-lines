@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroVase from "@/assets/wazon2-2.jpg.asset.json";
 import skeleton from "@/assets/szkielet2.jpg.asset.json";
+import jozef from "@/assets/jozef.jpg.asset.json";
 import {
   ArrowRight,
   Box,
@@ -275,10 +276,10 @@ function Index() {
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
           {projects.map((p, i) => (
             <div key={p.title} className="space-y-3">
-              {i === 0 ? (
+              {i === 0 || i === 1 ? (
                 <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
                   <img
-                    src={skeleton.url}
+                    src={i === 0 ? skeleton.url : jozef.url}
                     alt={p.title}
                     className="h-full w-full object-cover"
                   />
