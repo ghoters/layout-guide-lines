@@ -212,6 +212,21 @@ function Index() {
               ))}
             </div>
           </div>
+          <div className="pointer-events-none absolute right-6 top-24 hidden lg:block">
+            <div className="pointer-events-auto w-[260px] rounded-2xl bg-background/95 p-6 shadow-xl backdrop-blur-sm">
+              <div className="text-xs font-semibold text-[var(--brand)]">Ostatni projekt</div>
+              <div className="mt-3 text-lg font-bold">wazon gotycki</div>
+              <div className="mt-2 text-sm text-muted-foreground">Druk 3D, żywica</div>
+              <div className="mt-4 flex items-start justify-between gap-3">
+                <div className="text-sm text-muted-foreground">
+                  Blender, ZBrush,
+                  <br />
+                  Marmoset Toolbag
+                </div>
+                <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-[var(--brand)]" />
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </section>
