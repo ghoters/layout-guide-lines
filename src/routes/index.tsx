@@ -223,8 +223,8 @@ function Index() {
                   <br />
                   Marmoset Toolbag
                 </div>
-                <div className="flex h-5 w-5 shrink-0 items-center justify-center self-end rounded-full bg-[var(--brand)] text-primary-foreground">
-                  <ArrowRight className="h-3 w-3" />
+                <div className="flex h-5 w-5 shrink-0 items-center justify-center self-end rounded-full bg-[var(--brand)]">
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary-foreground" />
                 </div>
               </div>
             </div>
