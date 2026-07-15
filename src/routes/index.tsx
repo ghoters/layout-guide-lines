@@ -152,7 +152,7 @@ function Index() {
           </div>
           <span className="text-sm font-semibold tracking-wide">projektowanie3d.pl</span>
         </div>
-        <nav className="hidden items-center gap-8 md:flex md:flex-1 md:justify-start md:pl-[14%]">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
             <a
               key={l.label}
