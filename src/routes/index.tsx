@@ -427,7 +427,7 @@ function Index() {
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
               <Phone className="h-4 w-4" />
             </div>
-            <span className="text-sm">+48 123 456 789</span>
+            <span className="text-sm">+48 576309671</span>
           </div>
           <button className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">
             Wyślij zapytanie <ArrowRight className="h-4 w-4" />
