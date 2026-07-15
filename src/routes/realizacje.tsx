@@ -96,7 +96,7 @@ function Realizacje() {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
-          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">projektowanie3d.pl</span>
+          <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">3dmodele.pl</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) =>
@@ -222,7 +222,7 @@ function Realizacje() {
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
               <Settings className="h-4 w-4" />
             </div>
-            <span className="text-xs font-semibold tracking-wide">projektowanie3d.pl</span>
+            <span className="text-xs font-semibold tracking-wide">3dmodele.pl</span>
           </Link>
           <div className="text-xs text-muted-foreground">© 2024 Wszelkie prawa zastrzeżone.</div>
           <div className="flex items-center gap-4 text-[var(--brand)]">
