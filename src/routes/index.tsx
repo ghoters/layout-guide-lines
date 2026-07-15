@@ -220,7 +220,7 @@ function Index() {
               ))}
             </div>
           </div>
-          <div className="pointer-events-none absolute left-[60%] top-[15rem] lg:left-[60%] xl:left-[56%] hidden lg:block">
+          <div className="pointer-events-none absolute left-[57%] top-[15rem] lg:left-[57%] xl:left-[53%] hidden lg:block">
             <div className="pointer-events-auto w-fit rounded-2xl bg-background/95 p-6 shadow-xl backdrop-blur-sm">
               <div className="text-xs font-semibold text-[var(--brand)]">Ostatni projekt</div>
               <div className="mt-3 text-lg font-bold">wazon gotycki</div>
