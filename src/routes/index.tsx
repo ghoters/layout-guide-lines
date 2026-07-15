@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroVase from "@/assets/hero-vase.png.asset.json";
+import heroVase from "@/assets/wazon2.jpg.asset.json";
 import {
   ArrowRight,
   Box,
@@ -162,13 +162,13 @@ function Index() {
 
       {/* HERO */}
       <section className="relative">
-        <div className="relative mx-auto max-w-[1200px] overflow-hidden px-6 pb-20 pt-20">
+        <div className="relative w-full overflow-hidden">
           <img
             src={heroVase.url}
             alt="Model 3D — wazon gotycki"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="relative min-h-[620px] lg:min-h-[620px]">
+          <div className="relative mx-auto min-h-[620px] max-w-[1200px] px-6 pb-20 pt-20 lg:min-h-[620px]">
           <div className="max-w-2xl pt-8">
             <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
