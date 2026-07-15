@@ -174,7 +174,7 @@ function Index() {
           />
           <div className="relative mx-auto min-h-[620px] max-w-[1200px] px-6 pb-20 pt-20 lg:min-h-[620px]">
           <div className="max-w-2xl pt-8">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
+            <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brand)]">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
               PROJEKTOWANIE 3D
             </div>
@@ -185,7 +185,7 @@ function Index() {
               <br />
               Twoich potrzeb.
             </h1>
-            <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/90 drop-shadow-sm">
+            <p className="mt-6 max-w-md text-base leading-relaxed text-foreground/90 drop-shadow-sm">
               Modele do druku 3D, gier, wizualizacji i nie tylko.
               <br />
               Od pomysłu do gotowego projektu.
@@ -197,8 +197,8 @@ function Index() {
               >
                 Wyślij zapytanie <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="#realizacje" className="inline-flex items-center gap-2 text-sm font-medium drop-shadow-sm">
-                Zobacz realizacje <ArrowRight className="h-4 w-4" />
+              <a href="#realizacje" className="inline-flex items-center gap-2 text-base font-medium drop-shadow-sm">
+                Zobacz realizacje <ArrowRight className="h-5 w-5" />
               </a>
             </div>
             <div className="mt-12 grid max-w-lg grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
@@ -209,11 +209,11 @@ function Index() {
               ].map((s) => (
                 <div key={s.label} className="flex items-center gap-3 sm:items-start">
                   <div className="mt-0 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-background/70 text-[var(--brand)] backdrop-blur-sm sm:mt-1">
-                    <s.icon className="h-4 w-4" />
+                    <s.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xl font-bold text-[var(--brand)] drop-shadow-sm sm:text-2xl">{s.value}</div>
-                    <div className="text-[11px] text-foreground/80 drop-shadow-sm sm:text-xs">{s.label}</div>
+                    <div className="text-2xl font-bold text-[var(--brand)] drop-shadow-sm sm:text-3xl">{s.value}</div>
+                    <div className="text-xs text-foreground/80 drop-shadow-sm sm:text-sm">{s.label}</div>
                   </div>
                 </div>
               ))}
