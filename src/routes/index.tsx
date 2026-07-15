@@ -367,37 +367,37 @@ function Index() {
             />
           </div>
           <div>
-            <h3 className="text-xl font-bold">Od szkicu do gotowego modelu.</h3>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            <h3 className="text-2xl font-bold">Od szkicu do gotowego modelu.</h3>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               Moja przygoda z grafiką zaczęła się od rysunku i szkiców. Z czasem przeniosłem się do
               grafiki cyfrowej – tworzyłem ilustracje, grafiki wektorowe, projekty do druku, UI i
               concept art.
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               Obecnie specjalizuję się w projektowaniu 3D. Doświadczenie w 2D pomaga mi lepiej
               planować formę, detale i proporcje. Dzięki temu tworzę dopasowane modele do druku,
               gier i wizualizacji.
             </p>
             <Link
               to="/kontakt"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-2.5 text-base font-medium text-primary-foreground hover:opacity-90"
             >
               Dowiedz się więcej
             </Link>
           </div>
           <div>
-            <div className="mb-4 text-xs font-semibold tracking-wider">NARZĘDZIA, NA KTÓRYCH PRACUJĘ</div>
+            <div className="mb-4 text-sm font-semibold tracking-wider">NARZĘDZIA, NA KTÓRYCH PRACUJĘ</div>
             <div className="flex flex-wrap gap-2">
               {tools.map((t) => (
                 <span
                   key={t}
-                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium"
+                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm font-medium"
                 >
                   {t}
                 </span>
               ))}
-              <span className="inline-flex items-center gap-1 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium">
-                i inne <Plus className="h-3 w-3" />
+              <span className="inline-flex items-center gap-1 rounded-lg border border-border bg-card px-3 py-1.5 text-sm font-medium">
+                i inne <Plus className="h-4 w-4" />
               </span>
             </div>
           </div>
