@@ -206,17 +206,20 @@ function Realizacje() {
             </div>
             <span className="text-sm">+48 576309671</span>
           </div>
-          <button className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90">
+          <Link
+            to="/kontakt"
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+          >
             Wyślij zapytanie <ArrowRight className="h-4 w-4" />
-          </button>
+          </Link>
         </div>
       </section>
 
       {/* FOOTER */}
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6">
+        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
               <Settings className="h-4 w-4" />
             </div>
             <span className="text-xs font-semibold tracking-wide">projektowanie3d.pl</span>
