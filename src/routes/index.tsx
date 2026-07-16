@@ -67,7 +67,7 @@ const services = [
 
 
 const steps = [
-  { n: 1, icon: MessageSquare, title: "Rozmowa", desc: "Poznanie Twoich potrzeb i oczekiwań." },
+  { n: 1, icon: MessageSquare, title: "Rozmowa", desc: "Poznanie Twoich\npotrzeb i oczekiwań." },
   { n: 2, icon: ClipboardList, title: "Omówienie projektu", desc: "Ustalamy szczegóły, zakres i wycenę." },
   { n: 3, icon: Package, title: "Projekt", desc: "Tworzę modeli przesyłam do weryfikacji." },
   { n: 4, icon: PencilLine, title: "Poprawki", desc: "Wprowadzam uwagi i dopracowujemy detale." },
@@ -326,7 +326,12 @@ function Index() {
                     </div>
                     <div className="mt-3 text-xs font-semibold">{s.title}</div>
                     <div className="mt-1 flex-grow text-[11px] leading-relaxed text-muted-foreground">
-                      {s.desc}
+                      {s.desc.split("\n").map((line, i) => (
+                        <span key={i}>
+                          {i > 0 && <br />}
+                          {line}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 ))}
