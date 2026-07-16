@@ -67,7 +67,7 @@ const services = [
 
 
 const steps = [
-  { n: 1, icon: MessageSquare, title: "Rozmowa", desc: "Poznam Twoich potrzeb i oczekiwań." },
+  { n: 1, icon: MessageSquare, title: "Rozmowa", desc: "Poznanie Twoich potrzeb i oczekiwań." },
   { n: 2, icon: ClipboardList, title: "Omówienie projektu", desc: "Ustalamy szczegóły, zakres i wycenę." },
   { n: 3, icon: Package, title: "Projekt", desc: "Tworzę modeli precyzjeni do weryfikacji." },
   { n: 4, icon: PencilLine, title: "Poprawki", desc: "Wprowadzam uwagi i dopracowujemy detale." },
