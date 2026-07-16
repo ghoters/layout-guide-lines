@@ -265,14 +265,7 @@ function Kontakt() {
           <div className="flex items-center gap-4 text-[var(--brand)]">
             <Instagram className="h-4 w-4" />
             <span className="text-xs font-bold">A</span>
-            <a
-              href="https://www.linkedin.com/in/ghoters/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
+            <Linkedin className="h-4 w-4" />
           </div>
         </div>
       </footer>
