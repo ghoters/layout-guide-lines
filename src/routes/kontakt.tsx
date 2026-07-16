@@ -98,7 +98,7 @@ function Kontakt() {
             Porozmawiajmy o <span className="text-[var(--brand)]">projekcie</span>
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Napisz lub zadzwoń — chętnie omówię szczegóły, zakres i wycenę. Odpowiadam
+            Napisz lub zadzwoń - chętnie omówię szczegóły, zakres i wycenę. Odpowiadam
             zazwyczaj tego samego dnia.
           </p>
         </div>
