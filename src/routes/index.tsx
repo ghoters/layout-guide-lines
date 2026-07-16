@@ -224,7 +224,7 @@ function Index() {
           </div>
           <div className="pointer-events-none absolute left-[62%] top-[15rem] lg:left-[62%] xl:left-[58%] hidden lg:block">
             <div className="pointer-events-auto w-fit rounded-2xl bg-background/95 p-6 shadow-xl backdrop-blur-sm">
-              <div className="text-sm font-bold text-[var(--brand)]">Ostatni projekt</div>
+              <div className="text-sm font-extrabold text-[var(--brand)]">Ostatni projekt</div>
               <div className="mt-3 text-lg font-bold">wazon gotycki</div>
               <div className="mt-2 text-sm text-muted-foreground">Druk 3D, żywica</div>
               <div className="mt-4 flex items-start justify-between gap-3">
