@@ -226,7 +226,7 @@ function Kontakt() {
       <section className="mx-auto max-w-[1200px] px-6 pb-10">
         <div className="grid grid-cols-1 items-center gap-6 rounded-2xl bg-[var(--brand-soft)] px-8 py-8 lg:grid-cols-[1.2fr_1fr_1fr_auto]">
           <div>
-            <h3 className="text-xl font-bold">Wolisz napisać bezpośrednio?</h3>
+            <h2 className="text-xl font-bold">Wolisz napisać bezpośrednio?</h2>
             <p className="mt-1 text-sm text-muted-foreground">
               Jestem też dostępny mailowo i telefonicznie.
             </p>
