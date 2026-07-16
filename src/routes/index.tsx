@@ -67,7 +67,7 @@ const services = [
 
 
 const steps = [
-  { n: 1, icon: MessageSquare, title: "Rozmowa", desc: "Poznanie Twoich\npotrzeb i oczekiwań." },
+  { n: 1, icon: MessageSquare, title: "Rozmowa", desc: "Poznanie Twoich potrzeb i oczekiwań." },
   { n: 2, icon: ClipboardList, title: "Omówienie projektu", desc: "Ustalamy szczegóły, zakres i wycenę." },
   { n: 3, icon: Package, title: "Projekt", desc: "Tworzę modeli przesyłam do weryfikacji." },
   { n: 4, icon: PencilLine, title: "Poprawki", desc: "Wprowadzam uwagi i dopracowujemy detale." },
@@ -315,9 +315,9 @@ function Index() {
             </div>
             <div className="relative">
               <div className="absolute left-0 right-0 top-6 h-px border-t border-dashed border-border" />
-              <div className="relative grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
+              <div className="relative grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-2">
                 {steps.map((s) => (
-                  <div key={s.n} className="flex h-full flex-col items-center text-center">
+                  <div key={s.n} className="flex flex-col items-center text-center">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-soft)] text-[var(--brand)]">
                       <s.icon className="h-5 w-5" />
                     </div>
@@ -325,13 +325,8 @@ function Index() {
                       {s.n}
                     </div>
                     <div className="mt-3 text-xs font-semibold">{s.title}</div>
-                    <div className="mt-1 flex-grow text-[11px] leading-relaxed text-muted-foreground">
-                      {s.desc.split("\n").map((line, i) => (
-                        <span key={i}>
-                          {i > 0 && <br />}
-                          {line}
-                        </span>
-                      ))}
+                    <div className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                      {s.desc}
                     </div>
                   </div>
                 ))}
