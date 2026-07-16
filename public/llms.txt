@@ -1,0 +1,11 @@
+# 3dmodele.pl
+
+> Projektowanie modeli 3D na zamówienie — do druku 3D (FDM i żywica), gier, wizualizacji i ilustracji.
+
+Prowadzę pracownię projektowania 3D. Tworzę modele od szkicu po gotowy plik, z doświadczeniem w grafice 2D, ZBrush, Blender i Marmoset Toolbag.
+
+## Pages
+
+- [Strona główna](/): Oferta, proces współpracy, o mnie, narzędzia i kontakt.
+- [Realizacje](/realizacje): Portfolio wybranych projektów 3D — druk, gry, wizualizacje, ilustracje.
+- [Kontakt](/kontakt): Formularz kontaktowy, e-mail i telefon.

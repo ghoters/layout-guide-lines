@@ -191,7 +191,7 @@ function Realizacje() {
       <section id="kontakt" className="mx-auto max-w-[1200px] px-6 pb-10">
         <div className="grid grid-cols-1 items-center gap-6 rounded-2xl bg-[var(--brand-soft)] px-8 py-8 lg:grid-cols-[1.2fr_1fr_1fr_auto]">
           <div>
-            <h3 className="text-xl font-bold">Masz pomysł na projekt?</h3>
+            <h2 className="text-xl font-bold">Masz pomysł na projekt?</h2>
             <p className="mt-1 text-sm text-muted-foreground">Napisz lub zadzwoń – chętnie pomogę.</p>
           </div>
           <div className="flex min-w-0 items-center gap-3">
