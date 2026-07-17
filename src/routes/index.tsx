@@ -291,11 +291,11 @@ function Index() {
         </div>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
           {projects.map((p) => (
-            <Link
+            <button
               key={p.title}
-              to="/realizacje"
-              search={{ open: p.title }}
-              className="group block space-y-3"
+              type="button"
+              onClick={() => setSelectedProject(p)}
+              className="group block w-full space-y-3 text-left"
             >
               <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
                 <img
@@ -311,9 +311,13 @@ function Index() {
                 </div>
                 <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)] transition-transform duration-300 group-hover:translate-x-1" />
               </div>
-            </Link>
+            </button>
           ))}
         </div>
+
+        {selectedProject && (
+          <Lightbox project={selectedProject} onClose={() => setSelectedProject(null)} />
+        )}
       </section>
 
       {/* PROCESS + ADVANTAGES */}
