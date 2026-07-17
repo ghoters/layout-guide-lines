@@ -100,11 +100,16 @@ function Realizacje() {
     if (open) {
       const found = projects.find((p) => p.title === open) ?? null;
       setSelectedProject(found);
+    } else {
+      setSelectedProject(null);
     }
   }, [open]);
 
+  const openProject = (p: Project) => {
+    navigate({ to: "/realizacje", search: { open: p.title } });
+  };
+
   const closeLightbox = () => {
-    setSelectedProject(null);
     navigate({ to: "/realizacje", search: {} });
   };
 
