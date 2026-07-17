@@ -264,10 +264,10 @@ function Kontakt() {
             <span className="text-sm">+48 576 309 671</span>
           </div>
           <a
-            href="mailto:sebjara.ghoters@gmail.com"
+            href="#contact-form"
             className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
           >
-            Napisz maila <ArrowRight className="h-4 w-4" />
+            Wypełnij formularz <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </section>
