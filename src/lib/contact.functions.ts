@@ -31,7 +31,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: "3dmodele.pl <onboarding@resend.dev>",
+        from: "3dmodele.pl <formularz@3dmodele.pl>",
         to: ["sebjara.ghoters@gmail.com"],
         reply_to: data.email,
         subject: `Nowa wiadomość od ${data.name}`,
