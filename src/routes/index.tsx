@@ -173,7 +173,11 @@ function Index() {
         <div className="relative w-full overflow-hidden">
           <img
             src={heroVase.url}
-            alt="Model 3D — wazon gotycki"
+            alt="Model 3D wazonu gotyckiego — wizualizacja projektu"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="relative mx-auto min-h-[620px] max-w-[1200px] px-6 pb-20 pt-20 lg:min-h-[620px]">
@@ -253,6 +257,7 @@ function Index() {
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
           CO MOGĘ DLA CIEBIE ZROBIĆ
         </div>
+        <h2 className="sr-only">Usługi projektowania 3D</h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {services.map((s) => (
             <div
@@ -288,6 +293,7 @@ function Index() {
             Zobacz wszystkie realizacje <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
+        <h2 className="sr-only">Wybrane realizacje projektów 3D</h2>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
           {projects.map((p) => (
             <button
@@ -299,7 +305,8 @@ function Index() {
               <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
                 <img
                   src={p.image.url}
-                  alt={p.title}
+                  alt={`${p.title} — ${p.tag}`}
+                  loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -323,9 +330,9 @@ function Index() {
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-2">
           <div>
-            <div className="mb-8 text-xs font-semibold tracking-wider text-foreground">
+            <h2 className="mb-8 text-xs font-semibold tracking-wider text-foreground">
               JAK WYGLĄDA WSPÓŁPRACA
-            </div>
+            </h2>
             <div className="relative">
               <div className="absolute left-0 right-0 top-6 h-px border-t border-dashed border-border" />
               <div className="relative grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-2">
@@ -348,9 +355,9 @@ function Index() {
           </div>
 
           <div>
-            <div className="mb-8 text-xs font-semibold tracking-wider text-foreground">
+            <h2 className="mb-8 text-xs font-semibold tracking-wider text-foreground">
               DLACZEGO WARTO ZE MNĄ WSPÓŁPRACOWAĆ?
-            </div>
+            </h2>
             <div className="grid grid-cols-2 gap-x-8 gap-y-6">
               {advantages.map((a) => (
                 <div key={a.title} className="flex gap-3">
@@ -378,7 +385,8 @@ function Index() {
           <div className="h-[240px] w-full overflow-hidden rounded-xl border border-border">
             <img
               src={awatar3.url}
-              alt="Zdjęcie profilowe"
+              alt="Zdjęcie profilowe projektanta 3D"
+              loading="lazy"
               className="h-full w-full object-cover"
             />
           </div>

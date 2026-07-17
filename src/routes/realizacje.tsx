@@ -28,6 +28,23 @@ export const Route = createFileRoute("/realizacje")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Realizacje — Projektowanie 3D",
+          url: "https://modele3d-pl.lovable.app/realizacje",
+          hasPart: projects.map((p) => ({
+            "@type": "CreativeWork",
+            name: p.title,
+            about: p.tag,
+            image: `https://modele3d-pl.lovable.app${p.fullImage.url}`,
+          })),
+        }),
+      },
+    ],
   }),
   component: Realizacje,
 });
