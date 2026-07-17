@@ -92,7 +92,21 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
 }
 
 function Realizacje() {
+  const { open } = useSearch({ from: "/realizacje" });
+  const navigate = useNavigate({ from: "/realizacje" });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    if (open) {
+      const found = projects.find((p) => p.title === open) ?? null;
+      setSelectedProject(found);
+    }
+  }, [open]);
+
+  const closeLightbox = () => {
+    setSelectedProject(null);
+    navigate({ to: "/realizacje", search: {} });
+  };
 
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
