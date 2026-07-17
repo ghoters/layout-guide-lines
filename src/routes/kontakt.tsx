@@ -228,10 +228,14 @@ function Kontakt() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+                  disabled={submitting}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  Wyślij wiadomość <Send className="h-4 w-4" />
+                  {submitting ? "Wysyłanie..." : "Wyślij wiadomość"} <Send className="h-4 w-4" />
                 </button>
+                {error && (
+                  <p className="text-center text-sm text-red-600">{error}</p>
+                )}
               </form>
             )}
           </div>
