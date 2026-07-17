@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroVase from "@/assets/wazon2-2.jpg.asset.json";
-import awatar3 from "@/assets/awatar3.jpg.asset.json";
+const heroVase = { url: "/assets/wazon2-2.jpg" };
+const awatar3 = { url: "/assets/awatar3.jpg" };
 import { projects } from "@/lib/projects";
 import {
   ArrowRight,
