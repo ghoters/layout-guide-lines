@@ -1,20 +1,20 @@
-import szkieletThumb from "@/assets/szkielet3.jpg.asset.json";
-import jozefThumb from "@/assets/jozef2.jpg.asset.json";
-import gunThumb from "@/assets/revolwer.jpg.asset.json";
-import martinThumb from "@/assets/martin.jpg.asset.json";
-import elephantThumb from "@/assets/elephant.jpg.asset.json";
-import wiezaThumb from "@/assets/wieza.jpg.asset.json";
-import forestThumb from "@/assets/forest.jpg.asset.json";
-import elementThumb from "@/assets/konstr.jpg.asset.json";
+const szkieletThumb = { url: "/assets/szkielet3.jpg" };
+const jozefThumb = { url: "/assets/jOszef-2.jpg" };
+const gunThumb = { url: "/assets/revolwer.jpg" };
+const martinThumb = { url: "/assets/martin.jpg" };
+const elephantThumb = { url: "/assets/elephant.jpg" };
+const wiezaThumb = { url: "/assets/WieOLa.jpg" };
+const forestThumb = { url: "/assets/forest.jpg" };
+const elementThumb = { url: "/assets/konstr.jpg" };
 
-import szkieletFull from "@/assets/szkielet-2.jpg.asset.json";
-import jozefFull from "@/assets/FiguraJozefa.jpg.asset.json";
-import gunFull from "@/assets/gun.jpg.asset.json";
-import martinFull from "@/assets/martingore.jpg.asset.json";
-import elephantFull from "@/assets/MechaElephant.jpg.asset.json";
-import wiezaFull from "@/assets/Wieza-2.jpg.asset.json";
-import forestFull from "@/assets/forest-2.jpg.asset.json";
-import elementFull from "@/assets/element_uzytkowy.jpg.asset.json";
+const szkieletFull = { url: "/assets/szkielet-2.jpg" };
+const jozefFull = { url: "/assets/FiguraJozefa.jpg" };
+const gunFull = { url: "/assets/gun.jpg" };
+const martinFull = { url: "/assets/martingore.jpg" };
+const elephantFull = { url: "/assets/MechaElephant.jpg" };
+const wiezaFull = { url: "/assets/Wieza-2.jpg" };
+const forestFull = { url: "/assets/forest-2.jpg" };
+const elementFull = { url: "/assets/element_uzytkowy.jpg" };
 
 export const projects = [
   {
