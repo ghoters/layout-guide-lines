@@ -178,7 +178,7 @@ function Kontakt() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={onSubmit} className="space-y-5">
+              <form id="contact-form" onSubmit={onSubmit} className="space-y-5">
                 <div className="space-y-5">
                   <div className="space-y-2">
                     <label htmlFor="name" className="flex items-center gap-2 text-sm font-medium">
@@ -264,10 +264,10 @@ function Kontakt() {
             <span className="text-sm">+48 576 309 671</span>
           </div>
           <a
-            href="mailto:sebjara.ghoters@gmail.com"
+            href="#contact-form"
             className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
           >
-            Napisz maila <ArrowRight className="h-4 w-4" />
+            Wypełnij formularz <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </section>
