@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { sendContactMessage } from "@/lib/contact.functions";
 import {
   ArrowRight,
   Settings,
@@ -44,11 +46,25 @@ const navLinks = [
 function Kontakt() {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const send = useServerFn(sendContactMessage);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
+    setSubmitting(true);
+    setError(null);
+    try {
+      await send({ data: form });
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Nie udało się wysłać wiadomości."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -212,10 +228,14 @@ function Kontakt() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+                  disabled={submitting}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  Wyślij wiadomość <Send className="h-4 w-4" />
+                  {submitting ? "Wysyłanie..." : "Wyślij wiadomość"} <Send className="h-4 w-4" />
                 </button>
+                {error && (
+                  <p className="text-center text-sm text-red-600">{error}</p>
+                )}
               </form>
             )}
           </div>
