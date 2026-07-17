@@ -126,6 +126,8 @@ function Placeholder({ className = "", label }: { className?: string; label?: st
 }
 
 function Index() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
       {/* NAV */}
