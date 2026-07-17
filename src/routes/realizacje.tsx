@@ -208,7 +208,7 @@ function Realizacje() {
 
         {/* LIGHTBOX */}
         {selectedProject && (
-          <Lightbox project={selectedProject} onClose={() => setSelectedProject(null)} />
+          <Lightbox project={selectedProject} onClose={closeLightbox} />
         )}
       </section>
 
