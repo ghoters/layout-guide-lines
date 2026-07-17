@@ -286,12 +286,17 @@ function Index() {
         </div>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
           {projects.map((p) => (
-            <div key={p.title} className="space-y-3">
+            <Link
+              key={p.title}
+              to="/realizacje"
+              search={{ open: p.title }}
+              className="group block space-y-3"
+            >
               <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
                 <img
                   src={p.image.url}
                   alt={p.title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="flex items-start justify-between">
@@ -299,9 +304,9 @@ function Index() {
                   <div className="text-sm font-semibold">{p.title}</div>
                   <div className="text-xs text-muted-foreground">{p.tag}</div>
                 </div>
-                <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)]" />
+                <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)] transition-transform duration-300 group-hover:translate-x-1" />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

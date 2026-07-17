@@ -1,9 +1,15 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useSearch, useNavigate } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone, X } from "lucide-react";
 import { projects, type Project } from "@/lib/projects";
+import { z } from "zod";
+
+const searchSchema = z.object({
+  open: z.string().optional(),
+});
 
 export const Route = createFileRoute("/realizacje")({
+  validateSearch: (search) => searchSchema.parse(search),
   head: () => ({
     meta: [
       { title: "Realizacje — Projektowanie 3D" },
@@ -86,7 +92,26 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
 }
 
 function Realizacje() {
+  const { open } = useSearch({ from: "/realizacje" });
+  const navigate = useNavigate({ from: "/realizacje" });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    if (open) {
+      const found = projects.find((p) => p.title === open) ?? null;
+      setSelectedProject(found);
+    } else {
+      setSelectedProject(null);
+    }
+  }, [open]);
+
+  const openProject = (p: Project) => {
+    navigate({ to: "/realizacje", search: { open: p.title } });
+  };
+
+  const closeLightbox = () => {
+    navigate({ to: "/realizacje", search: {} });
+  };
 
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
@@ -158,7 +183,7 @@ function Realizacje() {
             <button
               key={p.title}
               type="button"
-              onClick={() => setSelectedProject(p)}
+              onClick={() => openProject(p)}
               className="group cursor-pointer overflow-hidden rounded-2xl border border-border bg-card text-left transition-shadow hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2"
             >
               <div className="h-[240px] w-full overflow-hidden">
@@ -183,7 +208,7 @@ function Realizacje() {
 
         {/* LIGHTBOX */}
         {selectedProject && (
-          <Lightbox project={selectedProject} onClose={() => setSelectedProject(null)} />
+          <Lightbox project={selectedProject} onClose={closeLightbox} />
         )}
       </section>
 
