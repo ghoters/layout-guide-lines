@@ -183,7 +183,7 @@ function Realizacje() {
             <button
               key={p.title}
               type="button"
-              onClick={() => setSelectedProject(p)}
+              onClick={() => openProject(p)}
               className="group cursor-pointer overflow-hidden rounded-2xl border border-border bg-card text-left transition-shadow hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2"
             >
               <div className="h-[240px] w-full overflow-hidden">
