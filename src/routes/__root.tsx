@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Tworzę modele 3D dopasowane do Twoich potrzeb — do druku 3D, gier i wizualizacji.",
       },
       { name: "author", content: "Projektowanie 3D" },
-      { property: "og:title", content: "Projektowanie 3D" },
+      { property: "og:title", content: "Projektowanie 3D — modele, wydruki i wizualizacje" },
       {
         property: "og:description",
         content: "Modele 3D do druku, gier i wizualizacji. Od pomysłu do gotowego projektu.",
@@ -99,6 +99,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "3dmodele.pl",
+          description:
+            "Projektowanie modeli 3D na zamówienie — do druku 3D (FDM i żywica), gier, wizualizacji i ilustracji.",
+          url: "https://modele3d-pl.lovable.app",
+          email: "sebjara.ghoters@gmail.com",
+          telephone: "+48576309671",
+          areaServed: "PL",
+          serviceType: [
+            "Modele do druku 3D",
+            "Wizualizacje 3D",
+            "Modele do gier",
+            "Grafika 2D",
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
