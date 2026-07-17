@@ -27,7 +27,6 @@ import {
   Linkedin,
   Settings,
   Plus,
-  X,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
