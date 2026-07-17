@@ -33,6 +33,23 @@ export const Route = createFileRoute("/kontakt")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Kontakt — 3dmodele.pl",
+          url: "https://modele3d-pl.lovable.app/kontakt",
+          mainEntity: {
+            "@type": "Person",
+            name: "3dmodele.pl",
+            email: "sebjara.ghoters@gmail.com",
+            telephone: "+48576309671",
+          },
+        }),
+      },
+    ],
   }),
   component: Kontakt,
 });
