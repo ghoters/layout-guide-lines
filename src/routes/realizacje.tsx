@@ -1,7 +1,8 @@
 import { createFileRoute, Link, useSearch, useNavigate } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone, X } from "lucide-react";
+import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { projects, type Project } from "@/lib/projects";
+import { Lightbox } from "@/components/Lightbox";
 import { z } from "zod";
 
 const searchSchema = z.object({
