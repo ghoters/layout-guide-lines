@@ -1,9 +1,15 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useSearch, useNavigate } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone, X } from "lucide-react";
 import { projects, type Project } from "@/lib/projects";
+import { z } from "zod";
+
+const searchSchema = z.object({
+  open: z.string().optional(),
+});
 
 export const Route = createFileRoute("/realizacje")({
+  validateSearch: (search) => searchSchema.parse(search),
   head: () => ({
     meta: [
       { title: "Realizacje — Projektowanie 3D" },
