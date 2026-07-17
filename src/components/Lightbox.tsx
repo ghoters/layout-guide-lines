@@ -38,7 +38,7 @@ export function Lightbox({ project, onClose }: { project: Project; onClose: () =
         <div className="flex max-h-[80vh] items-center justify-center overflow-hidden bg-black/5">
           <img
             src={project.fullImage.url}
-            alt={project.title}
+            alt={`${project.title} — ${project.tag}`}
             className="max-h-[80vh] w-full object-contain"
           />
         </div>
