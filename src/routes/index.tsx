@@ -30,6 +30,12 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { property: "og:url", content: "https://www.3dmodele.pl/" },
+    ],
+    links: [{ rel: "canonical", href: "https://www.3dmodele.pl/" }],
+  }),
   component: Index,
 });
 
