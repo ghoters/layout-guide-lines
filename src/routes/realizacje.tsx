@@ -27,7 +27,9 @@ export const Route = createFileRoute("/realizacje")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://www.3dmodele.pl/realizacje" },
     ],
+    links: [{ rel: "canonical", href: "https://www.3dmodele.pl/realizacje" }],
     scripts: [
       {
         type: "application/ld+json",
