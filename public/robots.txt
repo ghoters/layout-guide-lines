@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://3dmodele.pl/sitemap.xml
+Sitemap: https://www.3dmodele.pl/sitemap.xml
