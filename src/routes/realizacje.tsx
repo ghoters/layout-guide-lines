@@ -27,7 +27,9 @@ export const Route = createFileRoute("/realizacje")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://www.3dmodele.pl/realizacje" },
     ],
+    links: [{ rel: "canonical", href: "https://www.3dmodele.pl/realizacje" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -35,12 +37,12 @@ export const Route = createFileRoute("/realizacje")({
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Realizacje — Projektowanie 3D",
-          url: "https://3dmodele.pl/realizacje",
+          url: "https://www.3dmodele.pl/realizacje",
           hasPart: projects.map((p) => ({
             "@type": "CreativeWork",
             name: p.title,
             about: p.tag,
-            image: `https://3dmodele.pl${p.fullImage.url}`,
+            image: `https://www.3dmodele.pl${p.fullImage.url}`,
           })),
         }),
       },

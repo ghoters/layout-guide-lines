@@ -32,7 +32,9 @@ export const Route = createFileRoute("/kontakt")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://www.3dmodele.pl/kontakt" },
     ],
+    links: [{ rel: "canonical", href: "https://www.3dmodele.pl/kontakt" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -40,7 +42,7 @@ export const Route = createFileRoute("/kontakt")({
           "@context": "https://schema.org",
           "@type": "ContactPage",
           name: "Kontakt — 3dmodele.pl",
-          url: "https://3dmodele.pl/kontakt",
+          url: "https://www.3dmodele.pl/kontakt",
           mainEntity: {
             "@type": "Person",
             name: "3dmodele.pl",

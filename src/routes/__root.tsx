@@ -109,7 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "3dmodele.pl",
           description:
             "Projektowanie modeli 3D na zamówienie — do druku 3D (FDM i żywica), gier, wizualizacji i ilustracji.",
-          url: "https://3dmodele.pl",
+          url: "https://www.3dmodele.pl",
           email: "sebjara.ghoters@gmail.com",
           telephone: "+48576309671",
           areaServed: "PL",
