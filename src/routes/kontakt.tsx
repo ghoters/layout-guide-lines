@@ -40,7 +40,7 @@ export const Route = createFileRoute("/kontakt")({
           "@context": "https://schema.org",
           "@type": "ContactPage",
           name: "Kontakt — 3dmodele.pl",
-          url: "https://modele3d-pl.lovable.app/kontakt",
+          url: "https://3dmodele.pl/kontakt",
           mainEntity: {
             "@type": "Person",
             name: "3dmodele.pl",
