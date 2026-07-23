@@ -1,20 +1,20 @@
 export type BlogCategory =
   | "Projektowanie 3D"
-  | "Modelowanie 3D"
-  | "Druk 3D FDM"
-  | "Druk 3D SLA"
-  | "Wizualizacje 3D"
+  | "Druk 3D"
+  | "Wizualizacje"
+  | "Modele do gier"
+  | "Poradniki"
   | "Case study"
-  | "Poradniki";
+  | "Aktualności";
 
 export const blogCategories: BlogCategory[] = [
   "Projektowanie 3D",
-  "Modelowanie 3D",
-  "Druk 3D FDM",
-  "Druk 3D SLA",
-  "Wizualizacje 3D",
-  "Case study",
+  "Druk 3D",
+  "Wizualizacje",
+  "Modele do gier",
   "Poradniki",
+  "Case study",
+  "Aktualności",
 ];
 
 export interface FaqItem {
