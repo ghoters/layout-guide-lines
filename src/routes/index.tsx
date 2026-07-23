@@ -42,6 +42,7 @@ export const Route = createFileRoute("/")({
 const navLinks = [
   { label: "Strona główna", to: "/" },
   { label: "Realizacje", to: "/realizacje" },
+  { label: "Blog", to: "/blog" },
   { label: "Kontakt", to: "/kontakt" },
 ];
 
@@ -156,7 +157,7 @@ function Index() {
             ) : (
               <Link
                 key={l.label}
-                to={l.to as "/" | "/realizacje"}
+                to={l.to as "/" | "/realizacje" | "/blog" | "/kontakt"}
                 activeProps={{ className: "text-sm font-medium text-[var(--brand)] underline underline-offset-8" }}
                 inactiveProps={{ className: "text-sm text-foreground/80 hover:text-foreground" }}
                 activeOptions={{ exact: true }}

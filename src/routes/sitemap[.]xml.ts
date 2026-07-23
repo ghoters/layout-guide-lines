@@ -16,8 +16,14 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/realizacje", changefreq: "weekly", priority: "0.8" },
+          { path: "/blog", changefreq: "weekly", priority: "0.8" },
           { path: "/kontakt", changefreq: "monthly", priority: "0.6" },
         ];
+
+        const { blogPosts } = await import("@/lib/blog");
+        for (const p of blogPosts) {
+          entries.push({ path: `/blog/${p.slug}`, changefreq: "monthly", priority: "0.7" });
+        }
 
         const urls = entries.map((e) =>
           [

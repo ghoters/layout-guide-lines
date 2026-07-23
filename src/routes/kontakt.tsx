@@ -59,6 +59,7 @@ export const Route = createFileRoute("/kontakt")({
 const navLinks = [
   { label: "Strona główna", to: "/" },
   { label: "Realizacje", to: "/realizacje" },
+  { label: "Blog", to: "/blog" },
   { label: "Kontakt", to: "/kontakt" },
 ];
 
@@ -100,7 +101,7 @@ function Kontakt() {
           {navLinks.map((l) => (
             <Link
               key={l.label}
-              to={l.to as "/" | "/realizacje" | "/kontakt"}
+              to={l.to as "/" | "/realizacje" | "/blog" | "/kontakt"}
               activeProps={{
                 className:
                   "text-sm font-medium text-[var(--brand)] underline underline-offset-8",

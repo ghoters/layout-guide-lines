@@ -54,6 +54,7 @@ export const Route = createFileRoute("/realizacje")({
 const navLinks = [
   { label: "Strona główna", to: "/" },
   { label: "Realizacje", to: "/realizacje" },
+  { label: "Blog", to: "/blog" },
   { label: "Kontakt", to: "/kontakt" },
 ];
 
@@ -102,7 +103,7 @@ function Realizacje() {
             ) : (
               <Link
                 key={l.label}
-                to={l.to as "/" | "/realizacje"}
+                to={l.to as "/" | "/realizacje" | "/blog" | "/kontakt"}
                 activeProps={{
                   className:
                     "text-sm font-medium text-[var(--brand)] underline underline-offset-8",
