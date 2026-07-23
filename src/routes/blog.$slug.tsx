@@ -167,7 +167,7 @@ function PostNotFound() {
 }
 
 function BlogPost() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: import("@/lib/blog").BlogPost };
   const related = blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 3);
   const fallback = related.length ? related : blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
