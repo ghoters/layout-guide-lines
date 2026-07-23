@@ -102,7 +102,7 @@ function Realizacje() {
             ) : (
               <Link
                 key={l.label}
-                to={l.to as "/" | "/realizacje"}
+                to={l.to as "/" | "/realizacje" | "/blog" | "/kontakt"}
                 activeProps={{
                   className:
                     "text-sm font-medium text-[var(--brand)] underline underline-offset-8",
