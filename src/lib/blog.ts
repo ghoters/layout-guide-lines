@@ -1,20 +1,20 @@
 export type BlogCategory =
   | "Projektowanie 3D"
-  | "Modelowanie 3D"
-  | "Druk 3D FDM"
-  | "Druk 3D SLA"
-  | "Wizualizacje 3D"
+  | "Druk 3D"
+  | "Wizualizacje"
+  | "Modele do gier"
+  | "Poradniki"
   | "Case study"
-  | "Poradniki";
+  | "Aktualności";
 
 export const blogCategories: BlogCategory[] = [
   "Projektowanie 3D",
-  "Modelowanie 3D",
-  "Druk 3D FDM",
-  "Druk 3D SLA",
-  "Wizualizacje 3D",
-  "Case study",
+  "Druk 3D",
+  "Wizualizacje",
+  "Modele do gier",
   "Poradniki",
+  "Case study",
+  "Aktualności",
 ];
 
 export interface FaqItem {
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Zobacz krok po kroku, jak wygląda projektowanie 3D na zamówienie — od briefu, przez modelowanie 3D, po gotowy plik do druku 3D FDM lub SLA.",
     excerpt: "Sprawdź, jak przebiega projektowanie 3D na zamówienie — od pierwszej rozmowy, przez modelowanie 3D, aż po gotowy model 3D do druku FDM lub SLA.",
     category: "Projektowanie 3D",
-    image: { url: "/assets/szkielet-2.jpg", alt: "Projektowanie modelu 3D na zamówienie" },
+    image: { url: "/assets/blog/thumb-proces.jpg", alt: "Projektowanie modelu 3D na zamówienie" },
     keyword: "projektowanie 3D na zamówienie",
     date: "2025-01-15",
     readingMinutes: 6,
@@ -84,7 +84,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Sprawdź, od czego zależy cena modelowania 3D do druku i ile realnie kosztuje projekt 3D do druku FDM lub SLA. Praktyczny przewodnik po wycenie.",
     excerpt: "Cena modelowania 3D zależy od złożoności, technologii druku i poziomu detalu. Wyjaśniam, jak wygląda wycena projektu 3D do druku krok po kroku.",
     category: "Poradniki",
-    image: { url: "/assets/FiguraJozefa.jpg", alt: "Modelowanie 3D do druku — wycena" },
+    image: { url: "/assets/blog/thumb-formaty.jpg", alt: "Modelowanie 3D do druku — wycena" },
     keyword: "modelowanie 3D do druku",
     date: "2025-01-20",
     readingMinutes: 5,
@@ -107,8 +107,8 @@ export const blogPosts: BlogPost[] = [
     metaTitle: "Druk 3D FDM czy SLA — porównanie technologii | 3dmodele.pl",
     metaDescription: "Druk 3D FDM czy druk 3D SLA? Porównuję obie technologie pod kątem jakości, ceny i zastosowań, żeby ułatwić wybór dla Twojego projektu 3D.",
     excerpt: "Porównanie druku 3D FDM i SLA — kiedy wybrać żywicę, a kiedy filament. Praktyczny przewodnik dla osób planujących modele 3D do druku.",
-    category: "Druk 3D FDM",
-    image: { url: "/assets/element_uzytkowy.jpg", alt: "Porównanie druku 3D FDM i SLA" },
+    category: "Druk 3D",
+    image: { url: "/assets/blog/thumb-druk.jpg", alt: "Porównanie druku 3D FDM i SLA" },
     keyword: "druk 3D FDM",
     date: "2025-01-25",
     readingMinutes: 7,
@@ -132,7 +132,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Poradnik: jak przygotować model 3D do druku FDM i SLA. Grubości ścianek, tolerancje, orientacja modelu i najczęstsze błędy.",
     excerpt: "Dowiedz się, jak przygotować model 3D do druku, żeby uniknąć błędów: grubości ścianek, tolerancje pasowań i optymalizacja pod FDM i SLA.",
     category: "Poradniki",
-    image: { url: "/assets/konstr.jpg", alt: "Przygotowanie modelu 3D do druku" },
+    image: { url: "/assets/blog/thumb-blender.jpg", alt: "Przygotowanie modelu 3D do druku" },
     keyword: "modele 3D do druku",
     date: "2025-02-01",
     readingMinutes: 6,
@@ -155,8 +155,8 @@ export const blogPosts: BlogPost[] = [
     metaTitle: "Najczęstsze błędy w projektowaniu modeli 3D do druku | 3dmodele.pl",
     metaDescription: "Poznaj najczęstsze błędy w projektowaniu modeli 3D do druku FDM i SLA — od zbyt cienkich ścianek po złe tolerancje. Sprawdź, jak ich uniknąć.",
     excerpt: "Zbyt cienkie ścianki, zapomniane tolerancje, brak fasetek — omawiam najczęstsze błędy w projektowaniu modeli 3D do druku i pokazuję, jak ich uniknąć.",
-    category: "Modelowanie 3D",
-    image: { url: "/assets/gun.jpg", alt: "Błędy w modelach 3D do druku" },
+    category: "Poradniki",
+    image: { url: "/assets/blog/thumb-uchwyt.jpg", alt: "Błędy w modelach 3D do druku" },
     keyword: "modele 3D do druku",
     date: "2025-02-05",
     readingMinutes: 5,
@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Case study projektu 3D: pokazuję, jak od pomysłu klienta doszliśmy do gotowego wydruku 3D — modelowanie, wycena, druk 3D FDM i SLA.",
     excerpt: "Studium przypadku pokazujące, jak od briefu klienta powstaje gotowy model 3D i wydruk — z realnymi decyzjami projektowymi.",
     category: "Case study",
-    image: { url: "/assets/martingore.jpg", alt: "Case study projektu 3D — od pomysłu do druku" },
+    image: { url: "/assets/blog/thumb-uchwyt.jpg", alt: "Case study projektu 3D — od pomysłu do druku" },
     keyword: "projekt 3D do druku",
     date: "2025-02-10",
     readingMinutes: 6,
@@ -202,7 +202,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: "Sprawdź, jakie pliki i referencje warto przygotować przed rozpoczęciem projektowania 3D na zamówienie. Praktyczna checklista dla klienta.",
     excerpt: "Zdjęcia, szkice, rysunki techniczne, wymiary — sprawdź, co warto przygotować, aby zlecić projektowanie 3D na zamówienie.",
     category: "Projektowanie 3D",
-    image: { url: "/assets/forest-2.jpg", alt: "Pliki potrzebne do projektowania 3D" },
+    image: { url: "/assets/blog/thumb-proces.jpg", alt: "Pliki potrzebne do projektowania 3D" },
     keyword: "projektowanie 3D na zamówienie",
     date: "2025-02-15",
     readingMinutes: 4,
@@ -224,8 +224,8 @@ export const blogPosts: BlogPost[] = [
     metaTitle: "Druk 3D dla firm — kiedy się opłaca? | 3dmodele.pl",
     metaDescription: "Druk 3D dla firm: prototypy, krótkie serie, części zamienne. Sprawdź, kiedy warto zainwestować w projektowanie 3D i druk 3D FDM lub SLA.",
     excerpt: "Prototypy, krótkie serie, części zamienne, gadżety marketingowe — kiedy druk 3D dla firm ma największy sens.",
-    category: "Druk 3D FDM",
-    image: { url: "/assets/revolwer.jpg", alt: "Druk 3D dla firm" },
+    category: "Aktualności",
+    image: { url: "/assets/blog/thumb-nowosci.jpg", alt: "Druk 3D dla firm" },
     keyword: "druk 3D FDM",
     date: "2025-02-20",
     readingMinutes: 5,
@@ -247,8 +247,8 @@ export const blogPosts: BlogPost[] = [
     metaTitle: "Modelowanie 3D figurki na zamówienie — jak wygląda proces | 3dmodele.pl",
     metaDescription: "Zamawiasz modelowanie 3D figurki? Zobacz, jak wygląda współpraca krok po kroku — od referencji, przez model 3D, po druk 3D SLA.",
     excerpt: "Zamówienie figurki 3D krok po kroku: referencje, modelowanie, akceptacja i druk 3D SLA. Sprawdź, jak wygląda to u mnie.",
-    category: "Modelowanie 3D",
-    image: { url: "/assets/jOszef-2.jpg", alt: "Modelowanie 3D figurki na zamówienie" },
+    category: "Modele do gier",
+    image: { url: "/assets/blog/thumb-gry.jpg", alt: "Modelowanie 3D figurki na zamówienie" },
     keyword: "modelowanie 3D do druku",
     date: "2025-02-25",
     readingMinutes: 5,
@@ -270,8 +270,8 @@ export const blogPosts: BlogPost[] = [
     metaTitle: "Wizualizacje 3D produktów — jak zwiększają sprzedaż | 3dmodele.pl",
     metaDescription: "Wizualizacje 3D produktów pozwalają pokazać produkt zanim powstanie i zwiększają konwersję w sklepach internetowych. Sprawdź, jak z nich korzystać.",
     excerpt: "Wizualizacje 3D produktów zwiększają zaufanie klienta i konwersję w sklepach online. Wyjaśniam, kiedy warto po nie sięgnąć.",
-    category: "Wizualizacje 3D",
-    image: { url: "/assets/MechaElephant.jpg", alt: "Wizualizacje 3D produktów" },
+    category: "Wizualizacje",
+    image: { url: "/assets/blog/thumb-wizualizacje.jpg", alt: "Wizualizacje 3D produktów" },
     keyword: "wizualizacje 3D produktów",
     date: "2025-03-01",
     readingMinutes: 5,
