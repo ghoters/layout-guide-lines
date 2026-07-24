@@ -1,0 +1,86 @@
+{
+  "slug": "jak-przygotowac-model-do-druku",
+  "title": "Jak przygotować model 3D do druku?",
+  "h1": "Jak przygotować model 3D do druku — praktyczny poradnik",
+  "metaTitle": "Jak przygotować model 3D do druku (FDM i SLA) | 3dmodele.pl",
+  "metaDescription": "Poradnik: jak przygotować model 3D do druku FDM i SLA. Grubości ścianek, tolerancje, orientacja modelu i najczęstsze błędy.",
+  "excerpt": "Dowiedz się, jak przygotować model 3D do druku, żeby uniknąć błędów: grubości ścianek, tolerancje pasowań i optymalizacja pod FDM i SLA.",
+  "category": "Poradniki",
+  "image": {
+    "url": "/assets/blog/thumb-blender.jpg",
+    "alt": "Przygotowanie modelu 3D do druku"
+  },
+  "keyword": "modele 3D do druku",
+  "date": "2025-02-01",
+  "readingMinutes": 6,
+  "intro": "Zanim wyślesz model do drukarki, warto sprawdzić kilka rzeczy. Dobrze przygotowany model 3D do druku oszczędza czas, materiał i nerwy.",
+  "sections": [
+    {
+      "heading": "Zamknięta i szczelna geometria",
+      "level": 2,
+      "paragraphs": [
+        "Model musi być tzw. „manifold” — bez dziur, odwróconych normalnych i zdublowanych ścianek. Slicery lubią zamknięte bryły."
+      ],
+      "callout": {
+        "style": "tip",
+        "text": "Użyj narzędzia „3D Print Toolbox” w Blenderze lub „Analyze” w Meshmixerze, żeby szybko znaleźć błędy siatki."
+      }
+    },
+    {
+      "heading": "Grubości ścianek",
+      "level": 2,
+      "paragraphs": [
+        "Dla druku 3D FDM minimalna grubość ścianek to zwykle 1,2 mm, dla SLA — od 0,8 mm. Zbyt cienkie ścianki pękają lub w ogóle się nie drukują."
+      ],
+      "table": {
+        "headers": [
+          "Technologia",
+          "Min. grubość ścianki",
+          "Min. detal"
+        ],
+        "rows": [
+          [
+            "FDM 0.4 mm",
+            "1,2 mm",
+            "0,8 mm"
+          ],
+          [
+            "SLA",
+            "0,8 mm",
+            "0,3 mm"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "Tolerancje pasowań",
+      "level": 2,
+      "paragraphs": [
+        "Dla elementów łączonych warto zostawić 0,2–0,4 mm luzu. Wartość zależy od kalibracji drukarki i materiału."
+      ]
+    },
+    {
+      "heading": "Orientacja modelu",
+      "level": 2,
+      "paragraphs": [
+        "Ustawienie modelu na platformie wpływa na wytrzymałość, ilość podpór i czas druku. Warstwy najsłabiej trzymają się „w poprzek” siły."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "W jakim formacie zapisać model?",
+      "a": "Najczęściej używa się STL lub 3MF. 3MF przenosi więcej informacji (kolor, jednostki), STL jest bardziej uniwersalny."
+    },
+    {
+      "q": "Czy muszę samodzielnie ustawiać podpory?",
+      "a": "Nie — zajmuje się tym slicer lub osoba drukująca model. Warto jednak zaprojektować model tak, aby minimalizować liczbę podpór."
+    }
+  ],
+  "author": {
+    "name": "Sebastian Jara",
+    "role": "Projektant 3D · 3dmodele.pl",
+    "avatar": "/assets/awatar3.jpg"
+  },
+  "cta": "Masz pomysł na model 3D? Skontaktuj się ze mną i otrzymaj bezpłatną wycenę projektu."
+}

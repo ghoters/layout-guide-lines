@@ -1,0 +1,108 @@
+{
+  "slug": "fdm-czy-sla",
+  "title": "FDM czy SLA – którą technologię druku 3D wybrać?",
+  "h1": "Druk 3D FDM czy SLA — którą technologię wybrać?",
+  "metaTitle": "Druk 3D FDM czy SLA — porównanie technologii | 3dmodele.pl",
+  "metaDescription": "Druk 3D FDM czy druk 3D SLA? Porównuję obie technologie pod kątem jakości, ceny i zastosowań, żeby ułatwić wybór dla Twojego projektu 3D.",
+  "excerpt": "Porównanie druku 3D FDM i SLA — kiedy wybrać żywicę, a kiedy filament. Praktyczny przewodnik dla osób planujących modele 3D do druku.",
+  "category": "Druk 3D",
+  "image": {
+    "url": "/assets/blog/thumb-druk.jpg",
+    "alt": "Porównanie druku 3D FDM i SLA"
+  },
+  "keyword": "druk 3D FDM",
+  "date": "2025-01-25",
+  "readingMinutes": 7,
+  "intro": "Druk 3D FDM i druk 3D SLA to dwie najpopularniejsze technologie druku 3D. Każda z nich sprawdza się w innych zastosowaniach. Zobacz, kiedy wybrać którą.",
+  "sections": [
+    {
+      "heading": "Druk 3D FDM — mocne i słabe strony",
+      "level": 2,
+      "paragraphs": [
+        "FDM (Fused Deposition Modeling) to druk z filamentu. Świetnie sprawdza się przy większych, funkcjonalnych modelach użytkowych, prototypach i częściach mechanicznych.",
+        "Zaletą jest niski koszt materiału i duża wytrzymałość gotowych elementów."
+      ],
+      "list": {
+        "style": "bullet",
+        "items": [
+          "Niski koszt materiału",
+          "Wytrzymałe wydruki funkcjonalne",
+          "Duże pole robocze",
+          "Widoczna warstwowość i niższy detal"
+        ]
+      }
+    },
+    {
+      "heading": "Druk 3D SLA — mocne i słabe strony",
+      "level": 2,
+      "paragraphs": [
+        "SLA to druk z żywicy fotoutwardzalnej. Daje bardzo wysoki poziom detalu, gładkie powierzchnie i sprawdza się przy figurkach, biżuterii i modelach dentystycznych.",
+        "Wadą jest wyższa cena materiału i konieczność obróbki po druku (mycie, dotwardzanie)."
+      ]
+    },
+    {
+      "heading": "Porównanie technologii",
+      "level": 2,
+      "paragraphs": [
+        "Krótkie zestawienie najważniejszych parametrów obu technologii."
+      ],
+      "table": {
+        "headers": [
+          "Cecha",
+          "FDM",
+          "SLA"
+        ],
+        "rows": [
+          [
+            "Detal",
+            "Średni",
+            "Bardzo wysoki"
+          ],
+          [
+            "Wytrzymałość",
+            "Wysoka",
+            "Średnia"
+          ],
+          [
+            "Koszt materiału",
+            "Niski",
+            "Wyższy"
+          ],
+          [
+            "Post-processing",
+            "Minimalny",
+            "Mycie + dotwardzanie"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "Kiedy FDM, a kiedy SLA",
+      "level": 2,
+      "paragraphs": [
+        "Wybieraj FDM dla dużych elementów użytkowych i prototypów. Wybieraj SLA, jeśli zależy Ci na detalu i estetyce — np. modele kolekcjonerskie, figurki, elementy jubilerskie."
+      ],
+      "callout": {
+        "style": "quote",
+        "text": "Nie ma „lepszej” technologii — jest technologia dopasowana do konkretnego modelu.",
+        "author": "Sebastian, 3dmodele.pl"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": "Czy jeden model można wydrukować w obu technologiach?",
+      "a": "Tak, ale zwykle wymaga to lekkiej reoptymalizacji modelu 3D pod docelową technologię."
+    },
+    {
+      "q": "Która technologia jest tańsza?",
+      "a": "Przy dużych, prostych elementach tańszy jest zwykle druk 3D FDM. Przy małych, detalicznych — koszty potrafią się zrównać."
+    }
+  ],
+  "author": {
+    "name": "Sebastian Jara",
+    "role": "Projektant 3D · 3dmodele.pl",
+    "avatar": "/assets/awatar3.jpg"
+  },
+  "cta": "Masz pomysł na model 3D? Skontaktuj się ze mną i otrzymaj bezpłatną wycenę projektu."
+}

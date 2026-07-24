@@ -1,0 +1,64 @@
+{
+  "slug": "od-pomyslu-do-gotowego-wydruku",
+  "title": "Od pomysłu do gotowego wydruku 3D – case study projektu",
+  "h1": "Od pomysłu do gotowego wydruku 3D — case study projektu",
+  "metaTitle": "Case study: od pomysłu do wydruku 3D — modelowanie i druk | 3dmodele.pl",
+  "metaDescription": "Case study projektu 3D: pokazuję, jak od pomysłu klienta doszliśmy do gotowego wydruku 3D — modelowanie, wycena, druk 3D FDM i SLA.",
+  "excerpt": "Studium przypadku pokazujące, jak od briefu klienta powstaje gotowy model 3D i wydruk — z realnymi decyzjami projektowymi.",
+  "category": "Case study",
+  "image": {
+    "url": "/assets/blog/thumb-uchwyt.jpg",
+    "alt": "Case study projektu 3D — od pomysłu do druku"
+  },
+  "keyword": "projekt 3D do druku",
+  "date": "2025-02-10",
+  "readingMinutes": 6,
+  "intro": "W tym case study pokazuję, jak wygląda pełny cykl: od pierwszej rozmowy z klientem, przez modelowanie 3D, po gotowy wydruk 3D w technologii SLA.",
+  "sections": [
+    {
+      "heading": "Brief klienta",
+      "level": 2,
+      "paragraphs": [
+        "Klient przyszedł z pomysłem na figurkę kolekcjonerską. Miał zdjęcia referencyjne, wysokość docelową i oczekiwał wysokiego poziomu detalu."
+      ],
+      "callout": {
+        "style": "quote",
+        "text": "Chciałbym mieć figurkę mojej postaci z gry — możliwie wierną oryginałowi.",
+        "author": "Klient, brief startowy"
+      }
+    },
+    {
+      "heading": "Modelowanie i konsultacje",
+      "level": 2,
+      "paragraphs": [
+        "Po pierwszej fazie modelowania wysłałem podglądy 360°. Po dwóch turach poprawek zatwierdziliśmy proporcje i detal."
+      ]
+    },
+    {
+      "heading": "Druk 3D SLA i wykończenie",
+      "level": 2,
+      "paragraphs": [
+        "Ze względu na detal wybraliśmy druk 3D SLA. Po druku model został umyty, dotwardzony i przygotowany pod malowanie."
+      ]
+    },
+    {
+      "heading": "Wnioski",
+      "level": 2,
+      "paragraphs": [
+        "Sprawdzone materiały referencyjne skróciły cały proces o niemal tydzień. Warto inwestować czas w brief."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Ile trwał cały projekt?",
+      "a": "Od pierwszego maila do gotowego wydruku minęły niecałe trzy tygodnie."
+    }
+  ],
+  "author": {
+    "name": "Sebastian Jara",
+    "role": "Projektant 3D · 3dmodele.pl",
+    "avatar": "/assets/awatar3.jpg"
+  },
+  "cta": "Masz pomysł na model 3D? Skontaktuj się ze mną i otrzymaj bezpłatną wycenę projektu."
+}
