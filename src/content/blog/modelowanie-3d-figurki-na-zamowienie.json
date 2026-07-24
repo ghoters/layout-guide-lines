@@ -1,0 +1,61 @@
+{
+  "slug": "modelowanie-3d-figurki-na-zamowienie",
+  "title": "Modelowanie 3D figurki na zamówienie – jak wygląda współpraca?",
+  "h1": "Modelowanie 3D figurki na zamówienie — jak wygląda współpraca?",
+  "metaTitle": "Modelowanie 3D figurki na zamówienie — jak wygląda proces | 3dmodele.pl",
+  "metaDescription": "Zamawiasz modelowanie 3D figurki? Zobacz, jak wygląda współpraca krok po kroku — od referencji, przez model 3D, po druk 3D SLA.",
+  "excerpt": "Zamówienie figurki 3D krok po kroku: referencje, modelowanie, akceptacja i druk 3D SLA. Sprawdź, jak wygląda to u mnie.",
+  "category": "Modele do gier",
+  "image": {
+    "url": "/assets/blog/thumb-gry.jpg",
+    "alt": "Modelowanie 3D figurki na zamówienie"
+  },
+  "keyword": "modelowanie 3D do druku",
+  "date": "2025-02-25",
+  "readingMinutes": 5,
+  "intro": "Modelowanie 3D figurki na zamówienie to jedna z najczęstszych realizacji w 3dmodele.pl. Pokazuję, jak wygląda taka współpraca od pierwszej wiadomości.",
+  "sections": [
+    {
+      "heading": "Referencje i brief",
+      "level": 2,
+      "paragraphs": [
+        "Najlepiej zebrać kilka zdjęć/artów z różnych ujęć oraz opis, co jest kluczowe: podobieństwo, poza, detal ubioru."
+      ]
+    },
+    {
+      "heading": "Modelowanie i podglądy",
+      "level": 2,
+      "paragraphs": [
+        "Pracę dzielę na etapy: blocking, sylwetka, detal, retopo pod druk. Na każdym etapie wysyłam podglądy."
+      ],
+      "list": {
+        "style": "number",
+        "items": [
+          "Blocking i proporcje",
+          "Sylwetka i poza",
+          "Detal (ubiór, twarz, akcesoria)",
+          "Retopologia pod druk 3D"
+        ]
+      }
+    },
+    {
+      "heading": "Druk 3D SLA i finish",
+      "level": 2,
+      "paragraphs": [
+        "Figurki drukuję głównie w technologii druku 3D SLA — daje najlepszy detal. Klient dostaje model gotowy pod malowanie."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Czy modeluję figurki na podstawie zdjęć realnych osób?",
+      "a": "Tak, o ile mam do dyspozycji zdjęcia z kilku ujęć oraz zgodę osoby przedstawianej."
+    }
+  ],
+  "author": {
+    "name": "Sebastian Jara",
+    "role": "Projektant 3D · 3dmodele.pl",
+    "avatar": "/assets/awatar3.jpg"
+  },
+  "cta": "Masz pomysł na model 3D? Skontaktuj się ze mną i otrzymaj bezpłatną wycenę projektu."
+}

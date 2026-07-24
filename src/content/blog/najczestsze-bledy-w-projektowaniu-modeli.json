@@ -1,0 +1,72 @@
+{
+  "slug": "najczestsze-bledy-w-projektowaniu-modeli",
+  "title": "Najczęstsze błędy w projektowaniu modeli do druku 3D",
+  "h1": "Najczęstsze błędy w projektowaniu modeli 3D do druku",
+  "metaTitle": "Najczęstsze błędy w projektowaniu modeli 3D do druku | 3dmodele.pl",
+  "metaDescription": "Poznaj najczęstsze błędy w projektowaniu modeli 3D do druku FDM i SLA — od zbyt cienkich ścianek po złe tolerancje. Sprawdź, jak ich uniknąć.",
+  "excerpt": "Zbyt cienkie ścianki, zapomniane tolerancje, brak fasetek — omawiam najczęstsze błędy w projektowaniu modeli 3D do druku i pokazuję, jak ich uniknąć.",
+  "category": "Poradniki",
+  "image": {
+    "url": "/assets/blog/thumb-uchwyt.jpg",
+    "alt": "Błędy w modelach 3D do druku"
+  },
+  "keyword": "modele 3D do druku",
+  "date": "2025-02-05",
+  "readingMinutes": 5,
+  "intro": "Wiele modeli, które trafiają do mnie do „poprawy”, ma podobne problemy. Poniżej lista najczęstszych błędów w modelowaniu 3D do druku — warto przejść tę checklistę przed wysłaniem projektu na drukarkę.",
+  "sections": [
+    {
+      "heading": "Zbyt cienkie ścianki i detale",
+      "level": 2,
+      "paragraphs": [
+        "Detal, który świetnie wygląda w programie, może być za cienki dla realnej drukarki. Zawsze warto zweryfikować minimalne grubości pod konkretną technologię."
+      ]
+    },
+    {
+      "heading": "Nieszczelna siatka",
+      "level": 2,
+      "paragraphs": [
+        "Brakujące ścianki, odwrócone normalne, zdublowane wierzchołki — to najczęstszy powód błędów w slicerze."
+      ],
+      "list": {
+        "style": "bullet",
+        "items": [
+          "Brakujące ściany (holes)",
+          "Odwrócone normalne",
+          "Zdublowane wierzchołki",
+          "Przenikające się bryły"
+        ]
+      }
+    },
+    {
+      "heading": "Brak tolerancji dla łączeń",
+      "level": 2,
+      "paragraphs": [
+        "Dwie części „na styk” w programie oznaczają w druku brak możliwości złożenia. Zawsze planuj luz."
+      ],
+      "callout": {
+        "style": "info",
+        "text": "Standardowy luz 0,2 mm sprawdza się dla większości drukarek FDM. Dla wciskanych pasowań spróbuj 0,15 mm."
+      }
+    },
+    {
+      "heading": "Zbyt duża ilość podpór",
+      "level": 2,
+      "paragraphs": [
+        "Model zaprojektowany bez myślenia o orientacji na platformie generuje mnóstwo podpór — więcej materiału i gorsza jakość powierzchni."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Czy da się „naprawić” model przed drukiem?",
+      "a": "Tak, wiele błędów można poprawić w programach typu Meshmixer czy Blender. Nie zawsze jednak da się uratować geometrię — czasem szybciej jest zamodelować od nowa."
+    }
+  ],
+  "author": {
+    "name": "Sebastian Jara",
+    "role": "Projektant 3D · 3dmodele.pl",
+    "avatar": "/assets/awatar3.jpg"
+  },
+  "cta": "Masz pomysł na model 3D? Skontaktuj się ze mną i otrzymaj bezpłatną wycenę projektu."
+}

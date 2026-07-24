@@ -1,0 +1,80 @@
+{
+  "slug": "jakie-pliki-sa-potrzebne-do-projektowania-3d",
+  "title": "Jakie pliki są potrzebne do projektowania 3D?",
+  "h1": "Jakie pliki są potrzebne do projektowania 3D?",
+  "metaTitle": "Jakie pliki są potrzebne do projektowania 3D? | 3dmodele.pl",
+  "metaDescription": "Sprawdź, jakie pliki i referencje warto przygotować przed rozpoczęciem projektowania 3D na zamówienie. Praktyczna checklista dla klienta.",
+  "excerpt": "Zdjęcia, szkice, rysunki techniczne, wymiary — sprawdź, co warto przygotować, aby zlecić projektowanie 3D na zamówienie.",
+  "category": "Projektowanie 3D",
+  "image": {
+    "url": "/assets/blog/thumb-proces.jpg",
+    "alt": "Pliki potrzebne do projektowania 3D"
+  },
+  "keyword": "projektowanie 3D na zamówienie",
+  "date": "2025-02-15",
+  "readingMinutes": 4,
+  "intro": "Im lepiej przygotowane materiały, tym szybciej i taniej powstaje projekt 3D do druku. Oto lista rzeczy, które warto zebrać przed briefem.",
+  "sections": [
+    {
+      "heading": "Zdjęcia i szkice",
+      "level": 2,
+      "paragraphs": [
+        "Nawet ręczny szkic na kartce jest cenny. Zdjęcia z kilku stron pomagają zrozumieć proporcje i detale."
+      ],
+      "list": {
+        "style": "bullet",
+        "items": [
+          "Zdjęcia z przodu, boku i góry",
+          "Szkic z wymiarami",
+          "Zdjęcie referencji w skali (np. z monetą)"
+        ]
+      }
+    },
+    {
+      "heading": "Wymiary i tolerancje",
+      "level": 2,
+      "paragraphs": [
+        "Jeśli model ma coś pasować (obudowa, uchwyt, adapter), potrzebne są dokładne wymiary z tolerancjami."
+      ]
+    },
+    {
+      "heading": "Formaty plików źródłowych",
+      "level": 2,
+      "paragraphs": [
+        "Jeśli masz już model (np. STEP, STL, OBJ), prześlij go — przyspieszy to prace nad projektowaniem 3D."
+      ],
+      "table": {
+        "headers": [
+          "Format",
+          "Zastosowanie"
+        ],
+        "rows": [
+          [
+            "STEP",
+            "Modele CAD, projekty mechaniczne"
+          ],
+          [
+            "STL / 3MF",
+            "Modele do druku 3D"
+          ],
+          [
+            "OBJ / FBX",
+            "Modele do wizualizacji i gier"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": "Co jeśli mam tylko pomysł?",
+      "a": "To wystarczy. Opisz go możliwie szczegółowo — resztę omówimy w rozmowie."
+    }
+  ],
+  "author": {
+    "name": "Sebastian Jara",
+    "role": "Projektant 3D · 3dmodele.pl",
+    "avatar": "/assets/awatar3.jpg"
+  },
+  "cta": "Masz pomysł na model 3D? Skontaktuj się ze mną i otrzymaj bezpłatną wycenę projektu."
+}
