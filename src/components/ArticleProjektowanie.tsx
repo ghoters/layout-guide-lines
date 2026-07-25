@@ -436,6 +436,16 @@ export default function ArticleProjektowanie() {
                     <li key={s.id}>
                       <a
                         href={`#${s.id}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const el = document.getElementById(s.id);
+                          if (el) {
+                            const y = el.getBoundingClientRect().top + window.scrollY - 96;
+                            window.scrollTo({ top: y, behavior: "smooth" });
+                            history.replaceState(null, "", `#${s.id}`);
+                            setActiveId(s.id);
+                          }
+                        }}
                         className={
                           "flex items-start gap-3 rounded-lg px-3 py-2 text-xs transition " +
                           (active
