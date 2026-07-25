@@ -463,7 +463,7 @@ export default function ArticleStlStep() {
             {/* FAQ */}
             <div className="mt-12">
               <NumberedHeading id="faq" num={9}>FAQ</NumberedHeading>
-              <div className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2">
+              <div className="mt-5 flex flex-col gap-3">
                 {faq.map((f, i) => {
                   const open = openFaq === i;
                   return (
