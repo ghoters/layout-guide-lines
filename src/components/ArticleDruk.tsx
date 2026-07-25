@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { blogPosts } from "@/lib/blog";
-import blogDrukHero from "/assets/blog-druk-hero.jpg?url";
 
 const navLinks = [
   { label: "Strona główna", to: "/" as const },
