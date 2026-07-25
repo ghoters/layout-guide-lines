@@ -11,6 +11,7 @@ export type BlogCategory =
 export const blogCategories: BlogCategory[] = [
   "Projektowanie 3D",
   "Druk 3D",
+  "Poradniki",
 ];
 
 export interface FaqItem {
@@ -94,6 +95,30 @@ export const blogPosts: BlogPost[] = [
     faq: [
       { q: "W jakim formacie zapisać model?", a: "Najczęściej używa się STL lub 3MF. 3MF przenosi więcej informacji (kolor, jednostki), STL jest bardziej uniwersalny." },
       { q: "Czy muszę samodzielnie ustawiać podpory?", a: "Nie — zajmuje się tym slicer lub osoba drukująca model. Warto jednak zaprojektować model tak, aby minimalizować liczbę podpór." },
+    ],
+    cta: defaultCta,
+  },
+  {
+    slug: "stl-czy-step-ktory-format-wybrac",
+    title: "STL czy STEP – który format wybrać?",
+    h1: "STL czy STEP – który format wybrać?",
+    metaTitle: "STL czy STEP – który format wybrać? | 3dmodele.pl",
+    metaDescription: "Porównanie formatów plików 3D STL i STEP oraz ich zastosowań w praktyce. Dowiedz się, kiedy używać STL, a kiedy STEP.",
+    excerpt: "Porównanie formatów plików 3D i ich zastosowań w praktyce.",
+    category: "Poradniki",
+    image: { url: "/assets/blog-stl-vs-step.jpg", alt: "Porównanie formatów plików 3D STL i STEP" },
+    keyword: "STL czy STEP",
+    date: "2024-04-28",
+    readingMinutes: 4,
+    intro: "STL i STEP to dwa najpopularniejsze formaty plików 3D, ale służą do zupełnie innych rzeczy. Poniżej krótkie porównanie, które pomoże Ci wybrać właściwy format do Twojego projektu.",
+    sections: [
+      { heading: "Czym jest STL?", level: 2, paragraphs: ["STL (Stereolithography) to format opisujący geometrię modelu w postaci siatki trójkątów. Jest standardem w druku 3D — obsługują go wszystkie slicery i drukarki.", "Wadą STL jest brak informacji o wymiarach parametrycznych, historii operacji czy tolerancjach. To plik „gotowy do druku”, ale trudny do edycji."] },
+      { heading: "Czym jest STEP?", level: 2, paragraphs: ["STEP (ISO 10303) to format wymiany danych CAD. Przechowuje geometrię jako precyzyjne bryły (BREP), zachowując wymiary, powierzchnie i strukturę modelu.", "STEP jest idealny do współpracy między programami CAD (SolidWorks, Fusion 360, Inventor) oraz do dalszej edycji modelu."] },
+      { heading: "Kiedy STL, a kiedy STEP?", level: 2, paragraphs: ["STL wybierz, gdy plik trafia bezpośrednio do druku 3D lub do wizualizacji, a model nie będzie już modyfikowany.", "STEP wybierz, gdy model ma być dalej edytowany, wysłany do produkcji CNC, obróbki lub gdy współpracujesz z inżynierem korzystającym z innego programu CAD."] },
+    ],
+    faq: [
+      { q: "Czy mogę wydrukować plik STEP?", a: "Bezpośrednio nie — najpierw trzeba go skonwertować do STL lub 3MF w slicerze albo programie CAD." },
+      { q: "Który format jest dokładniejszy?", a: "STEP — opisuje geometrię matematycznie, bez uproszczeń. STL aproksymuje krzywizny trójkątami, więc dokładność zależy od gęstości siatki." },
     ],
     cta: defaultCta,
   },
