@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone, ChevronRight } from "lucide-react";
 import { blogPosts, getPostBySlug } from "@/lib/blog";
+import ArticleProjektowanie from "@/components/ArticleProjektowanie";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -168,6 +169,9 @@ function PostNotFound() {
 
 function BlogPost() {
   const { post } = Route.useLoaderData() as { post: import("@/lib/blog").BlogPost };
+  if (post.slug === "jak-wyglada-proces-projektowania-modelu-3d") {
+    return <ArticleProjektowanie />;
+  }
   const related = blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 3);
   const fallback = related.length ? related : blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
