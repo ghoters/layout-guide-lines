@@ -91,7 +91,7 @@ function Kontakt() {
     <div className="min-h-screen bg-[var(--page)] text-foreground">
       {/* NAV */}
       <header className="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-6 sm:flex sm:items-center sm:justify-between">
-        <Link to="/" className="flex min-w-0 items-center gap-2">
+        <Link to="/" className="flex min-w-0 items-center gap-2" aria-label="3dmodele.pl — strona główna">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
             <Settings className="h-5 w-5" />
           </div>
