@@ -178,10 +178,13 @@ export default function ArticleStlStep() {
 
   const [activeId, setActiveId] = useState<string>(toc[0].id);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const lockRef = useRef(false);
+  const lockTimer = useRef<number | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
+        if (lockRef.current) return;
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
@@ -277,6 +280,11 @@ export default function ArticleStlStep() {
                           const el = document.getElementById(s.id);
                           if (el) {
                             const y = el.getBoundingClientRect().top + window.scrollY - 96;
+                            lockRef.current = true;
+                            if (lockTimer.current) window.clearTimeout(lockTimer.current);
+                            lockTimer.current = window.setTimeout(() => {
+                              lockRef.current = false;
+                            }, 800);
                             window.scrollTo({ top: y, behavior: "smooth" });
                             history.replaceState(null, "", `#${s.id}`);
                             setActiveId(s.id);
