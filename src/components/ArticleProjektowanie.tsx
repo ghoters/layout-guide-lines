@@ -240,7 +240,7 @@ export default function ArticleProjektowanie() {
                 <span className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
                   <User className="h-3.5 w-3.5" />
                 </span>
-                Konrad Żurawski
+                Autor: 3dmodele.pl
               </span>
             </div>
           </div>
