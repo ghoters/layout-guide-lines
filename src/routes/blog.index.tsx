@@ -3,7 +3,7 @@ import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone, BookOpen, Calen
 import { useMemo, useState } from "react";
 import { blogPosts, blogCategories, type BlogCategory } from "@/lib/blog";
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Blog o projektowaniu 3D i druku 3D | 3dmodele.pl" },
