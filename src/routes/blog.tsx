@@ -225,9 +225,8 @@ function Blog() {
           ))}
         </div>
 
-        {totalPages > 1 && (
-          <div className="mt-10 flex items-center justify-center gap-2">
-            <button
+        <div className="mt-10 flex items-center justify-center gap-2">
+          <button
               type="button"
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={current === 1}
@@ -264,8 +263,7 @@ function Blog() {
             >
               <ChevronRight className="h-4 w-4" />
             </button>
-          </div>
-        )}
+        </div>
       </section>
 
       <section className="mx-auto max-w-[1200px] px-6 pb-10">
