@@ -3,6 +3,7 @@ import { ArrowRight, Settings, Instagram, Linkedin, Mail, Phone, ChevronRight } 
 import { blogPosts, getPostBySlug } from "@/lib/blog";
 import ArticleProjektowanie from "@/components/ArticleProjektowanie";
 import ArticleStlStep from "@/components/ArticleStlStep";
+import ArticleDruk from "@/components/ArticleDruk";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -172,6 +173,9 @@ function BlogPost() {
   const { post } = Route.useLoaderData() as { post: import("@/lib/blog").BlogPost };
   if (post.slug === "jak-wyglada-proces-projektowania-modelu-3d") {
     return <ArticleProjektowanie />;
+  }
+  if (post.slug === "jak-przygotowac-model-do-druku-3d") {
+    return <ArticleDruk />;
   }
   if (post.slug === "stl-czy-step-ktory-format-wybrac") {
     return <ArticleStlStep />;
