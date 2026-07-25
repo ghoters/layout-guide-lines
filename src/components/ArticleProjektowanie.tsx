@@ -169,20 +169,35 @@ export default function ArticleProjektowanie() {
   const [activeId, setActiveId] = useState<string>(toc[0].id);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-        if (visible) setActiveId(visible.target.id);
-      },
-      { rootMargin: "-30% 0px -60% 0px", threshold: 0 },
-    );
-    toc.forEach((s) => {
-      const el = document.getElementById(s.id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+    let frameId: number | null = null;
+
+    const updateActiveSection = () => {
+      const activationLine = 112;
+      const sections = toc
+        .map((item) => document.getElementById(item.id))
+        .filter((element): element is HTMLElement => Boolean(element));
+
+      const current = [...sections]
+        .reverse()
+        .find((section) => section.getBoundingClientRect().top <= activationLine);
+
+      setActiveId(current?.id ?? sections[0]?.id ?? toc[0].id);
+      frameId = null;
+    };
+
+    const handleScroll = () => {
+      if (frameId === null) frameId = window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      if (frameId !== null) window.cancelAnimationFrame(frameId);
+    };
   }, []);
 
   return (
