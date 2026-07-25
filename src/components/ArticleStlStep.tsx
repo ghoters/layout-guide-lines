@@ -18,7 +18,7 @@ import {
   FileType2,
   Boxes,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { blogPosts } from "@/lib/blog";
 
 const navLinks = [
