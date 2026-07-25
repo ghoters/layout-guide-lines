@@ -377,7 +377,7 @@ export default function ArticleStlStep() {
             {/* Różnice / tabela */}
             <div className="mt-12">
               <NumberedHeading id="roznice" num={4}>STL vs STEP – kluczowe różnice</NumberedHeading>
-              <div id="tabela" className="mt-5 overflow-hidden rounded-2xl border border-border bg-card">
+              <div id="tabela" className="scroll-mt-24 mt-5 overflow-hidden rounded-2xl border border-border bg-card">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left text-sm">
                     <thead className="bg-[var(--brand-soft)]/40 text-[11px] uppercase tracking-wider text-muted-foreground">
