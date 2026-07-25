@@ -14,6 +14,10 @@ import {
   Quote,
   Info,
   Lightbulb,
+  CheckCircle2,
+  MessageSquare,
+  FolderOpen,
+  BookOpen,
 } from "lucide-react";
 import {
   blogPosts,
