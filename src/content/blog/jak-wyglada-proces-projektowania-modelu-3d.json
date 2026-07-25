@@ -1,79 +1,212 @@
 {
   "slug": "jak-wyglada-proces-projektowania-modelu-3d",
   "title": "Jak wygląda proces projektowania modelu 3D na zamówienie?",
-  "h1": "Jak wygląda proces projektowania 3D na zamówienie?",
-  "metaTitle": "Projektowanie 3D na zamówienie — jak wygląda cały proces? | 3dmodele.pl",
-  "metaDescription": "Zobacz krok po kroku, jak wygląda projektowanie 3D na zamówienie — od briefu, przez modelowanie 3D, po gotowy plik do druku 3D FDM lub SLA.",
-  "excerpt": "Sprawdź, jak przebiega projektowanie 3D na zamówienie — od pierwszej rozmowy, przez modelowanie 3D, aż po gotowy model 3D do druku FDM lub SLA.",
+  "h1": "Jak wygląda proces projektowania modelu 3D na zamówienie?",
+  "metaTitle": "Projektowanie 3D na zamówienie — jak wygląda cały proces krok po kroku | 3dmodele.pl",
+  "metaDescription": "Projektowanie 3D na zamówienie krok po kroku: brief, szkice, modelowanie 3D, poprawki, pliki STL/STEP/OBJ, wizualizacje i druk 3D FDM/SLA. Praktyczny przewodnik.",
+  "excerpt": "Kompletny przewodnik po projektowaniu 3D na zamówienie — od pierwszego kontaktu, przez modelowanie i poprawki, aż po pliki STL/STEP/OBJ i gotowy wydruk 3D.",
   "category": "Projektowanie 3D",
   "image": {
     "url": "/assets/blog/thumb-proces.jpg",
-    "alt": "Projektowanie modelu 3D na zamówienie"
+    "alt": "Projektowanie modelu 3D na zamówienie — proces krok po kroku"
   },
   "keyword": "projektowanie 3D na zamówienie",
   "date": "2025-01-15",
-  "readingMinutes": 6,
-  "intro": "Projektowanie 3D na zamówienie to nie tylko modelowanie w programie. To uporządkowany proces, w którym pomysł klienta zamienia się w gotowy model 3D — do druku 3D, wizualizacji lub gry. Poniżej pokazuję, jak wygląda ten proces krok po kroku u mnie w 3dmodele.pl.",
+  "readingMinutes": 12,
+  "intro": "Projektowanie 3D na zamówienie to znacznie więcej niż samo klikanie w programie do modelowania. To uporządkowany proces, w którym pomysł klienta — czasem tylko luźny szkic na serwetce, czasem gotowa dokumentacja techniczna — zamienia się w precyzyjny model 3D gotowy do druku, wizualizacji lub silnika gry. W tym artykule pokazuję, jak wygląda ten proces krok po kroku w 3dmodele.pl: od pierwszej rozmowy z klientem, przez analizę projektu, szkice i modelowanie, aż po eksport plików STL, STEP lub OBJ i finalny wydruk 3D. Dowiesz się, jakie informacje warto przygotować przed zleceniem, ile trwają poszczególne etapy, jak wygląda tryb poprawek i którą technologię druku (FDM czy SLA) wybrać do konkretnego typu modelu.",
   "sections": [
     {
-      "heading": "1. Brief i analiza pomysłu",
+      "heading": "1. Pierwszy kontakt i brief projektowy",
       "level": 2,
       "paragraphs": [
-        "Każdy projekt zaczynam od krótkiej rozmowy. Zbieram informacje o przeznaczeniu modelu, wymiarach, technologii druku (FDM czy SLA) i oczekiwanym poziomie detalu.",
-        "Im dokładniejszy brief, tym mniej poprawek na dalszych etapach — dlatego warto od razu przesłać szkice, zdjęcia referencyjne lub linki do inspiracji."
+        "Każde zlecenie zaczyna się od rozmowy. Nieważne, czy piszesz e-mailem, wypełniasz formularz kontaktowy, czy dzwonisz — celem pierwszego kontaktu jest zrozumienie, co dokładnie chcesz osiągnąć. To fundament całego procesu projektowania 3D na zamówienie: im dokładniej opiszesz projekt, tym mniej poprawek pojawi się później i tym szybciej otrzymasz gotowy model.",
+        "Podczas briefu zbieram informacje o przeznaczeniu modelu, docelowych wymiarach, technologii druku, oczekiwanym poziomie detalu i budżecie. Rozmawiamy też o formacie plików wynikowych — inne pliki potrzebne są do druku 3D, inne do renderu produktowego, a jeszcze inne do gry lub animacji."
       ],
       "list": {
         "style": "bullet",
         "items": [
-          "Przeznaczenie modelu (druk, wizualizacja, gra)",
-          "Docelowe wymiary i tolerancje",
-          "Preferowana technologia druku",
-          "Referencje wizualne i szkice"
+          "Przeznaczenie modelu — druk 3D, wizualizacja, gra, animacja, prototyp",
+          "Docelowe wymiary, tolerancje i pasowania (jeśli model łączy się z innymi częściami)",
+          "Preferowana technologia druku (FDM, SLA, SLS) lub docelowy silnik / render",
+          "Wymagany poziom detalu i realizmu",
+          "Referencje wizualne — szkice, zdjęcia, linki, konkurencyjne produkty",
+          "Termin realizacji i budżet"
+        ]
+      },
+      "callout": {
+        "style": "tip",
+        "text": "Jeśli nie masz szkiców, nic nie szkodzi — wystarczy opis słowny i zdjęcia inspiracji. Szkice koncepcyjne mogę wykonać na etapie analizy projektu."
+      }
+    },
+    {
+      "heading": "2. Analiza projektu i wycena",
+      "level": 2,
+      "paragraphs": [
+        "Kiedy mam komplet informacji, przechodzę do analizy technicznej. Sprawdzam, czy pomysł jest wykonalny w wybranej technologii, czy wymiary są realne, czy model wytrzyma obciążenia (jeśli jest to element użytkowy), oraz czy wybrana metoda druku pozwoli uzyskać oczekiwany detal.",
+        "Na tej podstawie przygotowuję wycenę projektowania 3D wraz z realnym harmonogramem. Wycena zawsze obejmuje konkretną liczbę rund poprawek — zwykle 2 lub 3 — żeby uniknąć niedomówień. Klient dokładnie wie, co dostaje w cenie, ile trwa realizacja i jakie są koszty ewentualnych dodatkowych zmian poza ustalonym zakresem."
+      ],
+      "heading3Note": "",
+      "callout": {
+        "style": "info",
+        "text": "Wycena projektowania 3D zależy głównie od złożoności modelu i liczby detali, a nie od jego fizycznych wymiarów. Prosta figurka geometryczna może być tańsza niż mała, ale bardzo detaliczna miniatura."
+      }
+    },
+    {
+      "heading": "3. Szkice koncepcyjne i wybór kierunku",
+      "level": 2,
+      "paragraphs": [
+        "Przy bardziej złożonych projektach — figurkach, produktach użytkowych, obiektach koncepcyjnych — zaczynam od szkiców. To najtańszy i najszybszy sposób, żeby sprawdzić, czy dobrze zrozumiałem wizję klienta, zanim wejdę w czasochłonne modelowanie 3D.",
+        "Szkice pokazują ogólny kształt, proporcje i charakter modelu. Na tym etapie łatwo zmienić kierunek — przesunąć element, zmienić styl, zaproponować alternatywne rozwiązanie. Zmiana pomysłu na etapie szkicu zajmuje minuty; zmiana po zamodelowaniu — godziny lub dni."
+      ],
+      "list": {
+        "style": "number",
+        "items": [
+          "Przygotowuję 1–3 wersje koncepcyjne w oparciu o brief",
+          "Klient wskazuje preferowany kierunek lub łączy elementy z różnych wariantów",
+          "Dopracowujemy szczegóły wybranej koncepcji",
+          "Dopiero wtedy startuje właściwe modelowanie 3D"
         ]
       }
     },
     {
-      "heading": "2. Wycena i harmonogram",
+      "heading": "4. Modelowanie 3D — serce całego procesu",
       "level": 2,
       "paragraphs": [
-        "Na podstawie briefu przygotowuję wycenę projektowania 3D i realny termin realizacji. Wycena zawsze obejmuje konkretną liczbę poprawek, żeby uniknąć niedomówień."
-      ],
-      "callout": {
-        "style": "tip",
-        "text": "Im dokładniejsze materiały referencyjne prześlesz na starcie, tym szybciej i taniej powstaje projekt."
+        "Modelowanie to najbardziej czasochłonny i najbardziej twórczy etap. W zależności od typu projektu używam różnych narzędzi i technik. Modele użytkowe i mechaniczne buduję w oprogramowaniu CAD (Fusion 360, SolidWorks) — dzięki temu zachowuję pełną parametryczność, mogę łatwo zmieniać wymiary i eksportować pliki STEP z pełną historią cech. Figurki, postacie i modele organiczne rzeźbię w ZBrush lub Blenderze, gdzie mam swobodę pracy z detalem, teksturami i sylwetką.",
+        "Ważne: modelowanie 3D do druku wymaga innej optymalizacji niż model do renderu czy do gry. Model do druku musi być tzw. „water­tight” — czyli szczelną, zamkniętą siatką bez dziur i przenikających się ścian. Model do gry musi mieć niską liczbę poligonów i dobrze rozłożone UV. Model do wizualizacji stawia na detal siatki i realistyczne materiały PBR."
+      ]
+    },
+    {
+      "heading": "Na co zwracam uwagę podczas modelowania?",
+      "level": 3,
+      "list": {
+        "style": "bullet",
+        "items": [
+          "Minimalna grubość ścianek dostosowana do technologii druku (FDM zwykle 1.2–1.6 mm, SLA nawet 0.8 mm)",
+          "Prawidłowe normalne i szczelność siatki (brak non-manifold geometry)",
+          "Tolerancje pasowań dla elementów łączonych (typowo 0.2–0.4 mm luzu przy FDM)",
+          "Optymalizacja pod kątem podpór — mniej podpór = czystszy wydruk",
+          "Kierunki włókien i miejsca podatne na pęknięcia w druku FDM",
+          "Detale mniejsze niż rozdzielczość druku redukuję lub przenoszę na teksturę"
+        ]
       }
     },
     {
-      "heading": "3. Modelowanie 3D",
+      "heading": "5. Podgląd, poprawki i akceptacja klienta",
       "level": 2,
       "paragraphs": [
-        "To główna część pracy. Modelowanie 3D do druku wymaga innej optymalizacji niż model do wizualizacji czy gry — dbam m.in. o odpowiednią grubość ścianek, brak nieszczelnych siatek i tolerancje pasowań.",
-        "Na tym etapie wysyłam podglądy (rendery, obroty 360°) do akceptacji. Nanoszę poprawki i dopracowuję detale."
+        "Po pierwszej wersji modelu wysyłam podglądy: rendery statyczne, obroty 360° albo interaktywny podgląd w przeglądarce (Sketchfab lub podobne). Klient ma wtedy pełen obraz tego, co powstaje, i może zgłosić uwagi — nawet drobne, jak lekka zmiana proporcji, dodanie logo czy głębsze fazowanie krawędzi.",
+        "Poprawki zawsze zbieram w paczki. Zamiast reagować na każdy pojedynczy komentarz z osobna, proszę o zebranie wszystkich uwag do jednego etapu — to szybsze i tańsze dla obu stron. Zwykle rundy poprawek wyglądają tak: pierwsza obejmuje większe zmiany kierunkowe, druga dopracowuje detale, a trzecia (jeśli w ogóle potrzebna) to już kosmetyka przed eksportem."
+      ],
+      "callout": {
+        "style": "quote",
+        "text": "Najlepsze efekty daje jasny feedback — konkretne screeny z zaznaczonymi elementami są warte więcej niż długi opis słowny.",
+        "author": "Sebastian Jara"
+      }
+    },
+    {
+      "heading": "6. Przygotowanie plików — STL, STEP, OBJ i inne formaty",
+      "level": 2,
+      "paragraphs": [
+        "Kiedy model zostaje zaakceptowany, eksportuję go do formatów zgodnych z docelowym zastosowaniem. To ważny etap — źle wyeksportowany plik potrafi zepsuć nawet najlepszy model. Poniższa tabela pokazuje, które formaty do czego się nadają."
+      ],
+      "table": {
+        "headers": ["Format", "Zastosowanie", "Zachowuje kolor / materiały", "Edytowalny"],
+        "rows": [
+          ["STL", "Druk 3D (FDM, SLA, SLS)", "Nie", "Ograniczenie"],
+          ["3MF", "Druk 3D nowej generacji, kolor, wielomateriał", "Tak", "Częściowo"],
+          ["STEP", "CAD, produkcja CNC, dokumentacja techniczna", "Nie", "Tak (parametrycznie)"],
+          ["OBJ", "Wizualizacje, gry, animacja", "Tak (z MTL/teksturami)", "Tak"],
+          ["FBX / GLB", "Silniki gier, AR/VR, web 3D", "Tak (z materiałami PBR)", "Tak"]
+        ]
+      }
+    },
+    {
+      "heading": "7. Wizualizacje i rendery produktowe",
+      "level": 2,
+      "paragraphs": [
+        "Jeśli model trafia na stronę produktową, do katalogu lub kampanii marketingowej, przygotowuję też zestaw renderów. Wizualizacja 3D pozwala pokazać produkt, którego jeszcze nie ma fizycznie, lub przedstawić go w scenerii, której nie da się prosto sfotografować.",
+        "Standardowy pakiet to zwykle 3–6 ujęć: front, perspektywa, zbliżenie na detal, ujęcie in-scene (produkt w naturalnym otoczeniu) i wersja na białym tle do e-commerce. Do renderu używam Blendera (Cycles) lub Keyshota, z materiałami PBR i realistycznym HDRI."
+      ],
+      "image": {
+        "url": "/assets/blog/thumb-proces.jpg",
+        "alt": "Przykład renderu produktowego modelu 3D",
+        "caption": "Render produktowy pozwala pokazać model 3D, zanim jeszcze powstanie fizyczny prototyp."
+      }
+    },
+    {
+      "heading": "8. Druk 3D — FDM czy SLA?",
+      "level": 2,
+      "paragraphs": [
+        "Ostatni etap procesu to fizyczna realizacja modelu. Jeśli klient chce, mogę wydrukować projekt u siebie w technologii FDM lub SLA, albo przekazać gotowe pliki do własnej drukarki bądź do zewnętrznej drukarni. Wybór technologii zależy od przeznaczenia."
       ]
     },
     {
-      "heading": "4. Przygotowanie plików",
+      "heading": "Krótkie porównanie FDM i SLA",
+      "level": 3,
+      "list": {
+        "style": "bullet",
+        "items": [
+          "FDM (filament) — tańszy, większe gabaryty, dobry do prototypów, elementów użytkowych, obudów",
+          "SLA (żywica) — wyższy detal, gładka powierzchnia, idealny do figurek, miniatur, biżuterii, modeli dentystycznych",
+          "FDM lepiej radzi sobie z mechaniką i wytrzymałością, SLA — z estetyką i drobnymi detalami"
+        ]
+      },
+      "callout": {
+        "style": "tip",
+        "text": "Jeśli nie masz pewności, którą technologię wybrać, wyślij mi zdjęcia referencyjne — na ich podstawie doradzę optymalny wariant pod względem jakości i ceny."
+      }
+    },
+    {
+      "heading": "9. Post-processing i wysyłka",
       "level": 2,
       "paragraphs": [
-        "Gotowy projekt 3D do druku eksportuję do formatu STL lub 3MF. Jeśli model trafia do wizualizacji, przekazuję pliki źródłowe wraz z materiałami PBR."
+        "Jeśli druk realizuję u siebie, model przechodzi przez post-processing: usunięcie podpór, ewentualne szlifowanie, mycie i utwardzanie UV (przy SLA) oraz opcjonalne malowanie. Dopiero potem pakuję go i wysyłam do klienta. Do przesyłki dołączam też pliki źródłowe w uzgodnionych formatach.",
+        "Jeśli klient sam drukuje, przekazuję zestaw plików, krótką instrukcję z rekomendowanymi ustawieniami slicera (orientacja, gęstość wypełnienia, temperatury) oraz notatki dotyczące podpór. Dzięki temu wydruk we własnej drukarni ma dużo większe szanse powodzenia za pierwszym razem."
       ]
     },
     {
-      "heading": "5. Druk 3D lub przekazanie plików klientowi",
+      "heading": "10. Ile trwa cały proces projektowania 3D?",
       "level": 2,
       "paragraphs": [
-        "Model można wydrukować u mnie w technologii druku 3D FDM lub SLA, albo przekazać pliki do własnej drukarki. Zawsze doradzam, która technologia będzie w danym przypadku lepsza."
-      ]
+        "Terminy zależą przede wszystkim od złożoności modelu, liczby detali i tempa akceptacji poprawek po stronie klienta. Poniżej realne widełki, których używam przy wycenach."
+      ],
+      "table": {
+        "headers": ["Rodzaj projektu", "Czas realizacji", "Rundy poprawek"],
+        "rows": [
+          ["Prosty element użytkowy (uchwyt, adapter, obudowa)", "2–5 dni roboczych", "1–2"],
+          ["Model produktowy do wizualizacji", "5–10 dni roboczych", "2"],
+          ["Figurka postaci / miniatura", "1–3 tygodnie", "2–3"],
+          ["Rozbudowany model mechaniczny / zestaw części", "2–4 tygodnie", "2–3"],
+          ["Asset do gry (low-poly + UV + tekstury)", "1–3 tygodnie", "2"]
+        ]
+      }
     }
   ],
   "faq": [
     {
-      "q": "Ile trwa projektowanie 3D na zamówienie?",
-      "a": "Prosty model powstaje w 2–5 dni roboczych. Bardziej złożone projekty, np. figurki czy modele mechaniczne, zajmują 1–3 tygodnie."
+      "q": "Ile kosztuje projektowanie 3D na zamówienie?",
+      "a": "Koszt zależy od złożoności modelu i liczby detali. Proste elementy użytkowe zaczynają się od kilkuset złotych, bardziej rozbudowane figurki lub modele mechaniczne to koszt od 800 zł wzwyż. Każdą wycenę przygotowuję indywidualnie po analizie briefu."
     },
     {
-      "q": "Czy dostanę pliki źródłowe?",
-      "a": "Tak, po opłaceniu zlecenia przekazuję pliki wynikowe (STL/3MF). Pliki źródłowe modelu są dostępne po wcześniejszym ustaleniu warunków."
+      "q": "Jakie pliki dostanę po zakończeniu projektu?",
+      "a": "Standardowo przekazuję pliki wynikowe — najczęściej STL lub 3MF do druku, STEP do zastosowań CAD, OBJ/FBX do wizualizacji i gier. Pliki źródłowe (Blender, ZBrush, Fusion) udostępniam na indywidualnych warunkach."
+    },
+    {
+      "q": "Czy mogę zamówić tylko projekt, bez druku?",
+      "a": "Tak. Możesz zlecić samo projektowanie 3D i wydrukować model we własnym zakresie lub w wybranej drukarni. Przekażę Ci wtedy pliki wraz z rekomendacjami slicera."
+    },
+    {
+      "q": "Ile rund poprawek jest wliczonych w cenę?",
+      "a": "Standardowo 2–3 rundy poprawek. Kolejne zmiany są możliwe po ustaleniu dodatkowego zakresu i wyceny — dzięki temu proces jest przewidywalny dla obu stron."
+    },
+    {
+      "q": "Czy pomożesz mi wybrać technologię druku (FDM vs SLA)?",
+      "a": "Oczywiście. Na podstawie przeznaczenia i referencji doradzam, czy lepiej sprawdzi się FDM (tańszy, większe gabaryty, mechanika) czy SLA (wyższy detal, gładka powierzchnia, figurki i miniatury)."
+    },
+    {
+      "q": "Czy podpiszesz NDA?",
+      "a": "Tak, przy projektach produktowych i prototypach chętnie podpiszę umowę o zachowaniu poufności przed rozpoczęciem prac."
     }
   ],
   "author": {
@@ -81,5 +214,5 @@
     "role": "Projektant 3D · 3dmodele.pl",
     "avatar": "/assets/awatar3.jpg"
   },
-  "cta": "Masz pomysł na model 3D? Skontaktuj się ze mną i otrzymaj bezpłatną wycenę projektu."
+  "cta": "Potrzebujesz projektu 3D pod druk, wizualizację albo grę? Napisz do mnie — przygotuję bezpłatną wycenę i realny harmonogram realizacji."
 }
