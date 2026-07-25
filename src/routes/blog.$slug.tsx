@@ -14,6 +14,10 @@ import {
   Quote,
   Info,
   Lightbulb,
+  CheckCircle2,
+  MessageSquare,
+  FolderOpen,
+  BookOpen,
 } from "lucide-react";
 import {
   blogPosts,
@@ -209,10 +213,10 @@ function Callout({ callout }: { callout: NonNullable<BlogSection["callout"]> }) 
   return (
     <aside
       className={
-        "mt-6 flex gap-4 rounded-2xl border p-5 " +
+        "mt-6 flex gap-4 rounded-2xl p-5 " +
         (isQuote
-          ? "border-[var(--brand)]/30 bg-[var(--brand-soft)]"
-          : "border-border bg-card")
+          ? "bg-[var(--brand-soft)] border border-[var(--brand)]/20"
+          : "bg-[var(--brand-soft)]/60 border border-[var(--brand)]/10")
       }
     >
       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--brand)] text-primary-foreground">
@@ -231,18 +235,26 @@ function Callout({ callout }: { callout: NonNullable<BlogSection["callout"]> }) 
 }
 
 function SectionList({ list }: { list: NonNullable<BlogSection["list"]> }) {
-  const Tag = list.style === "number" ? "ol" : "ul";
+  if (list.style === "number") {
+    return (
+      <ol className="mt-4 space-y-2 pl-5 list-decimal text-sm leading-relaxed text-foreground/90">
+        {list.items.map((it, i) => (
+          <li key={i}>{it}</li>
+        ))}
+      </ol>
+    );
+  }
   return (
-    <Tag
-      className={
-        "mt-4 space-y-2 pl-5 text-sm leading-relaxed text-foreground/90 " +
-        (list.style === "number" ? "list-decimal" : "list-disc")
-      }
-    >
-      {list.items.map((it, i) => (
-        <li key={i}>{it}</li>
-      ))}
-    </Tag>
+    <div className="mt-5 rounded-2xl bg-[var(--brand-soft)]/70 p-5 sm:p-6">
+      <ul className="space-y-3">
+        {list.items.map((it, i) => (
+          <li key={i} className="flex items-start gap-3 text-sm leading-relaxed text-foreground/90">
+            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand)]" />
+            <span>{it}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -311,41 +323,58 @@ function BlogPostPage() {
 
       {/* HERO */}
       <section className="mx-auto max-w-[1200px] px-6 pt-6">
-        <div className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-soft)] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--brand)]">
-          {post.category}
-        </div>
-        <h1 className="mt-4 max-w-4xl text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl">
-          {post.h1}
-        </h1>
-        <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
-          {author && (
-            <span className="inline-flex items-center gap-2">
-              {author.avatar ? (
-                <img src={author.avatar} alt={author.name} className="h-6 w-6 rounded-full object-cover" />
-              ) : (
-                <User className="h-3.5 w-3.5" />
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_1fr]">
+          <div className="min-w-0">
+            <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-[var(--brand)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
+              {post.category}
+            </div>
+            <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-[2.75rem]">
+              {post.h1}
+            </h1>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              {post.excerpt}
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5">
+                <Calendar className="h-3.5 w-3.5" />
+                <time dateTime={post.date}>{publishedDate}</time>
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Clock className="h-3.5 w-3.5" />
+                {post.readingMinutes} min czytania
+              </span>
+              {author && (
+                <span className="inline-flex items-center gap-2">
+                  {author.avatar ? (
+                    <img src={author.avatar} alt={author.name} className="h-6 w-6 rounded-full object-cover" />
+                  ) : (
+                    <User className="h-3.5 w-3.5" />
+                  )}
+                  <span className="font-semibold text-foreground/80">{author.name}</span>
+                </span>
               )}
-              <span className="font-semibold text-foreground/80">{author.name}</span>
-            </span>
-          )}
-          <span className="inline-flex items-center gap-1.5">
-            <Calendar className="h-3.5 w-3.5" />
-            <time dateTime={post.date}>{publishedDate}</time>
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Clock className="h-3.5 w-3.5" />
-            {post.readingMinutes} min czytania
-          </span>
-        </div>
-
-        <div className="mt-8 overflow-hidden rounded-2xl border border-border">
-          <img
-            src={post.image.url}
-            alt={post.image.alt}
-            className="h-auto w-full object-cover"
-            loading="eager"
-            fetchPriority="high"
-          />
+            </div>
+          </div>
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl bg-[var(--brand-soft)]">
+              <img
+                src={post.image.url}
+                alt={post.image.alt}
+                className="aspect-[4/3] h-full w-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-2 -top-2 hidden h-14 w-14 grid-cols-4 gap-1.5 lg:grid"
+            >
+              {Array.from({ length: 16 }).map((_, i) => (
+                <span key={i} className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]/40" />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -360,8 +389,22 @@ function BlogPostPage() {
               const Heading = s.level === 3 ? "h3" : "h2";
               return (
                 <section key={id} id={id} className="mt-10 scroll-mt-24">
-                  <Heading className={s.level === 3 ? "text-lg font-semibold" : "text-2xl font-bold tracking-tight"}>
-                    {s.heading}
+                  <Heading
+                    className={
+                      s.level === 3
+                        ? "flex items-center gap-2 text-lg font-semibold"
+                        : "flex items-center gap-3 text-2xl font-bold tracking-tight"
+                    }
+                  >
+                    <span
+                      aria-hidden
+                      className={
+                        s.level === 3
+                          ? "inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]"
+                          : "inline-block h-2 w-2 shrink-0 rounded-full bg-[var(--brand)]"
+                      }
+                    />
+                    <span className="min-w-0">{s.heading}</span>
                   </Heading>
                   {s.paragraphs?.map((p, i) => (
                     <p key={i} className="mt-3 text-sm leading-relaxed text-foreground/90">{p}</p>
