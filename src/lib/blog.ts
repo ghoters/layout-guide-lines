@@ -1,5 +1,6 @@
 export type BlogCategory =
   | "Projektowanie 3D"
+  | "Druk 3D"
   | "Modelowanie 3D"
   | "Druk 3D FDM"
   | "Druk 3D SLA"
@@ -9,12 +10,7 @@ export type BlogCategory =
 
 export const blogCategories: BlogCategory[] = [
   "Projektowanie 3D",
-  "Modelowanie 3D",
-  "Druk 3D FDM",
-  "Druk 3D SLA",
-  "Wizualizacje 3D",
-  "Case study",
-  "Poradniki",
+  "Druk 3D",
 ];
 
 export interface FaqItem {
