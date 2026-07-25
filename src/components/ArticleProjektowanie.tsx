@@ -533,7 +533,7 @@ export default function ArticleProjektowanie() {
                   </div>
                   <div>
                     <div className="text-[11px] text-muted-foreground">Autor</div>
-                    <div className="font-semibold">Konrad Żurawski</div>
+                    <div className="font-semibold">3dmodele.pl</div>
                   </div>
                 </li>
               </ul>
