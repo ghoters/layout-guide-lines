@@ -14,6 +14,7 @@ import { Route as RealizacjeRouteImport } from './routes/realizacje'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogJakWygladaProcesProjektowaniaModelu3dRouteImport } from './routes/blog.jak-wyglada-proces-projektowania-modelu-3d'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -41,6 +42,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogJakWygladaProcesProjektowaniaModelu3dRoute =
+  BlogJakWygladaProcesProjektowaniaModelu3dRouteImport.update({
+    id: '/jak-wyglada-proces-projektowania-modelu-3d',
+    path: '/jak-wyglada-proces-projektowania-modelu-3d',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -54,6 +61,7 @@ export interface FileRoutesByFullPath {
   '/realizacje': typeof RealizacjeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/jak-wyglada-proces-projektowania-modelu-3d': typeof BlogJakWygladaProcesProjektowaniaModelu3dRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +70,7 @@ export interface FileRoutesByTo {
   '/realizacje': typeof RealizacjeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/jak-wyglada-proces-projektowania-modelu-3d': typeof BlogJakWygladaProcesProjektowaniaModelu3dRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +80,7 @@ export interface FileRoutesById {
   '/realizacje': typeof RealizacjeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/jak-wyglada-proces-projektowania-modelu-3d': typeof BlogJakWygladaProcesProjektowaniaModelu3dRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +91,7 @@ export interface FileRouteTypes {
     | '/realizacje'
     | '/sitemap.xml'
     | '/blog/$slug'
+    | '/blog/jak-wyglada-proces-projektowania-modelu-3d'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +100,7 @@ export interface FileRouteTypes {
     | '/realizacje'
     | '/sitemap.xml'
     | '/blog/$slug'
+    | '/blog/jak-wyglada-proces-projektowania-modelu-3d'
   id:
     | '__root__'
     | '/'
@@ -97,6 +109,7 @@ export interface FileRouteTypes {
     | '/realizacje'
     | '/sitemap.xml'
     | '/blog/$slug'
+    | '/blog/jak-wyglada-proces-projektowania-modelu-3d'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -144,6 +157,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/jak-wyglada-proces-projektowania-modelu-3d': {
+      id: '/blog/jak-wyglada-proces-projektowania-modelu-3d'
+      path: '/jak-wyglada-proces-projektowania-modelu-3d'
+      fullPath: '/blog/jak-wyglada-proces-projektowania-modelu-3d'
+      preLoaderRoute: typeof BlogJakWygladaProcesProjektowaniaModelu3dRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -156,10 +176,13 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogJakWygladaProcesProjektowaniaModelu3dRoute: typeof BlogJakWygladaProcesProjektowaniaModelu3dRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogJakWygladaProcesProjektowaniaModelu3dRoute:
+    BlogJakWygladaProcesProjektowaniaModelu3dRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
