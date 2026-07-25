@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   ArrowLeft,
@@ -22,65 +22,6 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { blogPosts } from "@/lib/blog";
-
-const url = "https://www.3dmodele.pl/blog/jak-wyglada-proces-projektowania-modelu-3d";
-const image = "https://www.3dmodele.pl/assets/blog-projektowanie.jpg";
-const title = "Jak wygląda proces projektowania modelu 3D na zamówienie?";
-const metaDescription =
-  "Zobacz, jak krok po kroku powstaje profesjonalny model 3D na zamówienie — od pomysłu, przez projekt, aż po gotowy plik do druku lub produkcji.";
-
-export const Route = createFileRoute("/blog/jak-wyglada-proces-projektowania-modelu-3d")({
-  head: () => ({
-    meta: [
-      { title: `${title} | 3dmodele.pl` },
-      { name: "description", content: metaDescription },
-      { property: "og:title", content: title },
-      { property: "og:description", content: metaDescription },
-      { property: "og:type", content: "article" },
-      { property: "og:url", content: url },
-      { property: "og:image", content: image },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: image },
-      { property: "article:section", content: "Projektowanie 3D" },
-      { property: "article:published_time", content: "2025-01-15" },
-    ],
-    links: [{ rel: "canonical", href: url }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline: title,
-          description: metaDescription,
-          image,
-          datePublished: "2025-01-15",
-          mainEntityOfPage: url,
-          articleSection: "Projektowanie 3D",
-          author: { "@type": "Person", name: "Konrad Żurawski" },
-          publisher: {
-            "@type": "Organization",
-            name: "3dmodele.pl",
-            url: "https://www.3dmodele.pl",
-          },
-        }),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Strona główna", item: "https://www.3dmodele.pl/" },
-            { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.3dmodele.pl/blog" },
-            { "@type": "ListItem", position: 3, name: title, item: url },
-          ],
-        }),
-      },
-    ],
-  }),
-  component: ArticlePage,
-});
 
 const navLinks = [
   { label: "Strona główna", to: "/" as const },
