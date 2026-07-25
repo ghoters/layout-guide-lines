@@ -161,7 +161,7 @@ function SectionHeading({ id, children }: { id: string; children: React.ReactNod
   );
 }
 
-function ArticlePage() {
+export default function ArticleProjektowanie() {
   const related = blogPosts
     .filter((p) => p.slug !== "jak-wyglada-proces-projektowania-modelu-3d")
     .slice(0, 3);
