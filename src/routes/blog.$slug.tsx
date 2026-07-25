@@ -323,41 +323,58 @@ function BlogPostPage() {
 
       {/* HERO */}
       <section className="mx-auto max-w-[1200px] px-6 pt-6">
-        <div className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-soft)] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--brand)]">
-          {post.category}
-        </div>
-        <h1 className="mt-4 max-w-4xl text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl">
-          {post.h1}
-        </h1>
-        <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
-          {author && (
-            <span className="inline-flex items-center gap-2">
-              {author.avatar ? (
-                <img src={author.avatar} alt={author.name} className="h-6 w-6 rounded-full object-cover" />
-              ) : (
-                <User className="h-3.5 w-3.5" />
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_1fr]">
+          <div className="min-w-0">
+            <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-[var(--brand)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
+              {post.category}
+            </div>
+            <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-[2.75rem]">
+              {post.h1}
+            </h1>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              {post.excerpt}
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5">
+                <Calendar className="h-3.5 w-3.5" />
+                <time dateTime={post.date}>{publishedDate}</time>
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Clock className="h-3.5 w-3.5" />
+                {post.readingMinutes} min czytania
+              </span>
+              {author && (
+                <span className="inline-flex items-center gap-2">
+                  {author.avatar ? (
+                    <img src={author.avatar} alt={author.name} className="h-6 w-6 rounded-full object-cover" />
+                  ) : (
+                    <User className="h-3.5 w-3.5" />
+                  )}
+                  <span className="font-semibold text-foreground/80">{author.name}</span>
+                </span>
               )}
-              <span className="font-semibold text-foreground/80">{author.name}</span>
-            </span>
-          )}
-          <span className="inline-flex items-center gap-1.5">
-            <Calendar className="h-3.5 w-3.5" />
-            <time dateTime={post.date}>{publishedDate}</time>
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Clock className="h-3.5 w-3.5" />
-            {post.readingMinutes} min czytania
-          </span>
-        </div>
-
-        <div className="mt-8 overflow-hidden rounded-2xl border border-border">
-          <img
-            src={post.image.url}
-            alt={post.image.alt}
-            className="h-auto w-full object-cover"
-            loading="eager"
-            fetchPriority="high"
-          />
+            </div>
+          </div>
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl bg-[var(--brand-soft)]">
+              <img
+                src={post.image.url}
+                alt={post.image.alt}
+                className="aspect-[4/3] h-full w-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-2 -top-2 hidden h-14 w-14 grid-cols-4 gap-1.5 lg:grid"
+            >
+              {Array.from({ length: 16 }).map((_, i) => (
+                <span key={i} className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]/40" />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
