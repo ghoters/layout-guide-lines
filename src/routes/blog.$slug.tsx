@@ -213,10 +213,10 @@ function Callout({ callout }: { callout: NonNullable<BlogSection["callout"]> }) 
   return (
     <aside
       className={
-        "mt-6 flex gap-4 rounded-2xl border p-5 " +
+        "mt-6 flex gap-4 rounded-2xl p-5 " +
         (isQuote
-          ? "border-[var(--brand)]/30 bg-[var(--brand-soft)]"
-          : "border-border bg-card")
+          ? "bg-[var(--brand-soft)] border border-[var(--brand)]/20"
+          : "bg-[var(--brand-soft)]/60 border border-[var(--brand)]/10")
       }
     >
       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--brand)] text-primary-foreground">
@@ -235,18 +235,26 @@ function Callout({ callout }: { callout: NonNullable<BlogSection["callout"]> }) 
 }
 
 function SectionList({ list }: { list: NonNullable<BlogSection["list"]> }) {
-  const Tag = list.style === "number" ? "ol" : "ul";
+  if (list.style === "number") {
+    return (
+      <ol className="mt-4 space-y-2 pl-5 list-decimal text-sm leading-relaxed text-foreground/90">
+        {list.items.map((it, i) => (
+          <li key={i}>{it}</li>
+        ))}
+      </ol>
+    );
+  }
   return (
-    <Tag
-      className={
-        "mt-4 space-y-2 pl-5 text-sm leading-relaxed text-foreground/90 " +
-        (list.style === "number" ? "list-decimal" : "list-disc")
-      }
-    >
-      {list.items.map((it, i) => (
-        <li key={i}>{it}</li>
-      ))}
-    </Tag>
+    <div className="mt-5 rounded-2xl bg-[var(--brand-soft)]/70 p-5 sm:p-6">
+      <ul className="space-y-3">
+        {list.items.map((it, i) => (
+          <li key={i} className="flex items-start gap-3 text-sm leading-relaxed text-foreground/90">
+            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand)]" />
+            <span>{it}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
