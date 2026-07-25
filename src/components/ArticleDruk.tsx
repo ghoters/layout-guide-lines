@@ -241,7 +241,7 @@ export default function ArticleDruk() {
             </div>
             <div aria-hidden className="absolute inset-0 -z-0 mx-auto my-auto h-72 w-72 rounded-full bg-[var(--brand-soft)]/70 blur-2xl" />
             <img
-              src={blogDrukHero}
+              src="/assets/blog-druk-hero.jpg"
               alt="Model 3D drukowany w drukarce 3D"
               className="relative z-10 h-auto w-full max-w-[420px] object-contain drop-shadow-xl"
               loading="eager"
