@@ -272,6 +272,16 @@ export default function ArticleStlStep() {
                     <li key={s.id}>
                       <a
                         href={`#${s.id}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const el = document.getElementById(s.id);
+                          if (el) {
+                            const y = el.getBoundingClientRect().top + window.scrollY - 96;
+                            window.scrollTo({ top: y, behavior: "smooth" });
+                            history.replaceState(null, "", `#${s.id}`);
+                            setActiveId(s.id);
+                          }
+                        }}
                         className={
                           "flex items-center gap-3 rounded-lg px-2 py-1.5 text-xs transition " +
                           (active
@@ -367,7 +377,7 @@ export default function ArticleStlStep() {
             {/* Różnice / tabela */}
             <div className="mt-12">
               <NumberedHeading id="roznice" num={4}>STL vs STEP – kluczowe różnice</NumberedHeading>
-              <div id="tabela" className="mt-5 overflow-hidden rounded-2xl border border-border bg-card">
+              <div id="tabela" className="scroll-mt-24 mt-5 overflow-hidden rounded-2xl border border-border bg-card">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left text-sm">
                     <thead className="bg-[var(--brand-soft)]/40 text-[11px] uppercase tracking-wider text-muted-foreground">
