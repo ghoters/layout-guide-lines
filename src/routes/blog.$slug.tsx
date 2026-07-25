@@ -389,8 +389,22 @@ function BlogPostPage() {
               const Heading = s.level === 3 ? "h3" : "h2";
               return (
                 <section key={id} id={id} className="mt-10 scroll-mt-24">
-                  <Heading className={s.level === 3 ? "text-lg font-semibold" : "text-2xl font-bold tracking-tight"}>
-                    {s.heading}
+                  <Heading
+                    className={
+                      s.level === 3
+                        ? "flex items-center gap-2 text-lg font-semibold"
+                        : "flex items-center gap-3 text-2xl font-bold tracking-tight"
+                    }
+                  >
+                    <span
+                      aria-hidden
+                      className={
+                        s.level === 3
+                          ? "inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand)]"
+                          : "inline-block h-2 w-2 shrink-0 rounded-full bg-[var(--brand)]"
+                      }
+                    />
+                    <span className="min-w-0">{s.heading}</span>
                   </Heading>
                   {s.paragraphs?.map((p, i) => (
                     <p key={i} className="mt-3 text-sm leading-relaxed text-foreground/90">{p}</p>
