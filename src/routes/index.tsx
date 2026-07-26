@@ -4,6 +4,7 @@ const heroVase = { url: "/assets/wazon2-2.jpg" };
 const awatar3 = { url: "/assets/awatar3.jpg" };
 import { projects, type Project } from "@/lib/projects";
 import { Lightbox } from "@/components/Lightbox";
+import { Logo } from "@/components/Logo";
 import {
   ArrowRight,
   Box,
@@ -25,7 +26,6 @@ import {
   Clock,
   Instagram,
   Linkedin,
-  Settings,
   Plus,
 } from "lucide-react";
 
