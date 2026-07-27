@@ -98,11 +98,8 @@ const faq = [
 function Header() {
   return (
     <header className="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-6 sm:flex sm:items-center sm:justify-between">
-      <Link to="/" className="flex min-w-0 items-center gap-2">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
-          <Settings className="h-5 w-5" />
-        </div>
-        <span className="hidden truncate text-sm font-semibold tracking-wide sm:inline">3dmodele.pl</span>
+      <Link to="/" className="flex min-w-0 items-center" aria-label="3dmodele.pl — strona główna">
+        <Logo height={36} />
       </Link>
       <nav className="hidden items-center gap-8 md:flex">
         {navLinks.map((l) => (
@@ -131,11 +128,8 @@ function Footer() {
   return (
     <footer className="mt-16 border-t border-border bg-card/40">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-4 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-background">
-            <Settings className="h-4 w-4" />
-          </div>
-          <span className="text-xs font-semibold tracking-wide">3dmodele.pl</span>
+        <Link to="/" className="flex items-center" aria-label="3dmodele.pl — strona główna">
+          <Logo height={32} />
         </Link>
         <div className="text-xs text-muted-foreground">© 2024 Wszelkie prawa zastrzeżone.</div>
         <div className="flex items-center gap-4 text-[var(--brand)]">
