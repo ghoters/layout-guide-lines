@@ -77,21 +77,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Projektowanie 3D — modele, wydruki i wizualizacje" },
+      { title: "Projektowanie modeli 3D | Druk 3D, CAD, modele do gier i wizualizacje | 3dmodele.pl" },
       {
         name: "description",
         content:
-          "Tworzę modele 3D dopasowane do Twoich potrzeb — do druku 3D, gier i wizualizacji.",
+          "Projektowanie modeli 3D na zamówienie. Tworzę modele do druku 3D, modele do gier, wizualizacje, projekty CAD oraz pliki STL. Oferuję również profesjonalne wydruki 3D.",
       },
-      { name: "author", content: "Projektowanie 3D" },
-      { property: "og:title", content: "Projektowanie 3D — modele, wydruki i wizualizacje" },
+      { name: "author", content: "3dmodele.pl" },
+      { property: "og:title", content: "Projektowanie modeli 3D | Druk 3D, CAD, modele do gier i wizualizacje | 3dmodele.pl" },
       {
         property: "og:description",
-        content: "Modele 3D do druku, gier i wizualizacji. Od pomysłu do gotowego projektu.",
+        content: "Projektowanie modeli 3D na zamówienie. Tworzę modele do druku 3D, modele do gier, wizualizacje, projekty CAD oraz pliki STL. Oferuję również profesjonalne wydruki 3D.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@3dmodele.pl" },
     ],
     links: [
       {
