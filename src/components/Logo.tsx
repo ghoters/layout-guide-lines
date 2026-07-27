@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/sygnet_logo.jpg.asset.json";
+import logoAsset from "@/assets/Logo_nowe_png.png.asset.json";
 
 interface LogoProps {
   height?: number;
