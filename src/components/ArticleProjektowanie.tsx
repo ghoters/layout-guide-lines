@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   ArrowLeft,
-  Settings,
   Instagram,
   Linkedin,
   Mail,
@@ -22,6 +21,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { blogPosts } from "@/lib/blog";
+import { Logo } from "@/components/Logo";
 
 const navLinks = [
   { label: "Strona główna", to: "/" as const },
