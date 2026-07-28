@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import heroVase from "@/assets/background_hero.jpg.asset.json";
+const heroVase = { url: "/assets/background_hero.jpg" };
 const awatar3 = { url: "/assets/awatar3.jpg" };
 import { projects, type Project } from "@/lib/projects";
 import { Lightbox } from "@/components/Lightbox";
