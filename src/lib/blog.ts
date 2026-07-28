@@ -6,12 +6,14 @@ export type BlogCategory =
   | "Druk 3D SLA"
   | "Wizualizacje 3D"
   | "Case study"
-  | "Poradniki";
+  | "Poradniki"
+  | "Modele 3D";
 
 export const blogCategories: BlogCategory[] = [
   "Projektowanie 3D",
   "Druk 3D",
   "Poradniki",
+  "Modele 3D",
 ];
 
 export interface FaqItem {
@@ -123,6 +125,32 @@ export const blogPosts: BlogPost[] = [
     cta: defaultCta,
   },
 ];
+
+blogPosts.push({
+  slug: "modele-3d-czym-sa-jak-powstaja",
+  title: "Modele 3D – czym są i jak powstają?",
+  h1: "Co to jest model 3D?",
+  metaTitle: "Modele 3D – czym są i jak powstają? | Kompletny poradnik | 3dmodele.pl",
+  metaDescription:
+    "Dowiedz się, czym są modele 3D, jak wygląda projektowanie modeli 3D oraz gdzie wykorzystuje się modele do druku 3D, gier i wizualizacji. Praktyczny poradnik.",
+  excerpt:
+    "Wyjaśniamy czym jest model 3D, jak powstaje i gdzie znajduje zastosowanie. Praktyczny przewodnik dla początkujących i nie tylko.",
+  category: "Modele 3D",
+  image: { url: "/assets/blog-model-3d-hero.jpg", alt: "Model 3D wspornika mechanicznego" },
+  keyword: "modele 3D",
+  date: "2024-05-12",
+  readingMinutes: 6,
+  intro:
+    "Modele 3D to fundament współczesnego projektowania, prototypowania i produkcji. W tym poradniku wyjaśniamy, czym są, jak powstają i gdzie znajdują zastosowanie.",
+  sections: [],
+  faq: [
+    { q: "Czy każdy model 3D nadaje się do druku 3D?", a: "Nie. Aby model nadawał się do druku 3D, musi być tzw. „manifold” – szczelny, bez dziur i błędów siatki. Modele do gier lub wizualizacji często wymagają dodatkowej optymalizacji." },
+    { q: "Czym różni się model CAD od modelu do gry?", a: "Model CAD skupia się na precyzyjnej geometrii i wymiarach – używany jest w inżynierii i produkcji. Model do gry jest zoptymalizowany pod wydajność, ma mniej poligonów i wykorzystuje tekstury." },
+    { q: "Jaki program wybrać do tworzenia modeli 3D?", a: "Do modeli CAD sprawdzą się SolidWorks, Fusion 360 czy Inventor. Do modeli do druku, gier i wizualizacji popularne są Blender, ZBrush oraz 3ds Max." },
+    { q: "Czy model 3D musi mieć tekstury?", a: "Nie zawsze. Modele do druku 3D zwykle nie potrzebują tekstur. Są one niezbędne w wizualizacjach, animacjach i grach, gdzie decydują o wyglądzie modelu." },
+  ],
+  cta: defaultCta,
+});
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
