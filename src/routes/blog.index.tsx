@@ -1,3 +1,4 @@
+import { MobileNav } from "@/components/MobileNav";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Instagram, Linkedin, Mail, Phone, BookOpen, Calendar, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -105,6 +106,7 @@ function Blog() {
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
         </Link>
       </header>
+      <MobileNav />
 
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 px-6 py-16 lg:grid-cols-[1.2fr_1fr] lg:py-24">
