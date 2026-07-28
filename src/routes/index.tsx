@@ -1,3 +1,4 @@
+import { MobileNav } from "@/components/MobileNav";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 const heroVase = { url: "/assets/background_hero.jpg" };
@@ -171,6 +172,7 @@ function Index() {
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
         </Link>
       </header>
+      <MobileNav />
 
       {/* HERO */}
       <section className="relative">

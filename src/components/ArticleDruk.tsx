@@ -1,3 +1,4 @@
+import { MobileNav } from "@/components/MobileNav";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -121,6 +122,7 @@ function Header() {
         Wyślij zapytanie <ArrowRight className="h-4 w-4" />
       </Link>
     </header>
+      <MobileNav />
   );
 }
 

@@ -1,3 +1,4 @@
+import { MobileNav } from "@/components/MobileNav";
 import { createFileRoute, Link, useSearch, useNavigate } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { ArrowRight, Instagram, Linkedin, Mail, Phone } from "lucide-react";
@@ -123,6 +124,7 @@ function Realizacje() {
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
         </Link>
       </header>
+      <MobileNav />
 
       {/* HERO */}
       <section className="border-b border-border">

@@ -1,3 +1,4 @@
+import { MobileNav } from "@/components/MobileNav";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, Instagram, Linkedin, Mail, Phone, ChevronRight } from "lucide-react";
 import { blogPosts, getPostBySlug } from "@/lib/blog";
@@ -124,6 +125,7 @@ function SiteHeader() {
         Wyślij zapytanie <ArrowRight className="h-4 w-4" />
       </Link>
     </header>
+      <MobileNav />
   );
 }
 

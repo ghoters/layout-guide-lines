@@ -1,3 +1,4 @@
+import { MobileNav } from "@/components/MobileNav";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
@@ -119,6 +120,7 @@ function Kontakt() {
           Wyślij zapytanie <ArrowRight className="h-4 w-4" />
         </Link>
       </header>
+      <MobileNav />
 
       {/* HERO */}
       <section className="border-b border-border">
