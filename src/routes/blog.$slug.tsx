@@ -101,6 +101,7 @@ const navLinks = [
 
 function SiteHeader() {
   return (
+    <>
     <header className="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-6 sm:flex sm:items-center sm:justify-between">
       <Link to="/" className="flex min-w-0 items-center" aria-label="3dmodele.pl — strona główna">
         <Logo height={36} />
@@ -125,7 +126,8 @@ function SiteHeader() {
         Wyślij zapytanie <ArrowRight className="h-4 w-4" />
       </Link>
     </header>
-      <MobileNav />
+    <MobileNav />
+    </>
   );
 }
 
