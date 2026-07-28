@@ -5,6 +5,7 @@ import { blogPosts, getPostBySlug } from "@/lib/blog";
 import ArticleProjektowanie from "@/components/ArticleProjektowanie";
 import ArticleStlStep from "@/components/ArticleStlStep";
 import ArticleDruk from "@/components/ArticleDruk";
+import ArticleModele3D from "@/components/ArticleModele3D";
 import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -178,6 +179,9 @@ function BlogPost() {
   }
   if (post.slug === "stl-czy-step-ktory-format-wybrac") {
     return <ArticleStlStep />;
+  }
+  if (post.slug === "modele-3d-czym-sa-jak-powstaja") {
+    return <ArticleModele3D />;
   }
   const related = blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 3);
   const fallback = related.length ? related : blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
