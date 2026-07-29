@@ -193,9 +193,9 @@ function Index() {
               PROJEKTOWANIE 3D
             </div>
             <h1 className="mt-5 text-4xl font-bold leading-[1.05] tracking-tight drop-shadow-sm sm:text-5xl md:text-6xl">
-              Projektowanie modeli <span className="text-[var(--brand)]">3D</span>
+              Tworzę modele <span className="text-[var(--brand)]">3D</span>
               <br />
-              dopasowanych do
+              dopasowane do
               <br />
               Twoich potrzeb.
             </h1>
