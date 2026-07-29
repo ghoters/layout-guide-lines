@@ -380,6 +380,88 @@ function Index() {
       </section>
 
       {/* ABOUT + TOOLS */}
+      {/* PROJEKTOWANIE NA ZAMÓWIENIE */}
+      <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
+              PROJEKTOWANIE MODELI 3D NA ZAMÓWIENIE
+            </div>
+            <h2 className="mt-5 text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl">
+              Projektowanie modeli <span className="text-[var(--brand)]">3D</span>
+              <br />
+              na zamówienie
+            </h2>
+            <div className="mt-6 space-y-5 text-sm leading-relaxed text-muted-foreground">
+              <p>
+                Projektowanie modeli 3D to moja pasja i codzienna praca. Tworzę modele 3D dopasowane
+                do Twoich potrzeb – od prostych elementów użytkowych, przez części techniczne i
+                prototypy, aż po złożone modele organiczne, figurki kolekcjonerskie, modele do gier
+                oraz wizualizacje 3D.
+              </p>
+              <p>
+                Każdy projekt wykonuję od podstaw na podstawie zdjęć, szkiców, rysunków technicznych
+                lub samego pomysłu. Dbam o poprawną geometrię, optymalizację i przygotowanie modelu
+                do jego docelowego zastosowania – druku 3D, produkcji, prezentacji lub użycia w
+                silnikach gier.
+              </p>
+              <p>
+                Pracuję w profesjonalnych programach 3D, takich jak Blender, ZBrush, Marmoset Toolbag
+                czy Fusion 360, co pozwala mi tworzyć modele na najwyższym poziomie. Otrzymujesz
+                gotowy plik STL, OBJ, STEP, FBX lub inny – zgodnie z Twoimi potrzebami.
+              </p>
+              <p>
+                Masz pomysł na model 3D? Skontaktuj się ze mną, a pomogę Ci zamienić go w gotowy,
+                dopracowany model 3D.
+              </p>
+            </div>
+            <div className="mt-8 flex flex-wrap items-center gap-6">
+              <Link
+                to="/kontakt"
+                className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand)] px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+              >
+                Wyślij zapytanie <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/realizacje" className="inline-flex items-center gap-2 text-sm font-medium">
+                Zobacz realizacje <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="overflow-hidden rounded-2xl border border-border">
+              <img
+                src="/assets/o-mnie-workspace.jpg"
+                alt="Stanowisko pracy z modelem 3D silnika w programie do modelowania"
+                loading="lazy"
+                width={1280}
+                height={848}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
+              {[
+                { src: "/assets/szkielet2.jpg", alt: "Model 3D stworzenia fantasy" },
+                { src: "/assets/konstr.jpg", alt: "Model 3D elementu konstrukcyjnego" },
+                { src: "/assets/jozef.jpg", alt: "Model 3D figury" },
+                { src: "/assets/Wieza-2.jpg", alt: "Model 3D wieży" },
+                { src: "/assets/revolwer.jpg", alt: "Model 3D rewolweru" },
+              ].map((t) => (
+                <div key={t.src} className="aspect-square overflow-hidden rounded-xl border border-border">
+                  <img
+                    src={t.src}
+                    alt={t.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
         <div className="mb-8 flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
