@@ -200,9 +200,7 @@ function Index() {
               Twoich potrzeb.
             </h1>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/90 drop-shadow-sm">
-              Modele do druku 3D, gier, wizualizacji i nie tylko.
-              <br />
-              Od pomysłu do gotowego projektu.
+              Projektowanie modeli 3D na zamówienie. Tworzę modele do druku 3D, projekty CAD, modele do gier, wizualizacje 3D oraz modele STL przygotowane do produkcji.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <Link
