@@ -430,7 +430,7 @@ function Index() {
           </div>
 
           <div className="space-y-4">
-            <div className="h-[340px] overflow-hidden rounded-2xl border border-border sm:h-[420px] lg:h-[520px]">
+            <div className="h-[280px] overflow-hidden rounded-2xl border border-border sm:h-[340px] lg:h-[420px]">
               <img
                 src="/assets/o-mnie-workspace.jpg"
                 alt="Stanowisko pracy z modelem 3D silnika w programie do modelowania"
