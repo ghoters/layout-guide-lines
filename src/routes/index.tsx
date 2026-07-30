@@ -330,55 +330,6 @@ function Index() {
         )}
       </section>
 
-      {/* PROCESS + ADVANTAGES */}
-      <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-2">
-          <div>
-            <h2 className="mb-8 text-xs font-semibold tracking-wider text-foreground">
-              JAK WYGLĄDA WSPÓŁPRACA
-            </h2>
-            <div className="relative">
-              <div className="absolute left-0 right-0 top-6 h-px border-t border-dashed border-border" />
-              <div className="relative grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-2">
-                {steps.map((s) => (
-                  <div key={s.n} className="flex flex-col items-center text-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-soft)] text-[var(--brand)]">
-                      <s.icon className="h-5 w-5" />
-                    </div>
-                    <div className="mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-muted text-xs font-semibold text-muted-foreground">
-                      {s.n}
-                    </div>
-                    <div className="mt-3 text-xs font-semibold">{s.title}</div>
-                    <div className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
-                      {s.desc}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="mb-8 text-xs font-semibold tracking-wider text-foreground">
-              DLACZEGO WARTO ZE MNĄ WSPÓŁPRACOWAĆ?
-            </h2>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-6">
-              {advantages.map((a) => (
-                <div key={a.title} className="flex gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--brand)]">
-                    <a.icon className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold">{a.title}</div>
-                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{a.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ABOUT + TOOLS */}
       {/* PROJEKTOWANIE NA ZAMÓWIENIE */}
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
@@ -455,6 +406,55 @@ function Index() {
                     loading="lazy"
                     className="h-full w-full object-cover"
                   />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS + ADVANTAGES */}
+      <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-2">
+          <div>
+            <h2 className="mb-8 text-xs font-semibold tracking-wider text-foreground">
+              JAK WYGLĄDA WSPÓŁPRACA
+            </h2>
+            <div className="relative">
+              <div className="absolute left-0 right-0 top-6 h-px border-t border-dashed border-border" />
+              <div className="relative grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-2">
+                {steps.map((s) => (
+                  <div key={s.n} className="flex flex-col items-center text-center">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand-soft)] text-[var(--brand)]">
+                      <s.icon className="h-5 w-5" />
+                    </div>
+                    <div className="mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-muted text-xs font-semibold text-muted-foreground">
+                      {s.n}
+                    </div>
+                    <div className="mt-3 text-xs font-semibold">{s.title}</div>
+                    <div className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                      {s.desc}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="mb-8 text-xs font-semibold tracking-wider text-foreground">
+              DLACZEGO WARTO ZE MNĄ WSPÓŁPRACOWAĆ?
+            </h2>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+              {advantages.map((a) => (
+                <div key={a.title} className="flex gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--brand)]">
+                    <a.icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">{a.title}</div>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{a.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
