@@ -98,8 +98,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/assets/sygnet3-2.png", type: "image/png" },
-      { rel: "apple-touch-icon", href: "/assets/sygnet3-2.png" },
+      { rel: "icon", href: "/sygnet_nowy.png", type: "image/png", sizes: "512x512" },
+      { rel: "shortcut icon", href: "/sygnet_nowy.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/sygnet_nowy.png" },
     ],
     scripts: [
       {
