@@ -393,11 +393,11 @@ function Index() {
             </div>
             <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
               {[
-                { src: "/assets/szkielet2.jpg", alt: "Model 3D stworzenia fantasy" },
-                { src: "/assets/konstr.jpg", alt: "Model 3D elementu konstrukcyjnego" },
-                { src: "/assets/jozef.jpg", alt: "Model 3D figury" },
-                { src: "/assets/Wieza-2.jpg", alt: "Model 3D wieży" },
-                { src: "/assets/revolwer.jpg", alt: "Model 3D rewolweru" },
+                { src: "/assets/o-mnie-thumb-1.jpg", alt: "Model 3D kołnierza przemysłowego" },
+                { src: "/assets/o-mnie-thumb-2.jpg", alt: "Model 3D połączenia konstrukcyjnego" },
+                { src: "/assets/o-mnie-thumb-3.jpg", alt: "Model 3D obudowy przekładni" },
+                { src: "/assets/o-mnie-thumb-4.jpg", alt: "Model 3D obudowy technicznej" },
+                { src: "/assets/o-mnie-thumb-5.jpg", alt: "Model 3D zawiasu z elementami" },
               ].map((t) => (
                 <div key={t.src} className="aspect-square overflow-hidden rounded-xl border border-border">
                   <img
