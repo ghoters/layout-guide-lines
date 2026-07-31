@@ -6,6 +6,7 @@ import ArticleProjektowanie from "@/components/ArticleProjektowanie";
 import ArticleStlStep from "@/components/ArticleStlStep";
 import ArticleDruk from "@/components/ArticleDruk";
 import ArticleModele3D from "@/components/ArticleModele3D";
+import ArticleNajczestszeBledy from "@/components/ArticleNajczestszeBledy";
 import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -182,6 +183,9 @@ function BlogPost() {
   }
   if (post.slug === "modele-3d-czym-sa-jak-powstaja") {
     return <ArticleModele3D />;
+  }
+  if (post.slug === "najczestsze-bledy-w-projektowaniu-modeli-do-druku-3d") {
+    return <ArticleNajczestszeBledy />;
   }
   const related = blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 3);
   const fallback = related.length ? related : blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
