@@ -6,6 +6,7 @@ import ArticleProjektowanie from "@/components/ArticleProjektowanie";
 import ArticleStlStep from "@/components/ArticleStlStep";
 import ArticleDruk from "@/components/ArticleDruk";
 import ArticleModele3D from "@/components/ArticleModele3D";
+import ArticleNajczestszeBledy from "@/components/ArticleNajczestszeBledy";
 import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/blog/$slug")({

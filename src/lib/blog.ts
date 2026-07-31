@@ -152,6 +152,32 @@ blogPosts.push({
   cta: defaultCta,
 });
 
+blogPosts.push({
+  slug: "najczestsze-bledy-w-projektowaniu-modeli-do-druku-3d",
+  title: "Najczęstsze błędy w projektowaniu modeli do druku 3D",
+  h1: "Najczęstsze błędy w projektowaniu modeli do druku 3D",
+  metaTitle: "Najczęstsze błędy w projektowaniu modeli do druku 3D | 3dmodele.pl",
+  metaDescription:
+    "Zbyt cienkie ścianki, zapomniane tolerancje, brak fasek — omawiam najczęstsze błędy w projektowaniu modeli do druku 3D i podpowiadam, jak ich unikać.",
+  excerpt:
+    "Zbyt cienkie ścianki, zapomniane tolerancje, brak fasek — omawiam najczęstsze błędy w projektowaniu modeli do druku 3D i podpowiadam, jak ich unikać.",
+  category: "Poradniki",
+  image: { url: "/assets/blog-bledy-hero.jpg", alt: "Czarny wydrukowany model 3D" },
+  keyword: "najczęstsze błędy w projektowaniu modeli do druku 3D",
+  date: "2025-02-05",
+  readingMinutes: 5,
+  intro:
+    "Nawet drobny błąd w projekcie może skończyć się nieudanym wydrukiem. Poniżej znajdziesz listę najczęstszych problemów i praktyczne wskazówki, jak ich unikać.",
+  sections: [],
+  faq: [
+    { q: "Czy każdy błąd geometrii da się naprawić?", a: "Większość błędów typu dziury czy odwrócone normalne można naprawić automatycznie w programach takich jak Meshmixer, Netfabb czy 3D Builder. Bardzo złożone uszkodzenia mogą wymagać ręcznej poprawy modelu." },
+    { q: "Jaką grubość ścianki przyjąć dla druku FDM?", a: "Dla druku FDM zalecam minimum 1,2 mm. Im grubsze ścianki, tym wydruk jest wytrzymalszy, ale równocześnie rośnie czas i zużycie materiału." },
+    { q: "Jak sprawdzić, czy tolerancje pasowań są dobre?", a: "Najlepiej wykonać próbny wydruk małego fragmentu pasowania lub przesymulować luz w programie CAD. Typowy luz dla FDM to 0,2–0,4 mm." },
+    { q: "Czy fasetki są konieczne w każdym modelu?", a: "Nie. Fasetki dodaje się tam, gdzie elementy mają się ze sobą stykać, osadzać lub montować – ułatwiają to montaż i zmniejszają ryzyko uszkodzenia krawędzi." },
+  ],
+  cta: defaultCta,
+});
+
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
