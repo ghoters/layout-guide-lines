@@ -117,6 +117,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           name: "3dmodele.pl",
+          image: "https://modele3d-pl.lovable.app/szkielet-og.jpg",
+          logo: "https://modele3d-pl.lovable.app/sygnet_nowy.png",
           description:
             "Projektowanie modeli 3D na zamówienie — do druku 3D (FDM i żywica), gier, wizualizacji i ilustracji.",
           url: "https://www.3dmodele.pl",
