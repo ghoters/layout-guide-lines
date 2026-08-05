@@ -90,8 +90,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Projektowanie modeli 3D na zamówienie. Tworzę modele do druku 3D, modele do gier, wizualizacje, projekty CAD oraz pliki STL. Oferuję również profesjonalne wydruki 3D.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://modele3d-pl.lovable.app/" },
+      { property: "og:image", content: "https://modele3d-pl.lovable.app/szkielet-og.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:alt", content: "Szkielet 3D — model anatomiczny przygotowany do druku 3D" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@3dmodele.pl" },
+      { name: "twitter:image", content: "https://modele3d-pl.lovable.app/szkielet-og.jpg" },
     ],
     links: [
       {
@@ -110,6 +117,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           name: "3dmodele.pl",
+          image: "https://modele3d-pl.lovable.app/szkielet-og.jpg",
+          logo: "https://modele3d-pl.lovable.app/sygnet_nowy.png",
           description:
             "Projektowanie modeli 3D na zamówienie — do druku 3D (FDM i żywica), gier, wizualizacji i ilustracji.",
           url: "https://www.3dmodele.pl",
