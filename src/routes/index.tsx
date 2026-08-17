@@ -33,9 +33,45 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { title: "Projektowanie modeli 3D | Druk 3D, CAD, modele do gier i wizualizacje | 3dmodele.pl" },
+      {
+        name: "description",
+        content:
+          "Projektowanie modeli 3D na zamówienie. Tworzę modele do druku 3D, modele do gier, wizualizacje, projekty CAD oraz pliki STL. Oferuję również profesjonalne wydruki 3D.",
+      },
+      { property: "og:title", content: "Projektowanie modeli 3D | Druk 3D, CAD, modele do gier i wizualizacje | 3dmodele.pl" },
+      {
+        property: "og:description",
+        content:
+          "Projektowanie modeli 3D na zamówienie. Tworzę modele do druku 3D, modele do gier, wizualizacje, projekty CAD oraz pliki STL. Oferuję również profesjonalne wydruki 3D.",
+      },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.3dmodele.pl/" },
+      { property: "og:image", content: "https://www.3dmodele.pl/szkielet-og.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Szkielet 3D — model anatomiczny przygotowany do druku 3D" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.3dmodele.pl/szkielet-og.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://www.3dmodele.pl/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          url: "https://www.3dmodele.pl/",
+          name: "Projektowanie modeli 3D | 3dmodele.pl",
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: "https://www.3dmodele.pl/szkielet-og.jpg",
+            width: 1200,
+            height: 630,
+          },
+        }),
+      },
+    ],
   }),
   component: Index,
 });
