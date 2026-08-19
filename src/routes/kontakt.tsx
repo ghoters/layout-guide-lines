@@ -71,12 +71,21 @@ function Kontakt() {
   const [error, setError] = useState<string | null>(null);
   const send = useServerFn(sendContactMessage);
 
+  const trackConversion = () => {
+    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "conversion", {
+        send_to: "AW-18326049899/wmdkCLLcq-QcEOuoxaJE",
+      });
+    }
+  };
+
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setError(null);
     try {
       await send({ data: form });
+      trackConversion();
       setSent(true);
       setForm({ name: "", email: "", message: "" });
     } catch (err) {
