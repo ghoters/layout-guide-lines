@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 const heroVase = { url: "/assets/background_hero.jpg" };
 const awatar3 = { url: "/assets/awatar3.jpg" };
-import { projects, type Project } from "@/lib/projects";
+import { projects, categories, type Project, type Category } from "@/lib/projects";
 import { Lightbox } from "@/components/Lightbox";
 import { Logo } from "@/components/Logo";
 import {
@@ -28,6 +28,7 @@ import {
   Instagram,
   Linkedin,
   Plus,
+  Lightbulb,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -170,6 +171,7 @@ function Placeholder({ className = "", label }: { className?: string; label?: st
 
 function Index() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeCategory, setActiveCategory] = useState<"Wszystkie" | Category>("Wszystkie");
 
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
@@ -320,51 +322,134 @@ function Index() {
       </section>
 
       {/* PROJECTS */}
-      <section id="realizacje" className="mx-auto max-w-[1200px] px-6 py-10">
-        <div className="mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
-            WYBRANE REALIZACJE
+      <section id="realizacje" className="mx-auto max-w-[1200px] px-6 py-14">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-start">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
+              PORTFOLIO
+            </div>
+            <h2 className="mt-4 text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl">
+              Projekty 3D wykonane
+              <br className="hidden sm:block" /> na zamówienie
+            </h2>
+            <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
+              Tworzę modele do druku 3D, części techniczne, assety do gier i wizualizacje. Każdy
+              projekt dopasowany do potrzeb klienta.
+            </p>
+          </div>
+          <div className="flex flex-col gap-6 lg:items-end">
+            <div className="flex items-start gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
+                <Box className="h-5 w-5" />
+              </div>
+              <p className="min-w-0 text-sm leading-relaxed text-muted-foreground">
+                Ponad 1000+ zrealizowanych projektów
+                <br className="hidden sm:block" /> dla klientów indywidualnych i firm.
+              </p>
+            </div>
+            <Link
+              to="/realizacje"
+              className="inline-flex w-fit items-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-medium text-[var(--brand)] transition-colors hover:border-[var(--brand)]"
+            >
+              Zobacz wszystkie realizacje <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* FILTERS */}
+        <div className="mt-8 flex flex-wrap gap-3">
+          {(["Wszystkie", ...categories] as const).map((c) => {
+            const active = activeCategory === c;
+            const Icon =
+              c === "Druk 3D" ? Box : c === "CAD" ? PenTool : c === "Gry" ? Gamepad2 : c === "Wizualizacje" ? Camera : null;
+            return (
+              <button
+                key={c}
+                type="button"
+                onClick={() => setActiveCategory(c)}
+                className={
+                  active
+                    ? "inline-flex items-center gap-2 rounded-xl bg-[var(--brand)] px-5 py-2.5 text-sm font-medium text-primary-foreground"
+                    : "inline-flex items-center gap-2 rounded-xl border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:border-[var(--brand)] hover:text-foreground"
+                }
+              >
+                {Icon && <Icon className="h-4 w-4" />}
+                {c}
+              </button>
+            );
+          })}
+        </div>
+
+        <h2 className="sr-only">Wybrane realizacje projektów 3D</h2>
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {projects
+            .filter((p) => activeCategory === "Wszystkie" || p.category === activeCategory)
+            .map((p) => (
+              <button
+                key={p.title}
+                type="button"
+                onClick={() => setSelectedProject(p)}
+                className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-card text-left transition-colors hover:border-[var(--brand)]"
+              >
+                <div className="relative h-[200px] w-full overflow-hidden">
+                  <img
+                    src={p.image.url}
+                    alt={`${p.title} — ${p.tag}, projekt 3D na zamówienie`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute left-3 top-3 rounded-md bg-[var(--brand)] px-2.5 py-1 text-[10px] font-bold tracking-wider text-primary-foreground">
+                    {p.badge}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="text-base font-bold">{p.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{p.desc}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-md bg-muted px-2 py-1 text-[10px] font-medium text-muted-foreground"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[var(--brand)] transition-opacity group-hover:opacity-80">
+                    Zobacz projekt <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </button>
+            ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-10 flex flex-col items-center gap-5 rounded-2xl border border-border bg-card px-6 py-6 sm:mx-auto sm:max-w-3xl sm:flex-row sm:justify-between">
+          <div className="flex min-w-0 items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)]">
+              <Lightbulb className="h-5 w-5" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-sm font-bold">Nie widzisz projektu podobnego do swojego?</div>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Napisz do mnie – chętnie podejmę się nowych wyzwań.
+              </p>
+            </div>
           </div>
           <Link
-            to="/realizacje"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand)]"
+            to="/kontakt"
+            className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[var(--brand)] px-5 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Zobacz wszystkie realizacje <ArrowRight className="h-4 w-4" />
+            Opowiedz o swoim projekcie <ArrowRight className="h-4 w-4" />
           </Link>
-        </div>
-        <h2 className="sr-only">Wybrane realizacje projektów 3D</h2>
-        <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
-          {projects.map((p) => (
-            <button
-              key={p.title}
-              type="button"
-              onClick={() => setSelectedProject(p)}
-              className="group block w-full space-y-3 text-left"
-            >
-              <div className="h-[170px] w-full overflow-hidden rounded-xl border border-border">
-                <img
-                  src={p.image.url}
-                  alt={`${p.title} — ${p.tag}`}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex items-start justify-between">
-                <div>
-                  <div className="text-sm font-semibold">{p.title}</div>
-                  <div className="text-xs text-muted-foreground">{p.tag}</div>
-                </div>
-                <ArrowRight className="mt-1 h-4 w-4 text-[var(--brand)] transition-transform duration-300 group-hover:translate-x-1" />
-              </div>
-            </button>
-          ))}
         </div>
 
         {selectedProject && (
           <Lightbox project={selectedProject} onClose={() => setSelectedProject(null)} />
         )}
       </section>
+
 
       {/* ABOUT + TOOLS */}
       {/* PROJEKTOWANIE NA ZAMÓWIENIE */}
