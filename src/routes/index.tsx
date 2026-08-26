@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 const heroVase = { url: "/assets/background_hero.jpg" };
 const awatar3 = { url: "/assets/awatar3.jpg" };
-import { projects, type Project } from "@/lib/projects";
+import { projects, categories, type Project, type Category } from "@/lib/projects";
 import { Lightbox } from "@/components/Lightbox";
 import { Logo } from "@/components/Logo";
 import {
@@ -28,6 +28,7 @@ import {
   Instagram,
   Linkedin,
   Plus,
+  Lightbulb,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -170,6 +171,7 @@ function Placeholder({ className = "", label }: { className?: string; label?: st
 
 function Index() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeCategory, setActiveCategory] = useState<"Wszystkie" | Category>("Wszystkie");
 
   return (
     <div className="min-h-screen bg-[var(--page)] text-foreground">
