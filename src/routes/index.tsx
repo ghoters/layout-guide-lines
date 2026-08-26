@@ -338,7 +338,7 @@ function Index() {
               projekt dopasowany do potrzeb klienta.
             </p>
           </div>
-          <div className="flex flex-col gap-6 lg:items-end">
+          <div className="flex flex-col gap-6 lg:items-end lg:mt-8">
             <div className="flex items-start gap-3">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-[var(--brand)]">
                 <Box className="h-5 w-5" />
