@@ -37,6 +37,7 @@ import {
 } from "lucide-react";
 
 import wazonRender from "@/assets/wazon-render.jpg.asset.json";
+import renderTlo from "@/assets/render_tło.jpg.asset.json";
 import wazonSzkic from "@/assets/wazon-szkic.jpg.asset.json";
 import wazonBlockout from "@/assets/wazon-blockout.jpg.asset.json";
 import wazonMeshmixer from "@/assets/wazon-meshmixer.jpg.asset.json";
@@ -635,8 +636,12 @@ function Index() {
       {/* CASE STUDY — WAZON GOTYCKI */}
       <section className="mx-auto max-w-[1200px] px-4 py-10 sm:px-6 sm:py-14">
         <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-          <div className="grid grid-cols-1 items-center gap-8 p-6 sm:p-10 lg:grid-cols-2 lg:gap-10 lg:p-14">
-            <div>
+          <div
+            className="relative grid min-h-[520px] grid-cols-1 items-center bg-cover bg-right bg-no-repeat lg:grid-cols-2"
+            style={{ backgroundImage: `url(${renderTlo.url})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/50 to-transparent" />
+            <div className="relative z-10 p-6 sm:p-10 lg:p-14">
               <div className="text-xs font-bold tracking-[0.18em] text-[var(--brand)]">
                 OSTATNIA REALIZACJA
               </div>
@@ -688,16 +693,7 @@ function Index() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-
-            <div className="relative flex items-center justify-center">
-              <div className="absolute right-4 top-0 h-64 w-64 rounded-full bg-[var(--brand-soft)]/70 sm:h-80 sm:w-80" />
-              <img
-                src={wazonRender.url}
-                alt="Wazon gotycki — dekoracyjny model 3D z ornamentyką gotycką przygotowany do druku 3D"
-                loading="lazy"
-                className="relative z-10 w-full max-w-[460px] object-contain"
-              />
-            </div>
+            <div className="hidden lg:block" />
           </div>
 
           <div className="border-t border-border p-6 sm:p-10">
