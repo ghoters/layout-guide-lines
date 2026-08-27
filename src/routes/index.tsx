@@ -583,6 +583,129 @@ function Index() {
         </div>
       </section>
 
+      {/* CASE STUDY — WAZON GOTYCKI */}
+      <section className="mx-auto max-w-[1200px] overflow-hidden px-6 py-14">
+        <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
+          <div className="grid grid-cols-1 gap-8 p-6 sm:p-10 lg:grid-cols-[40%_60%] lg:items-center lg:gap-6">
+            <div>
+              <div className="text-xs font-semibold tracking-wider text-[var(--brand)]">
+                OSTATNIA REALIZACJA
+              </div>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Wazon gotycki</h2>
+              <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
+                Dekoracyjny model 3D inspirowany ornamentyką gotycką. Projekt od podstaw – od
+                koncepcji i rysunków, przez modelowanie w ZBrush, po przygotowanie pod druk 3D.
+              </p>
+
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+                {["Blender", "ZBrush", "Meshmixer"].map((tool) => (
+                  <div key={tool} className="flex items-center gap-2">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border border-border text-[var(--brand)]">
+                      <Box className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-sm font-semibold">{tool}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {[
+                  { icon: Package, label: "Zastosowanie", value: "Druk 3D" },
+                  { icon: Printer, label: "Materiał", value: "Żywica" },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-3 rounded-xl bg-[var(--brand-soft)]/60 p-4"
+                  >
+                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+                      <item.icon className="h-4 w-4" />
+                    </span>
+                    <div>
+                      <div className="text-[11px] text-muted-foreground">{item.label}</div>
+                      <div className="text-sm font-semibold">{item.value}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                to="/realizacje"
+                className="mt-7 inline-flex items-center gap-3 rounded-xl bg-[var(--brand)] px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Zobacz projekt
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="relative">
+              <img
+                src="/assets/wazon/render-hero.jpg"
+                alt="Wazon gotycki — finalny render modelu 3D przygotowanego do druku"
+                loading="lazy"
+                className="w-full rounded-2xl object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 border-t border-border p-6 sm:p-10 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                n: "01",
+                title: "KONCEPCJA",
+                desc: "Szkice i opracowanie formy inspirowanej ornamentyką gotycką.",
+                img: "/assets/wazon/szkic.jpg",
+                alt: "Szkice koncepcyjne wazonu gotyckiego",
+              },
+              {
+                n: "02",
+                title: "MODELOWANIE",
+                desc: "Budowa modelu 3D i podział na poligrupy w ZBrush.",
+                img: "/assets/wazon/blockout.jpg",
+                alt: "Model wazonu z poligrupami w programie ZBrush",
+              },
+              {
+                n: "03",
+                title: "OPRACOWANIE MODELU",
+                desc: "Dopracowanie detali oraz przygotowanie modelu w Meshmixerze.",
+                img: "/assets/wazon/meshmixer.jpg",
+                alt: "Detale ornamentu wazonu w programie Meshmixer",
+              },
+              {
+                n: "04",
+                title: "GOTOWY MODEL",
+                desc: "Finalny model przygotowany pod druk 3D.",
+                img: "/assets/wazon/render.jpg",
+                alt: "Finalny render ciemnego wazonu gotyckiego",
+              },
+            ].map((step) => (
+              <div key={step.n} className="flex flex-col">
+                <div className="flex items-start gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-xs font-semibold text-[var(--brand)]">
+                    {step.n}
+                  </span>
+                  <div>
+                    <div className="text-xs font-semibold tracking-wide">{step.title}</div>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 h-40 w-full overflow-hidden rounded-xl border border-border bg-muted sm:h-44">
+                  <img
+                    src={step.img}
+                    alt={step.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
         <div className="mb-8 flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
