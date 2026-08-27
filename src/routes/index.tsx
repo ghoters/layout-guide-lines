@@ -583,6 +583,109 @@ function Index() {
         </div>
       </section>
 
+      {/* CASE STUDY — WAZON GOTYCKI */}
+      <section className="mx-auto max-w-[1200px] px-4 py-10 sm:px-6 sm:py-14">
+        <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+          <div className="grid grid-cols-1 items-center gap-8 p-6 sm:p-10 lg:grid-cols-2 lg:gap-10 lg:p-14">
+            <div>
+              <div className="text-xs font-bold tracking-[0.18em] text-[var(--brand)]">
+                OSTATNIA REALIZACJA
+              </div>
+              <h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+                Wazon gotycki
+              </h2>
+              <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Dekoracyjny model 3D inspirowany ornamentyką gotycką. Projekt od podstaw – od
+                koncepcji i rysunków, przez modelowanie w ZBrush, po przygotowanie pod druk 3D.
+              </p>
+
+              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+                {caseTools.map((t) => (
+                  <div key={t.name} className="flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-[var(--brand)]">
+                      <t.icon className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold">{t.name}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-7 flex flex-wrap gap-4">
+                <div className="flex min-w-[190px] items-center gap-3 rounded-xl bg-[var(--brand-soft)]/60 px-4 py-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+                    <Box className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-muted-foreground">Zastosowanie</div>
+                    <div className="text-sm font-bold">Druk 3D</div>
+                  </div>
+                </div>
+                <div className="flex min-w-[190px] items-center gap-3 rounded-xl bg-[var(--brand-soft)]/60 px-4 py-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-background text-[var(--brand)]">
+                    <Droplet className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-muted-foreground">Materiał</div>
+                    <div className="text-sm font-bold">Żywica</div>
+                  </div>
+                </div>
+              </div>
+
+              <Link
+                to="/realizacje"
+                className="mt-8 inline-flex items-center gap-3 rounded-xl bg-[var(--brand)] px-6 py-3.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+              >
+                Zobacz projekt
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="relative flex items-center justify-center">
+              <div className="absolute right-4 top-0 h-64 w-64 rounded-full bg-[var(--brand-soft)]/70 sm:h-80 sm:w-80" />
+              <img
+                src={wazonRender.url}
+                alt="Wazon gotycki — dekoracyjny model 3D z ornamentyką gotycką przygotowany do druku 3D"
+                loading="lazy"
+                className="relative z-10 w-full max-w-[460px] object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="border-t border-border p-6 sm:p-10">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {caseSteps.map((s, i) => (
+                <div key={s.n} className="relative">
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-xs font-bold text-[var(--brand)]">
+                      {s.n}
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold tracking-wider">{s.title}</div>
+                      <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                        {s.desc}
+                      </p>
+                    </div>
+                  </div>
+                  {i < caseSteps.length - 1 && (
+                    <ArrowRight className="absolute -right-4 top-1 hidden h-4 w-4 text-muted-foreground lg:block" />
+                  )}
+                  <div className="mt-5 overflow-hidden rounded-xl border border-border bg-muted/30">
+                    <img
+                      src={s.image}
+                      alt={s.alt}
+                      loading="lazy"
+                      className="h-[190px] w-full object-cover"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       <section className="mx-auto max-w-[1200px] border-t border-border px-6 py-14">
         <div className="mb-8 flex items-center gap-2 text-xs font-semibold tracking-wider text-[var(--brand)]">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
