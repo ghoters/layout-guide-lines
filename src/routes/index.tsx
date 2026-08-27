@@ -37,6 +37,7 @@ import {
 } from "lucide-react";
 
 import wazonRender from "@/assets/wazon-render.jpg.asset.json";
+import renderTlo from "@/assets/render_tło.jpg.asset.json";
 import wazonSzkic from "@/assets/wazon-szkic.jpg.asset.json";
 import wazonBlockout from "@/assets/wazon-blockout.jpg.asset.json";
 import wazonMeshmixer from "@/assets/wazon-meshmixer.jpg.asset.json";
