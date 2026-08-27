@@ -29,7 +29,56 @@ import {
   Linkedin,
   Plus,
   Lightbulb,
+  Droplet,
+  Layers,
+  Brush,
+  Wrench,
+  Aperture,
 } from "lucide-react";
+
+import wazonRender from "@/assets/wazon-render.jpg.asset.json";
+import wazonSzkic from "@/assets/wazon-szkic.jpg.asset.json";
+import wazonBlockout from "@/assets/wazon-blockout.jpg.asset.json";
+import wazonMeshmixer from "@/assets/wazon-meshmixer.jpg.asset.json";
+
+const caseTools = [
+  { name: "Blender", icon: Aperture },
+  { name: "ZBrush", icon: Brush },
+  { name: "Meshmixer", icon: Wrench },
+  { name: "Marmoset Toolbag", icon: Layers },
+];
+
+const caseSteps = [
+  {
+    n: "01",
+    title: "KONCEPCJA",
+    desc: "Szkice i opracowanie formy inspirowanej ornamentyką gotycką.",
+    image: wazonSzkic.url,
+    alt: "Szkice koncepcyjne wazonu gotyckiego",
+  },
+  {
+    n: "02",
+    title: "MODELOWANIE",
+    desc: "Budowa modelu 3D i podział na poligrupy w ZBrush.",
+    image: wazonBlockout.url,
+    alt: "Modelowanie wazonu gotyckiego w ZBrush z podziałem na poligrupy",
+  },
+  {
+    n: "03",
+    title: "DETAL",
+    desc: "Dopracowanie detali oraz przygotowanie modelu w Meshmixer.",
+    image: wazonMeshmixer.url,
+    alt: "Dopracowanie detali wazonu gotyckiego w programie Meshmixer",
+  },
+  {
+    n: "04",
+    title: "GOTOWY MODEL",
+    desc: "Finalny model przygotowany pod druk 3D.",
+    image: wazonRender.url,
+    alt: "Finalny render wazonu gotyckiego przygotowanego do druku 3D",
+  },
+];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
