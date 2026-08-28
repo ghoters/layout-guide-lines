@@ -634,7 +634,7 @@ function Index() {
       </section>
 
       {/* CASE STUDY — WAZON GOTYCKI */}
-      <section className="mx-auto max-w-[1200px] px-4 py-10 sm:px-6 sm:py-14">
+      <section className="mx-auto max-w-[1200px] border-t border-border px-4 py-10 sm:px-6 sm:py-14">
         <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
           <div
             className="relative grid min-h-[520px] grid-cols-1 items-center bg-cover bg-right bg-no-repeat lg:grid-cols-2"
