@@ -699,7 +699,7 @@ function Index() {
           <div className="border-t border-border p-6 sm:p-10">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {caseSteps.map((s, i) => (
-                <div key={s.n} className="relative">
+                <div key={s.n} className="relative flex h-full flex-col">
                   <div className="flex items-start gap-3">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-soft)] text-xs font-bold text-[var(--brand)]">
                       {s.n}
@@ -714,14 +714,17 @@ function Index() {
                   {i < caseSteps.length - 1 && (
                     <ArrowRight className="absolute -right-4 top-1 hidden h-4 w-4 text-muted-foreground lg:block" />
                   )}
-                  <div className="mt-5 overflow-hidden rounded-xl border border-border bg-muted/30">
-                    <img
-                      src={s.image}
-                      alt={s.alt}
-                      loading="lazy"
-                      className="h-[190px] w-full object-cover"
-                    />
+                  <div className="mt-auto pt-5">
+                    <div className="overflow-hidden rounded-xl border border-border bg-muted/30">
+                      <img
+                        src={s.image}
+                        alt={s.alt}
+                        loading="lazy"
+                        className="aspect-[4/3] h-[190px] w-full object-cover"
+                      />
+                    </div>
                   </div>
+
                 </div>
               ))}
             </div>
