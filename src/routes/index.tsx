@@ -36,11 +36,11 @@ import {
   Aperture,
 } from "lucide-react";
 
-import wazonRender from "@/assets/wazon-render.jpg.asset.json";
-import renderTlo from "@/assets/render_tło.jpg.asset.json";
-import wazonSzkic from "@/assets/wazon-szkic.jpg.asset.json";
-import wazonBlockout from "@/assets/wazon-blockout.jpg.asset.json";
-import wazonMeshmixer from "@/assets/wazon-meshmixer.jpg.asset.json";
+const wazonRender = { url: "/assets/wazon-render.jpg" };
+const renderTlo = { url: "/assets/render_tlo.jpg" };
+const wazonSzkic = { url: "/assets/wazon-szkic.jpg" };
+const wazonBlockout = { url: "/assets/wazon-blockout.jpg" };
+const wazonMeshmixer = { url: "/assets/wazon-meshmixer.jpg" };
 
 const caseTools = [
   { name: "Blender", icon: Aperture },
