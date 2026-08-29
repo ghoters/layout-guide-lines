@@ -642,7 +642,7 @@ function Index() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/50 to-transparent" />
             <div className="relative z-10 p-6 sm:p-10 lg:p-14">
-              <div className="text-xs font-bold tracking-[0.18em] text-[var(--brand)]">
+<div className="text-xs font-extrabold tracking-[0.18em] text-[var(--brand)]">
                 CASE STUDY
               </div>
               <h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
