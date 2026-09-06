@@ -202,7 +202,7 @@ function Blog() {
                   </Link>
                 </h2>
                 <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{p.excerpt}</p>
-                <div className="mt-5 flex items-center justify-between border-t border-border pt-4 text-[11px] text-muted-foreground">
+                <div className="mt-5 flex items-center gap-4 border-t border-border pt-4 text-[11px] font-medium text-muted-foreground">
                   <span className="inline-flex items-center gap-1.5">
                     <Calendar className="h-3.5 w-3.5" />
                     {formatDate(p.date)}
@@ -211,15 +211,15 @@ function Blog() {
                     <Clock className="h-3.5 w-3.5" />
                     {p.readingMinutes} min czytania
                   </span>
+                  <Link
+                    to="/blog/$slug"
+                    params={{ slug: p.slug }}
+                    className="ml-auto flex h-9 w-9 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)] transition-colors hover:bg-[var(--brand)] hover:text-primary-foreground"
+                    aria-label={`Czytaj więcej: ${p.title}`}
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
-                <Link
-                  to="/blog/$slug"
-                  params={{ slug: p.slug }}
-                  className="mt-4 inline-flex items-center gap-1 self-end text-[var(--brand)] hover:opacity-80"
-                  aria-label={`Czytaj więcej: ${p.title}`}
-                >
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
               </div>
             </article>
           ))}
