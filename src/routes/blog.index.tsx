@@ -203,16 +203,14 @@ function Blog() {
                 </h2>
                 <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{p.excerpt}</p>
                 <div className="mt-5 flex items-center justify-between border-t border-border pt-4 text-[11px] font-medium text-muted-foreground">
-                  <div className="flex items-center gap-3 overflow-hidden">
-                    <span className="inline-flex items-center gap-1.5 truncate">
-                      <Calendar className="h-3.5 w-3.5 shrink-0" />
-                      {formatDate(p.date)}
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 truncate">
-                      <Clock className="h-3.5 w-3.5 shrink-0" />
-                      {p.readingMinutes} min
-                    </span>
-                  </div>
+                  <span className="inline-flex min-w-0 items-center gap-1.5 truncate">
+                    <Calendar className="h-3.5 w-3.5 shrink-0" />
+                    {formatDate(p.date)}
+                  </span>
+                  <span className="inline-flex min-w-0 items-center gap-1.5 truncate">
+                    <Clock className="h-3.5 w-3.5 shrink-0" />
+                    {p.readingMinutes} min
+                  </span>
                   <Link
                     to="/blog/$slug"
                     params={{ slug: p.slug }}
