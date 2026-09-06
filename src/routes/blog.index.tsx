@@ -202,22 +202,24 @@ function Blog() {
                   </Link>
                 </h2>
                 <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{p.excerpt}</p>
-                <div className="mt-5 flex items-center gap-4 border-t border-border pt-4 text-[11px] font-medium text-muted-foreground">
-                  <span className="inline-flex items-center gap-1.5">
-                    <Calendar className="h-3.5 w-3.5" />
-                    {formatDate(p.date)}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Clock className="h-3.5 w-3.5" />
-                    {p.readingMinutes} min czytania
-                  </span>
+                <div className="mt-5 flex items-center justify-between border-t border-border pt-4 text-[11px] font-medium text-muted-foreground">
+                  <div className="flex items-center gap-3 overflow-hidden">
+                    <span className="inline-flex items-center gap-1.5 truncate">
+                      <Calendar className="h-3.5 w-3.5 shrink-0" />
+                      {formatDate(p.date)}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 truncate">
+                      <Clock className="h-3.5 w-3.5 shrink-0" />
+                      {p.readingMinutes} min
+                    </span>
+                  </div>
                   <Link
                     to="/blog/$slug"
                     params={{ slug: p.slug }}
-                    className="ml-auto flex h-9 w-9 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)] transition-colors hover:bg-[var(--brand)] hover:text-primary-foreground"
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--brand-soft)] text-[var(--brand)] transition-colors hover:bg-[var(--brand)] hover:text-primary-foreground"
                     aria-label={`Czytaj więcej: ${p.title}`}
                   >
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
               </div>
