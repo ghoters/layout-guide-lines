@@ -1,5 +1,5 @@
 # Roadmap
 
-- [ ] Przebudować stronę Blog zgodnie z załączonym projektem.
-- [ ] Zachować wszystkie obecne grafiki i działające odnośniki artykułów.
-- [ ] Sprawdzić wygląd na desktopie, tablecie i telefonie.
+- [x] Dopasować układ strony Blog do podstrony Realizacje (nagłówek, filtry, siatka, CTA).
+- [x] Zachować obecne boksy artykułów, grafiki i działające odnośniki.
+- [x] Sprawdzić wygląd na desktopie, tablecie i telefonie.
