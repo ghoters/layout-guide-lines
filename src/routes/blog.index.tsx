@@ -157,7 +157,10 @@ function Blog() {
             <div className="flex flex-wrap gap-2" aria-label="Kategorie artykułów">
               {filters.map((f) => {
                 const isActive = f === active;
-                const Icon = f === "Wszystkie" ? null : categoryIcons[f as BlogCategory] ?? Box;
+                const Icon =
+                  f === "Wszystkie"
+                    ? null
+                    : (categoryIcons as Partial<Record<BlogCategory, typeof Box>>)[f] ?? Box;
                 return (
                   <button
                     key={f}
