@@ -134,7 +134,7 @@ function Blog() {
                   <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
                   BLOG
                 </div>
-                <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Blog o projektowaniu 3D</h1>
+                <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Blog o projektowaniu <span className="text-[var(--brand)]">3D</span></h1>
                 <p className="mt-3 max-w-[590px] text-sm leading-6 text-muted-foreground">
                   Porady, case studies i praktyczne wskazówki ze świata projektowania 3D,
                   druku 3D, wizualizacji oraz tworzenia modeli do gier.
