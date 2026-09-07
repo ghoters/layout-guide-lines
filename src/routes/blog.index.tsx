@@ -198,7 +198,7 @@ function Blog() {
             {filtered.map((p) => (
               <article
                 key={p.slug}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-0.5 hover:shadow-xl"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-0.5 hover:shadow-xl"
               >
                 <Link
                   to="/blog/$slug"
@@ -221,8 +221,8 @@ function Blog() {
                       {p.title}
                     </Link>
                   </h2>
-                  <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{p.excerpt}</p>
-                  <div className="mt-5 flex items-center justify-between border-t border-border pt-4 text-[11px] font-medium text-muted-foreground">
+                  <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-muted-foreground">{p.excerpt}</p>
+                  <div className="mt-auto flex items-center justify-between border-t border-border pt-4 text-[11px] font-medium text-muted-foreground">
                     <span className="inline-flex min-w-0 items-center gap-1.5 truncate">
                       <Calendar className="h-3.5 w-3.5 shrink-0" />
                       {formatDate(p.date)}
