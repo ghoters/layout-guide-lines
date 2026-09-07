@@ -162,7 +162,7 @@ function Realizacje() {
                   <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand)]" />
                   PORTFOLIO
                 </div>
-                <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Realizacje</h1>
+                <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">Wybrane <span className="text-[var(--brand)]">realizacje</span></h1>
                 <p className="mt-3 max-w-[590px] text-sm leading-6 text-muted-foreground">
                   Zobacz wybrane projekty 3D wykonane na zamówienie – od modeli do druku 3D,
                   przez części techniczne i CAD, aż po assety do gier oraz wizualizacje.
