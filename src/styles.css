@@ -19,6 +19,8 @@
  */
 
 @theme inline {
+  --font-contact-display: "Outfit", sans-serif;
+  --font-contact-body: "Figtree", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -59,6 +61,8 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-contact-surface: var(--contact-surface);
+  --color-contact-icon: var(--contact-icon);
 }
 
 :root {
@@ -81,6 +85,8 @@
   --brand-soft: oklch(0.96 0.03 285);
   --hero-tint: oklch(0.97 0.025 290);
   --page: oklch(0.985 0.008 285);
+  --contact-surface: oklch(0.985 0.015 285);
+  --contact-icon: oklch(0.965 0.035 285);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.92 0.012 275);
